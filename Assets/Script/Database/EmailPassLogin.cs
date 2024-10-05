@@ -10,7 +10,6 @@ using Unity.VisualScripting;
 public class EmailPassLogin : MonoBehaviour
 {
     FirebaseAuth auth;
-    [SerializeField] DataSever dataSever;
     PlayerInfo playerInfo;
 
     #region variables
@@ -372,7 +371,7 @@ public class EmailPassLogin : MonoBehaviour
     public void ReadData()
     {
 
-        dataSever.LoadDataFn<PlayerInfo>("User/" + auth.CurrentUser.UserId, (loaded) =>
+        DataSever.Instance.LoadDataFn<PlayerInfo>("User/" + auth.CurrentUser.UserId, (loaded) =>
         {
             if (loaded != null)
             {
@@ -400,7 +399,7 @@ public class EmailPassLogin : MonoBehaviour
         
         if(IsPlayerNameInputValid())
         {
-            dataSever.SaveDataFn("User/" + auth.CurrentUser.UserId, playerInfo);
+            DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, playerInfo);
             GameManager.instance.LoadScene(2, 3);
         }
 

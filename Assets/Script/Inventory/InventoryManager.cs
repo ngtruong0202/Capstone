@@ -9,14 +9,10 @@ using static Item;
 public class InventoryManager : ItemUI
 {
     public static InventoryManager instance;
-    public DataSever dataSever;
 
-    //InventoryData inventoryData;
 
     public GameObject inventoryPrefab;
     public Transform invetoryTranform;
-
-    //private int selectedItemIndex = -1;
 
     public Item[] startItem;
 
@@ -58,7 +54,7 @@ public class InventoryManager : ItemUI
     {
         LoadInventory();
 
-        dataSever.SaveDataFn("User/" + "iddddd", inventoryData);
+        DataSever.Instance.SaveDataFn("User/" + "iddddd", inventoryData);
     }
 
     public void LoadInventory()
