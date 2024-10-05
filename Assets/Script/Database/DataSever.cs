@@ -9,10 +9,12 @@ using Newtonsoft.Json;
 
 public class DataSever : MonoBehaviour
 {
+    public static DataSever Instance;
     DatabaseReference dbRef;
 
     private void Awake()
     {
+        Instance = this;
         dbRef = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
