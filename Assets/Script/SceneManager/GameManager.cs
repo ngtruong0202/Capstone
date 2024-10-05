@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject loadingScreen;
     public Slider bar;
+    public Image _bar;
     public TextMeshProUGUI barTxt;
 
     List<AsyncOperation> scenesLoading = new List<AsyncOperation>();
@@ -35,7 +36,6 @@ public class GameManager : MonoBehaviour
 
         //scenesLoading.Add(SceneManager.UnloadSceneAsync(0));
         scenesLoading.Add(SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive));
-        //scenesLoading.Add(SceneManager.LoadSceneAsync(b, LoadSceneMode.Additive));
 
         StartCoroutine(GetSceneLoadPropress());
     }
@@ -64,9 +64,11 @@ public class GameManager : MonoBehaviour
                 {
                     totalSceneProgress += operation.progress;
                 }
-                totalSceneProgress = (totalSceneProgress / scenesLoading.Count) * 100f;
-                
+                totalSceneProgress = (totalSceneProgress / scenesLoading.Count) * 100;
+
                 bar.value = (int)totalSceneProgress;
+                //_bar.fillAmount = totalSceneProgress;
+
                 barTxt.text = totalSceneProgress.ToString("0");
                 yield return null;
             }
