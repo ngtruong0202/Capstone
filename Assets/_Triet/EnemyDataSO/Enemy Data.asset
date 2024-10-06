@@ -16,11 +16,11 @@ MonoBehaviour:
   race: 2
   maxRarity: 3
   maxType: 3
-  basicHp: 1.39
-  basicAtk: 0
-  basicAtkSpd: 0
-  basicDef: 0
-  basicCriticalRate: 0
-  basicCriticalDmg: 0
-  description: 
+  basicHp: 1000
+  basicAtk: 200
+  basicAtkSpd: 2
+  basicDef: 200
+  basicCriticalRate: 25
+  basicCriticalDmg: 120
+  description: Dragon
   enemySkill: {fileID: 0}
