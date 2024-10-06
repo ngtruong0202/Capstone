@@ -32,6 +32,10 @@ public class EmailPassLogin : MonoBehaviour
     public InputField resetPassEmail;
     public TextMeshProUGUI resetPassText;
 
+    //[Header("Change Pass")]
+    //public InputField newPasswordInputField;
+    //public InputField newPasswordInputField2;
+
     [Header("Extra")]
     public GameObject loadingScreen;
     public GameObject loginUI, signupUI, createCharactorUI;
@@ -208,6 +212,38 @@ public class EmailPassLogin : MonoBehaviour
                 Debug.Log("Lỗi khi gửi email khôi phục mật khẩu: " + e.Message);
                 resetPassText.text = "Lỗi khi gửi email khôi phục mật khẩu.";
             }
+        }
+    }
+
+    //public async void OnChangePasswordButtonClick()
+    //{
+    //    string newPassword = newPasswordInputField.text;
+    //    string newPassword2 = newPasswordInputField2.text;
+    //    if(newPasswordInputField == newPasswordInputField2)
+    //    {
+    //        await ChangePassword(newPassword);
+    //    }
+    //}
+
+    public async Task ChangePassword(string newPassword)
+    {
+        FirebaseUser user = auth.CurrentUser;
+
+        if (user != null)
+        {
+            try
+            {
+                await user.UpdatePasswordAsync(newPassword);
+                Debug.Log("Đổi mật khẩu thành công.");
+            }
+            catch (FirebaseException e)
+            {
+                Debug.Log("Lỗi khi đổi mật khẩu: " + e.Message);
+            }
+        }
+        else
+        {
+            Debug.Log("Không có người dùng nào đang đăng nhập.");
         }
     }
 
