@@ -5,7 +5,8 @@ using Firebase.Extensions;
 using Firebase.Auth;
 using Firebase;
 using UnityEngine.UI;
-using Unity.VisualScripting;
+using System.Threading.Tasks;
+
 
 public class EmailPassLogin : MonoBehaviour
 {
@@ -17,21 +18,26 @@ public class EmailPassLogin : MonoBehaviour
     public Button loginButton;
     public InputField LoginEmail;
     public InputField loginPassword;
+    public TextMeshProUGUI loginText;
 
     [Header("Sign up")]
     public Button signButton;
     public InputField SignupEmail;
     public InputField SignupPassword;
     public InputField SignupPasswordConfirm;
+    public TextMeshProUGUI SignText;
 
-    [Header("Forger Pass")]
-    public Button forgetButton;
-    public InputField ForgetEmail;
+    [Header("Reset Pass")]
+    public Button resetPassButton;
+    public InputField resetPassEmail;
+    public TextMeshProUGUI resetPassText;
 
+    //[Header("Change Pass")]
+    //public InputField newPasswordInputField;
+    //public InputField newPasswordInputField2;
 
     [Header("Extra")]
     public GameObject loadingScreen;
-    public TextMeshProUGUI logTxt;
     public GameObject loginUI, signupUI, createCharactorUI;
 
     [Header("Extra")]
@@ -51,8 +57,8 @@ public class EmailPassLogin : MonoBehaviour
         createCharactorUI.SetActive(false);
 
         loginButton.onClick.AddListener(Login);
-        signButton.onClick.AddListener(SignUp);
-        forgetButton.onClick.AddListener(FogetPassword);
+        signButton.onClick.AddListener(Register);
+        resetPassButton.onClick.AddListener(ResetPass);
         quitGame.onClick.AddListener(QuitGame);
         createCharactorButton.onClick.AddListener(CreateCharactor);
 
@@ -61,295 +67,186 @@ public class EmailPassLogin : MonoBehaviour
 
     #endregion
 
-    #region signup 
-    public void SignUp()
+    public async void Register()
     {
         loadingScreen.SetActive(true);
 
         string email = SignupEmail.text;
         string password = SignupPassword.text;
-        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
-            if (task.IsCanceled)
-            {
-                Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
-                return;
-            }
-            if (task.IsFaulted)
-            {
-                Debug.Log("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-                return;
-            }
-            // Firebase user has been created.
-
+        string password2 = SignupPasswordConfirm.text;
+        if(password == password2)
+        {
+            await RegisterUser(email, password);
             loadingScreen.SetActive(false);
-            AuthResult result = task.Result;
-            Debug.LogFormat("Firebase user created successfully: {0} ({1})",
-                result.User.DisplayName, result.User.UserId);
+        }
+        else
+        {
+            SignText.text = "Mật khẩu không trùng khớp";
+        }
+
+    }
+    public async Task RegisterUser(string email, string password)
+    {
+        try
+        {
+            // Tạo người dùng mới
+            AuthResult authResult = await auth.CreateUserWithEmailAndPasswordAsync(email, password);
+            FirebaseUser newUser = authResult.User;
 
             SignupEmail.text = "";
             SignupPassword.text = "";
             SignupPasswordConfirm.text = "";
 
-            if (result.User.IsEmailVerified)
-            {
-                //showLogMsg("Sign up Successful");
-                Debug.Log("Email đã được sử dụng");
-            }
-            else
-            {
-                //showLogMsg("Please verify your email!!");
-                SendEmailVerification();
-            }
-
-        });
-    }
-
-    public void SendEmailVerification()
-    {
-        StartCoroutine(SendEmailForVerificationAsync());
-    }
-
-    IEnumerator SendEmailForVerificationAsync()
-    {
-        FirebaseUser user = auth.CurrentUser;
-        if (user != null)
+            // Gửi email xác thực
+            await SendVerificationEmail(newUser);
+        }
+        catch (FirebaseException e)
         {
-            var sendEmailTask = user.SendEmailVerificationAsync();
-            yield return new WaitUntil(() => sendEmailTask.IsCompleted);
-
-            if (sendEmailTask.Exception != null)
+            Debug.Log("Lỗi đăng ký: " + e.Message);
+            if (e.ErrorCode == (int)AuthError.EmailAlreadyInUse)
             {
-                print("Email send error");
-                FirebaseException firebaseException = sendEmailTask.Exception.GetBaseException() as FirebaseException;
-                AuthError error = (AuthError)firebaseException.ErrorCode;
-
-                switch (error)
-                {
-                    case AuthError.None:
-                        break;
-                    case AuthError.Unimplemented:
-                        break;
-                    case AuthError.Failure:
-                        break;
-                    case AuthError.InvalidCustomToken:
-                        break;
-                    case AuthError.CustomTokenMismatch:
-                        break;
-                    case AuthError.InvalidCredential:
-                        break;
-                    case AuthError.UserDisabled:
-                        break;
-                    case AuthError.AccountExistsWithDifferentCredentials:
-                        break;
-                    case AuthError.OperationNotAllowed:
-                        break;
-                    case AuthError.EmailAlreadyInUse:
-                        break;
-                    case AuthError.RequiresRecentLogin:
-                        break;
-                    case AuthError.CredentialAlreadyInUse:
-                        break;
-                    case AuthError.InvalidEmail:
-                        break;
-                    case AuthError.WrongPassword:
-                        break;
-                    case AuthError.TooManyRequests:
-                        break;
-                    case AuthError.UserNotFound:
-                        break;
-                    case AuthError.ProviderAlreadyLinked:
-                        break;
-                    case AuthError.NoSuchProvider:
-                        break;
-                    case AuthError.InvalidUserToken:
-                        break;
-                    case AuthError.UserTokenExpired:
-                        break;
-                    case AuthError.NetworkRequestFailed:
-                        break;
-                    case AuthError.InvalidApiKey:
-                        break;
-                    case AuthError.AppNotAuthorized:
-                        break;
-                    case AuthError.UserMismatch:
-                        break;
-                    case AuthError.WeakPassword:
-                        break;
-                    case AuthError.NoSignedInUser:
-                        break;
-                    case AuthError.ApiNotAvailable:
-                        break;
-                    case AuthError.ExpiredActionCode:
-                        break;
-                    case AuthError.InvalidActionCode:
-                        break;
-                    case AuthError.InvalidMessagePayload:
-                        break;
-                    case AuthError.InvalidPhoneNumber:
-                        break;
-                    case AuthError.MissingPhoneNumber:
-                        break;
-                    case AuthError.InvalidRecipientEmail:
-                        break;
-                    case AuthError.InvalidSender:
-                        break;
-                    case AuthError.InvalidVerificationCode:
-                        break;
-                    case AuthError.InvalidVerificationId:
-                        break;
-                    case AuthError.MissingVerificationCode:
-                        break;
-                    case AuthError.MissingVerificationId:
-                        break;
-                    case AuthError.MissingEmail:
-                        break;
-                    case AuthError.MissingPassword:
-                        break;
-                    case AuthError.QuotaExceeded:
-                        break;
-                    case AuthError.RetryPhoneAuth:
-                        break;
-                    case AuthError.SessionExpired:
-                        break;
-                    case AuthError.AppNotVerified:
-                        break;
-                    case AuthError.AppVerificationFailed:
-                        break;
-                    case AuthError.CaptchaCheckFailed:
-                        break;
-                    case AuthError.InvalidAppCredential:
-                        break;
-                    case AuthError.MissingAppCredential:
-                        break;
-                    case AuthError.InvalidClientId:
-                        break;
-                    case AuthError.InvalidContinueUri:
-                        break;
-                    case AuthError.MissingContinueUri:
-                        break;
-                    case AuthError.KeychainError:
-                        break;
-                    case AuthError.MissingAppToken:
-                        break;
-                    case AuthError.MissingIosBundleId:
-                        break;
-                    case AuthError.NotificationNotForwarded:
-                        break;
-                    case AuthError.UnauthorizedDomain:
-                        break;
-                    case AuthError.WebContextAlreadyPresented:
-                        break;
-                    case AuthError.WebContextCancelled:
-                        break;
-                    case AuthError.DynamicLinkNotActivated:
-                        break;
-                    case AuthError.Cancelled:
-                        break;
-                    case AuthError.InvalidProviderId:
-                        break;
-                    case AuthError.WebInternalError:
-                        break;
-                    case AuthError.WebStorateUnsupported:
-                        break;
-                    case AuthError.TenantIdMismatch:
-                        break;
-                    case AuthError.UnsupportedTenantOperation:
-                        break;
-                    case AuthError.InvalidLinkDomain:
-                        break;
-                    case AuthError.RejectedCredential:
-                        break;
-                    case AuthError.PhoneNumberNotFound:
-                        break;
-                    case AuthError.InvalidTenantId:
-                        break;
-                    case AuthError.MissingClientIdentifier:
-                        break;
-                    case AuthError.MissingMultiFactorSession:
-                        break;
-                    case AuthError.MissingMultiFactorInfo:
-                        break;
-                    case AuthError.InvalidMultiFactorSession:
-                        break;
-                    case AuthError.MultiFactorInfoNotFound:
-                        break;
-                    case AuthError.AdminRestrictedOperation:
-                        break;
-                    case AuthError.UnverifiedEmail:
-                        break;
-                    case AuthError.SecondFactorAlreadyEnrolled:
-                        break;
-                    case AuthError.MaximumSecondFactorCountExceeded:
-                        break;
-                    case AuthError.UnsupportedFirstFactor:
-                        break;
-                    case AuthError.EmailChangeNeedsVerification:
-                        break;
-                    default:
-                        break;
-                }
+                SignText.text = "Email đã được sử dụng.";
             }
-            else
+            else if (e.ErrorCode == (int)AuthError.InvalidEmail)
             {
-                print("Email successfully send");
+                SignText.text = "Email không hợp lệ.";
             }
+            else if (e.ErrorCode == (int)AuthError.InvalidEmail)
+            {
+                SignText.text = "Email không hợp lệ.";
+            }
+            else if (e.ErrorCode == (int)AuthError.WeakPassword)
+            {
+                SignText.text = "Mật khẩu không đủ mạnh.";
+            }
+            // Xử lý lỗi đăng ký (ví dụ: hiển thị thông báo cho người dùng)
         }
     }
 
+    private async Task SendVerificationEmail(FirebaseUser user)
+    {
+        try
+        {
+            await user.SendEmailVerificationAsync();
+            Debug.Log("Email xác thực đã được gửi tới: " + user.Email);
+            SignText.text = "Email xác thực đã được gửi tới: " + user.Email;
+            // Thông báo cho người dùng kiểm tra email của họ
+        }
+        catch (System.Exception e)
+        {
+            Debug.Log("Lỗi gửi email xác thực: " + e.Message);
 
-    #endregion
+            // Xử lý lỗi gửi email (ví dụ: hiển thị thông báo cho người dùng)
+        }
+    }
 
     #region Login
-    public void Login()
+  
+    public async void Login()
     {
         loadingScreen.SetActive(true);
 
         string email = LoginEmail.text;
         string password = loginPassword.text;
+        await LoginUser(email, password);
+        loadingScreen.SetActive(false);
 
-        Credential credential =
-        EmailAuthProvider.GetCredential(email, password);
-        auth.SignInAndRetrieveDataWithCredentialAsync(credential).ContinueWithOnMainThread(task => {
-            if (task.IsCanceled)
+
+    }
+
+    public async Task LoginUser(string email, string password)
+    {
+        if (string.IsNullOrEmpty(password))
+        {
+            loginText.text = "Vui lòng nhập mật khẩu.";
+            return;
+        }
+
+        try
+        {
+            var authResult = await auth.SignInWithEmailAndPasswordAsync(email, password);
+            ReadData();
+        }
+        catch (FirebaseException e)
+        {
+            if (e.ErrorCode == (int)AuthError.InvalidEmail)
             {
-                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync was canceled.");
-                return;
+                loginText.text = "Email không hợp lệ.";
             }
-            if (task.IsFaulted)
+            else if (e.ErrorCode == (int)AuthError.WrongPassword)
             {
-                Debug.LogError("SignInAndRetrieveDataWithCredentialAsync encountered an error: " + task.Exception);
-                return;
+                loginText.text = "Mật khẩu không chính xác.";
             }
-            loadingScreen.SetActive(false);
-            AuthResult result = task.Result;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
-                result.User.DisplayName, result.User.UserId);
-
-            if (result.User.IsEmailVerified)
+            else if(e.ErrorCode == 1)
             {
-                ReadData();
-                //showLogMsg("Log in Successful");
-
+                loginText.text = "Sai tài khoản hoặc mật khẩu.";
             }
             else
             {
-                showLogMsg("Please verify email!!");
-
+                Debug.Log("Lỗi đăng nhập: " + e.Message);
+                loginText.text = e.Message;
             }
-
-        });
+        }
     }
 
-    public void FogetPassword()
+    public async void ResetPass()
     {
-        string email = ForgetEmail.text;
-        auth.SendPasswordResetEmailAsync(email).ContinueWithOnMainThread(task =>
-        {
-            if (task.IsFaulted) return;
-            if (task.IsCanceled) return;
-
-        });
+        string email = resetPassEmail.text;
+        await SendPasswordResetEmail(email);
     }
+    public async Task SendPasswordResetEmail(string email)
+    {
+        try
+        {
+            await auth.SendPasswordResetEmailAsync(email);
+            resetPassText.text = "Email khôi phục mật khẩu đã được gửi thành công.";
+        }
+        catch (FirebaseException e)
+        {
+            if (e.ErrorCode == (int)AuthError.UserNotFound)
+            {
+                resetPassText.text = "Không tìm thấy tài khoản với email này.";
+            }
+            else
+            {
+                Debug.Log("Lỗi khi gửi email khôi phục mật khẩu: " + e.Message);
+                resetPassText.text = "Lỗi khi gửi email khôi phục mật khẩu.";
+            }
+        }
+    }
+
+    //public async void OnChangePasswordButtonClick()
+    //{
+    //    string newPassword = newPasswordInputField.text;
+    //    string newPassword2 = newPasswordInputField2.text;
+    //    if(newPasswordInputField == newPasswordInputField2)
+    //    {
+    //        await ChangePassword(newPassword);
+    //    }
+    //}
+
+    public async Task ChangePassword(string newPassword)
+    {
+        FirebaseUser user = auth.CurrentUser;
+
+        if (user != null)
+        {
+            try
+            {
+                await user.UpdatePasswordAsync(newPassword);
+                Debug.Log("Đổi mật khẩu thành công.");
+            }
+            catch (FirebaseException e)
+            {
+                Debug.Log("Lỗi khi đổi mật khẩu: " + e.Message);
+            }
+        }
+        else
+        {
+            Debug.Log("Không có người dùng nào đang đăng nhập.");
+        }
+    }
+
 
     public void LogOut()
     {
@@ -425,10 +322,9 @@ public class EmailPassLogin : MonoBehaviour
         #endregion
 
     #region extra
-        void showLogMsg(string msg)
+        void showLogMsg(string msg, TextMeshProUGUI text)
     {
-        logTxt.text = msg;
-        logTxt.GetComponent<Animation>().Play("textFadeout");
+        text.text = msg;
     }
     #endregion
 

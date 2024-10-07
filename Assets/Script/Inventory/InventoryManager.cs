@@ -23,7 +23,7 @@ public class InventoryManager : ItemUI
 
     public Button equipButton;
     public Button ingredientButton;
-    public Button productButton;
+    //public Button productButton;
     public Button itemsButton;
     public Button otherButton;
 
@@ -38,7 +38,7 @@ public class InventoryManager : ItemUI
 
         equipButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.equip, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
         ingredientButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.ingredient, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
-        productButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.product, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
+        //productButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.product, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
         itemsButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.items, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
         otherButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.other, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
 
