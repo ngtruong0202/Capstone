@@ -17,35 +17,19 @@ MonoBehaviour:
   description: 
   globalUserScript: 
   emphasisSettings:
-  - color:
-      r: 1
-      g: 0
-      b: 0.8254461
-      a: 1
+  - color: {r: 1, g: 0, b: 0.8254461, a: 1}
     bold: 0
     italic: 1
     underline: 0
-  - color:
-      r: 1
-      g: 0
-      b: 0
-      a: 1
+  - color: {r: 1, g: 0, b: 0, a: 1}
     bold: 0
     italic: 0
     underline: 0
-  - color:
-      r: 0
-      g: 1
-      b: 0
-      a: 1
+  - color: {r: 0, g: 1, b: 0, a: 1}
     bold: 0
     italic: 0
     underline: 0
-  - color:
-      r: 0
-      g: 0
-      b: 1
-      a: 1
+  - color: {r: 0, g: 0, b: 1, a: 1}
     bold: 0
     italic: 0
     underline: 0
@@ -167,6 +151,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -224,12 +210,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 178.05965
-        y: 36.716415
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 1
       fields:
       - title: Title
@@ -281,12 +267,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 152.98505
-        y: 160.74625
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 2
       fields:
       - title: Title
@@ -330,14 +316,14 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 155.3731
-        y: 263.2835
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 1199.9995}
     canvasZoom: 0.6700003
   - id: 2
     fields:
@@ -375,6 +361,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -432,12 +420,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 120
-        y: 20
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 1
       fields:
       - title: Title
@@ -489,12 +477,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 120
-        y: 70
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 2
       fields:
       - title: Title
@@ -550,12 +538,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 120
-        y: 120
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 3
       fields:
       - title: Title
@@ -605,12 +593,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 30
-        y: 170
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 4
       fields:
       - title: Title
@@ -662,12 +650,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 210
-        y: 170
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 5
       fields:
       - title: Title
@@ -717,12 +705,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 120
-        y: 220
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 6
       fields:
       - title: Title
@@ -778,12 +766,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 120.90909
-        y: 270
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 7
       fields:
       - title: Title
@@ -833,12 +821,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 30
-        y: 318.90414
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 8
       fields:
       - title: Title
@@ -894,12 +882,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 210
-        y: 320
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 9
       fields:
       - title: Title
@@ -943,12 +931,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 30
-        y: 370
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 10
       fields:
       - title: Title
@@ -992,25 +980,25 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 212.1918
-        y: 370
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 486.01123, y: 1323.1122}
+    canvasZoom: 0.1
   - id: 3
     fields:
     - title: Title
       value: Barks
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Actor
       value: 1
       type: 5
@@ -1037,6 +1025,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -1106,12 +1096,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 20
-        y: 80
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 1
       fields:
       - title: Title
@@ -1157,12 +1147,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 200
-        y: 30
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 2
       fields:
       - title: Title
@@ -1208,12 +1198,12 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 200
-        y: 80
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     - id: 3
       fields:
       - title: Title
@@ -1257,15 +1247,15 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls: []
-        m_CallsDirty: 1
       canvasRect:
-        x: 200
-        y: 130
+        serializedVersion: 2
+        x: -80
+        y: 0
         width: 160
-        height: 30
+        height: 0
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 1388.388, y: 518.7097}
+    canvasZoom: 0.93
   syncInfo:
     syncActors: 0
     syncItems: 0
