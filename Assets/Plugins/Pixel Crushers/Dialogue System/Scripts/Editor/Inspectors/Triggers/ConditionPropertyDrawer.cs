@@ -132,7 +132,7 @@ namespace PixelCrushers.DialogueSystem
                             var height = EditorTools.textAreaGuiStyle.CalcHeight(new GUIContent(element.stringValue), luaFieldWidth) + 2f;
                             rect = new Rect(x + 96f, y, width - 96f, height);
                             y += height;
-                            element.stringValue = EditorGUI.TextArea(rect, element.stringValue);
+                            element.stringValue = EditorGUI.TextArea(rect, element.stringValue, EditorTools.textAreaGuiStyle);
                         }
                     }
 
@@ -205,9 +205,15 @@ namespace PixelCrushers.DialogueSystem
 
         private float GetArrayHeight(SerializedProperty property)
         {
+#if UNITY_2020_1_OR_NEWER
+            return property.isExpanded
+                ? ((3 + Mathf.Max(1, property.arraySize)) * (EditorGUIUtility.singleLineHeight + 2f))
+                : EditorGUIUtility.singleLineHeight;
+#else
             return property.isExpanded
                 ? ((2 + property.arraySize) * (EditorGUIUtility.singleLineHeight + 2f))
                     : EditorGUIUtility.singleLineHeight;
+#endif
         }
 
         private float GetTextAreaArrayHeight(SerializedProperty property)
