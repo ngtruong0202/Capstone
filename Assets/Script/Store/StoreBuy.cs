@@ -30,7 +30,7 @@ public class StoreBuy : MonoBehaviour
     public void BuyPanel(Item _item)
     {
         item = _item;
-        if(currency.coin >= item.price)
+        if(currency.gold >= item.price)
         {
             Quantity(1);
             buyPanel.SetActive(true);
@@ -43,7 +43,7 @@ public class StoreBuy : MonoBehaviour
 
     public void Quantity(float _quantity)
     {
-        quantitySlider.maxValue = currency.coin / item.price;
+        quantitySlider.maxValue = currency.gold / item.price;
         if(quantitySlider.maxValue > 99)
             quantitySlider.maxValue = 99;
 
@@ -58,9 +58,9 @@ public class StoreBuy : MonoBehaviour
 
     public void Buy()
     {
-        if(currency.coin >= totalPrice)
+        if(currency.gold >= totalPrice)
         {
-            currency.coin -= totalPrice;
+            currency.gold -= totalPrice;
             InventoryManager.instance.AddItem(item, quantity);
             buyPanel.SetActive(false);
             quantitySlider.value = quantity;

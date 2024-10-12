@@ -8,11 +8,9 @@ public class ItemStoreData
 {
     public Dictionary<ItemType, List<Item>> categorizedInventory = new Dictionary<ItemType, List<Item>>
     {
-        { ItemType.equip, new List<Item>() },
-        { ItemType.ingredient, new List<Item>() },
-        { ItemType.product, new List<Item>() },
         { ItemType.items, new List<Item>() },
-        { ItemType.other, new List<Item>() },
+        { ItemType.ingredient, new List<Item>() },
+        { ItemType.quest, new List<Item>() },
 
     };
 
