@@ -8,7 +8,7 @@ public class Inventory : ScriptableObject
 {
     [SerializeField] private ItemSlot testItemSlot;
 
-    public ItemContainer ItemContainer { get; } = new ItemContainer(20);
+    public ItemContainer ItemContainer { get; } = new ItemContainer(25);
 
 
     [ContextMenu("Test Add")]

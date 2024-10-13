@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   testItemSlot:
     item: {fileID: 11400000, guid: e288fc062e2fef849bc1f943ceca5d18, type: 2}
-    quantity: 34
+    quantity: 5

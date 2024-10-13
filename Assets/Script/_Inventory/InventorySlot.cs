@@ -29,7 +29,7 @@ public class InventorySlot : ItemSlotUI, IDropHandler
 
         if(itemDragHandler == null) { return; }
 
-        if(itemDragHandler.ItemSlotUI as InventorySlot != null)
+        if((itemDragHandler.ItemSlotUI as InventorySlot ) != null)
         {
             inventory.ItemContainer.Swap(itemDragHandler.ItemSlotUI.SlotIndex, SlotIndex);
         }

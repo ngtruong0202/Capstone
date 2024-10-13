@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2494941342468424350}
   - component: {fileID: 5217876228429689647}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Item_Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,3 +350,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSlotUI: {fileID: 7155127328048230569}
+  itemDestroyer: {fileID: 0}
