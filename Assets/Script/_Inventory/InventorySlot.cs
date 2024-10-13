@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class InventorySlot : ItemSlotUI, IDropHandler
 {
-    [SerializeField] private Inventory inventory = null;
+    public Inventory inventory = null;
     [SerializeField] private TextMeshProUGUI itemQuantityText = null;
 
     protected override void Start()
