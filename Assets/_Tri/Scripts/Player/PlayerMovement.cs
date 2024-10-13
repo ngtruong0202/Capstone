@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float playerSpeed = 2.5f;
     public float runSpeed = 5f;
-    public float currentSpeed = 5f;
+    public float currentSpeed;
     [SerializeField] float gravityValue = -9.81f;
     [SerializeField] float jumpHeight = 5f;
     public float HorizontalInput, VerticalInput;
@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
         IsGrounded();
         Movement();
         Jump();
-        //currentState.UpdateState(this);
     }
 
     public void IsGrounded()
@@ -63,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 input = moveAction.ReadValue<Vector2>();
         move = new Vector3(input.x, 0, input.y);
-        characterController.Move(move * Time.deltaTime * playerSpeed);
+        characterController.Move(move * Time.deltaTime * currentSpeed);
 
         HorizontalInput = input.x;
         VerticalInput = input.y;
@@ -75,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
         characterController.Move(playerVelocity * Time.deltaTime);
         currentState.UpdateState(this);
 
+        Debug.Log(currentSpeed);
+
     }
 
     public void Jump()
@@ -82,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpAction.triggered && grounded)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-
+            Debug.Log("Jump!!!");
         }
     }
 

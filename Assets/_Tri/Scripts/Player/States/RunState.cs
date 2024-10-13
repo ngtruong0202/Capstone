@@ -6,7 +6,7 @@ public class RunState : MovementBaseStates
 {
     public override void EnterState(PlayerMovement movement)
     {
-        throw new System.NotImplementedException();
+        movement.animator.SetBool("IsRunning", true);
     }
 
     public override void UpdateState(PlayerMovement movement)
@@ -14,6 +14,7 @@ public class RunState : MovementBaseStates
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             ExitState(movement, movement.Walk);
+            Debug.Log("Ngung chay");
         }
         else if (movement.move.magnitude < 0.1f)
         {
@@ -23,7 +24,7 @@ public class RunState : MovementBaseStates
         if (movement.VerticalInput > 0 || movement.HorizontalInput > 0)
         {
             movement.currentSpeed = movement.runSpeed;
-            //Debug.Log("Chay:" + movement.currentSpeed);
+            Debug.Log("Chay:" + movement.currentSpeed);
         }
     }
 
