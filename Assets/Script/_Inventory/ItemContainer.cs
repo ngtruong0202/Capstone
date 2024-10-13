@@ -48,7 +48,6 @@ public class ItemContainer : IItemContainer
                 if (itemSlot.quantity <= itemSlot.item.MaxStack)
                 {
                     itemSlots[i] = itemSlot;
-                    Debug.Log(itemSlot.item.Name);
                     itemSlot.quantity = 0;
 
                     OnItemUpdated.Invoke();
@@ -141,12 +140,12 @@ public class ItemContainer : IItemContainer
     public void Swap(int indexOne, int indexTwo)
     {
         ItemSlot firstSlot = itemSlots[indexOne];
-        ItemSlot secondSlot = itemSlots[indexOne];
+        ItemSlot secondSlot = itemSlots[indexTwo];
         if(firstSlot == secondSlot) { return; }
 
-        if(secondSlot.item != null)
+        if (secondSlot.item != null)
         {
-            if(firstSlot.item == secondSlot.item)
+            if (firstSlot.item == secondSlot.item)
             {
                 int secondSlotRemainingSpace = secondSlot.item.MaxStack - secondSlot.quantity;
                 if(firstSlot.quantity <= secondSlotRemainingSpace)
@@ -166,6 +165,5 @@ public class ItemContainer : IItemContainer
         itemSlots[indexTwo] = firstSlot;
 
         OnItemUpdated.Invoke();
-
     }
 }
