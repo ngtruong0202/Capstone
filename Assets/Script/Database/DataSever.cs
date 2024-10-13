@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Firebase.Database;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 [Serializable]
 
@@ -24,33 +25,39 @@ public class DataSever : MonoBehaviour
         dbRef.Child(path).SetRawJsonValueAsync(json);
     }
 
-    public void LoadDataFn<T>(string path, System.Action<T> callback)
+    public async void LoadDataFn<T>(string path, System.Action<T> callback)
     {
-        StartCoroutine(LoadDataEnum(path, callback));
+        await LoadDataAsync(path, callback);
     }
 
-    IEnumerator LoadDataEnum<T>(string path, System.Action<T> callback)
+    public async Task LoadDataAsync<T>(string path, System.Action<T> callback)
     {
-        var serverData = dbRef.Child(path).GetValueAsync();
-        yield return new WaitUntil(predicate: () => serverData.IsCompleted);
+        var serverData = await dbRef.Child(path).GetValueAsync();
 
         print("process is complete");
 
-        DataSnapshot snapshot = serverData.Result;
-        string jsonData = snapshot.GetRawJsonValue();
-
-        if (jsonData != null)
+        if (serverData.Exists)
         {
-            print("server data found");
+            string jsonData = serverData.GetRawJsonValue();
 
-            T data = JsonConvert.DeserializeObject<T>(jsonData);
-            callback(data);
+            if (!string.IsNullOrEmpty(jsonData))
+            {
+                print("server data found");
+
+                T data = JsonConvert.DeserializeObject<T>(jsonData);
+                callback(data);
+            }
+            else
+            {
+                print("no data found");
+                callback(default(T));
+            }
         }
         else
         {
             print("no data found");
             callback(default(T));
         }
-
     }
+
 }

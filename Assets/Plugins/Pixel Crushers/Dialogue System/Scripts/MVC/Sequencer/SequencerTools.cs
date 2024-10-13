@@ -108,6 +108,10 @@ namespace PixelCrushers.DialogueSystem
             {
                 return GetPortraitImage(listener);
             }
+            else if (specifier.StartsWith(SequencerKeywords.ActorPrefix))
+            {
+                return CharacterInfo.GetRegisteredActorTransform(specifier.Substring(SequencerKeywords.ActorPrefix.Length));
+            }
             else
             {
                 GameObject go = FindSpecifier(specifier);
@@ -198,10 +202,10 @@ namespace PixelCrushers.DialogueSystem
             DialogueActor dialogueActor;
             StandardUISubtitlePanel panel = null;
 
-            if (DialogueManager.isConversationActive)
+            if (DialogueManager.isConversationActive && DialogueManager.currentConversationState != null)
             {
                 var subtitle = DialogueManager.currentConversationState.subtitle;
-                if (subject == subtitle.speakerInfo.transform)
+                if (subtitle.speakerInfo != null && subtitle.speakerInfo.transform == subject)
                 {
                     panel = subtitleControls.GetPanel(subtitle, out dialogueActor);
                 }

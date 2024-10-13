@@ -5,56 +5,71 @@ using System.Linq;
 using UnityEngine.UI;
 using TMPro;
 using static Item;
+using Firebase.Auth;
 
-public class InventoryManager : ItemUI
+public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
+    FirebaseAuth auth;
+    InventoryData inventoryData;
 
-
+    [Header("Item")]
     public GameObject inventoryPrefab;
-    public Transform invetoryTranform;
+    public Transform contentPos;
+    public InventorySlot[] inventorySlot;
+
+    [Header("Currency")]
+    public TextMeshProUGUI goldText;
+    public TextMeshProUGUI rubyText;
 
     public Item[] startItem;
 
-    [Header("Description")]
-    public TextMeshProUGUI itemNameText;
-    public TextMeshProUGUI itemDescriptionText;
-    public Image itemIconImage;
+  
 
-    public Button equipButton;
+    [Header("Button")]
     public Button ingredientButton;
-    //public Button productButton;
     public Button itemsButton;
-    public Button otherButton;
+    public Button questButton;
 
     private void Awake()
     {
         instance = this;
+        auth = FirebaseAuth.DefaultInstance;
     }
 
     void Start()
     {
         inventoryData = new InventoryData();
 
-        equipButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.equip, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
-        ingredientButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.ingredient, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
-        //productButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.product, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
-        itemsButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.items, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
-        otherButton.onClick.AddListener( () => UpdateInventoryUI(ItemType.other, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage));
+        questButton.onClick.AddListener(() => UpdateInventoryUI(ItemType.items));
+        ingredientButton.onClick.AddListener(() => UpdateInventoryUI(ItemType.ingredient));
+        itemsButton.onClick.AddListener(() => UpdateInventoryUI(ItemType.quest));
 
-        //SelectItem(Item.ItemType.equip, 0, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage);
+        //ReadData();
     }
 
-    public void Selects()
+    public void ReadData()
     {
-        SelectItem(ItemType.equip, 0, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage);
 
+        DataSever.Instance.LoadDataFn<Currency>("User/" + auth.CurrentUser.UserId, (loaded) =>
+        {
+            if (loaded != null)
+            {
+                goldText.text = loaded.gold.ToString();
+                rubyText.text = loaded.ruby.ToString();
+            }
+            else
+            {
+                Debug.Log("No data found or failed to load data.");
+            }
+        });
     }
+
     public void Test()
     {
         LoadInventory();
 
-        DataSever.Instance.SaveDataFn("User/" + "iddddd", inventoryData);
+        //DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser, inventoryData);
     }
 
     public void LoadInventory()
@@ -62,7 +77,7 @@ public class InventoryManager : ItemUI
         // Tải dữ liệu từ Firebase hoặc bất kỳ nguồn nào
         foreach (var item in startItem)
         {
-           AddItem(item,11);
+            AddItem(item, 12);
         }
     }
 
@@ -74,7 +89,7 @@ public class InventoryManager : ItemUI
         if (check)
         {
             item.quantity += count;
-                
+
             if (item.quantity > item.maxStackable)
             {
                 item.quantity = item.maxStackable;
@@ -87,65 +102,44 @@ public class InventoryManager : ItemUI
         {
             item.quantity = count;
             inventoryData.categorizedInventory[item.itemtype].Add(item);
-            inventoryData.GetItemsByType(ItemType.equip);
+            inventoryData.GetItemsByType(ItemType.items);
         }
-        UpdateInventoryUI(item.itemtype, inventoryPrefab, invetoryTranform, itemNameText, itemDescriptionText, itemIconImage);
-
+        //UpdateInventoryUI(item.itemtype);
+        SpawnItem(item);
     }
 
-    //public int GetItemQuatity(Item item)
-    //{
-    //    item.quantity -= item.maxStackable;
-    //    return item.quantity;
-    //}
+    public int GetItemQuatity(Item item)
+    {
+        item.quantity -= item.maxStackable;
+        return item.quantity;
+    }
 
-    //public void UpdateInventoryUI(ItemType itemType, Transform contentPos, TextMeshProUGUI itemNameText, TextMeshProUGUI itemDescriptionText, Image itemIconImage)
-    //{
-    //    foreach (Transform item in contentPos)
-    //    {
-    //        Destroy(item.gameObject);
-    //    }
+    public void UpdateInventoryUI(ItemType itemType)
+    {
+        foreach (Transform item in contentPos)
+        {
+            Destroy(item.gameObject);
+        }
 
-    //    for (int i = 0; i < inventoryData.categorizedInventory[itemType].Count; i++)
-    //    {
-    //        GameObject newItem = Instantiate(inventoryPrefab , contentPos);
-    //        newItem.GetComponent<InventoryItem>().UpdateItem(inventoryData.categorizedInventory[itemType][i]);
+        for (int i = 0; i < inventoryData.categorizedInventory[itemType].Count; i++)
+        {
+            GameObject newItem = Instantiate(inventoryPrefab, contentPos);
+        }
+    }
 
-    //        int index = i;
-    //        newItem.GetComponent<Button>().onClick.AddListener(() => SelectItem(itemType ,index, contentPos, itemNameText, itemDescriptionText, itemIconImage));
-    //    }
-    //}
-
-    //public void SelectItem(ItemType itemType , int index, Transform invenPos, TextMeshProUGUI itemNameText, TextMeshProUGUI itemDescriptionText, Image itemIconImage)
-    //{
-    //    if (index >= 0 && index < inventoryData.categorizedInventory[itemType].Count)
-    //    {
-    //        selectedItemIndex = index;
-    //        // Cập nhật UI để hiển thị vật phẩm được chọn
-    //        //Debug.Log("Selected item: " + inventoryData.categorizedInventory[itemType][selectedItemIndex].itemName);
-    //        // Gọi hàm cập nhật UI để làm nổi bật vật phẩm được chọn
-    //        HighlightSelectedItem(itemType, invenPos, itemNameText, itemDescriptionText, itemIconImage);
-    //    }
-    //}
-
-    //private void HighlightSelectedItem(ItemType itemType, Transform invenPos, TextMeshProUGUI itemNameText, TextMeshProUGUI itemDescriptionText, Image itemIconImage)
-    //{
-    //    for (int i = 0; i < invenPos.childCount; i++)
-    //    {
-    //        var itemSlot = invenPos.GetChild(i).GetComponent<InventoryItem>();
-    //        itemSlot.Highlight(i == selectedItemIndex);
-    //        UpdateSelectedItemDetails(itemType, itemNameText, itemDescriptionText, itemIconImage);
-    //    }
-    //}
-
-    //private void UpdateSelectedItemDetails(ItemType itemType, TextMeshProUGUI itemNameText, TextMeshProUGUI itemDescriptionText, Image itemIconImage)
-    //{
-    //    if (selectedItemIndex >= 0 && selectedItemIndex < inventoryData.categorizedInventory[itemType].Count)
-    //    {
-    //        Item selectedItem = inventoryData.categorizedInventory[itemType][selectedItemIndex];
-    //        itemNameText.text = selectedItem.itemName;
-    //        itemDescriptionText.text = "Description for " + selectedItem.itemName; // Thay bằng mô tả thực tế nếu có
-    //        itemIconImage.sprite = SpriteManager.Instance.GetSpriteByName(selectedItem.spriteURL);
-    //    }
-    //}
+    public void SpawnItem(Item item)
+    {
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            InventorySlot slot = inventorySlot[i];
+            InventoryItem itemSlot = slot.GetComponent<InventoryItem>();
+            if(itemSlot == null)
+            {
+                GameObject newItem = Instantiate(inventoryPrefab, slot.transform);
+                InventoryItem inventoryItem = newItem .GetComponent<InventoryItem>();
+                inventoryItem.InitialiseItem(item);
+                return;
+            }
+        }
+    }
 }

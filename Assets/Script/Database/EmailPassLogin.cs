@@ -292,11 +292,12 @@ public class EmailPassLogin : MonoBehaviour
     {
         string playername = playerName.text;
         PlayerInfo playerInfo = new PlayerInfo(auth.CurrentUser.UserId, playername);
-        Debug.Log(playerInfo);
+        Currency currency = new Currency(1000,1000 );
         
         if(IsPlayerNameInputValid())
         {
             DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, playerInfo);
+            //DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, currency);
             GameManager.instance.LoadScene(2, 3);
         }
 
@@ -321,11 +322,5 @@ public class EmailPassLogin : MonoBehaviour
     }
         #endregion
 
-    #region extra
-        void showLogMsg(string msg, TextMeshProUGUI text)
-    {
-        text.text = msg;
-    }
-    #endregion
 
 }

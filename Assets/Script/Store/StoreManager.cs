@@ -39,10 +39,10 @@ public class StoreManager : MonoBehaviour
         storeButton.onClick.AddListener(OnEnableStore);
         promotionButton.onClick.AddListener(OnEnableStore);
 
-        equipButton.onClick.AddListener(() => OnEnableItemStore(ItemType.equip));
+        //equipButton.onClick.AddListener(() => OnEnableItemStore(ItemType.equip));
         ingredientButton.onClick.AddListener(() => OnEnableItemStore(ItemType.ingredient));
         itemtButton.onClick.AddListener(() => OnEnableItemStore(ItemType.items));
-        othertButton.onClick.AddListener(() => OnEnableItemStore(ItemType.other));
+        //othertButton.onClick.AddListener(() => OnEnableItemStore(ItemType.other));
     }
 
     public void OnEnableStore()

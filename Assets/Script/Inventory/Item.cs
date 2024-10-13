@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public string itemDescription;
     public string boderURL;
     public string spriteURL;
+    public Sprite image;
 
     public int quantity;
     public bool useItem;
@@ -22,14 +23,8 @@ public class Item : ScriptableObject
 
     public enum ItemType
     {
-        equip,
         ingredient,
-        product,
         items,
-        other,
-        promotion,
-        seed
+        quest,
     }
-
-   
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   welcomeScreenVersion: '1.9.5 '
   playmakerVersion: 
-  showWelcomeScreen: 1
+  showWelcomeScreen: 0
   showUpgradeGuide: 0
-  lastAutoUpdateSignature: 2022.3.29f1__D:/Capstone/Assets__0.0.0.0
+  lastAutoUpdateSignature: 2022.3.29f1__D:/TRUONG/GAME/Game 3D/Capstone/Assets__0.0.0.0
   useLegacyNetworking: 0
