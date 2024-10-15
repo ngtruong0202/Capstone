@@ -6,11 +6,11 @@ using UnityEngine.EventSystems;
     public class ItemHotBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private TooltipPopup tooltipPopup;
-        [SerializeField] private InventorySlot inventorySlot;
+        [SerializeField] private ItemSlotUI itemSlotUI;
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            tooltipPopup.DisplayInfo(inventorySlot);
+            tooltipPopup.DisplayInfo(itemSlotUI);
         }
 
         public void OnPointerExit(PointerEventData eventData)
