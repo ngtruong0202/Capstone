@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float gravityValue = -9.81f;
     [SerializeField] float jumpHeight = 5f;
     public float HorizontalInput, VerticalInput;
+
+    [Header("Animation Smoothing")]
+    private float damping = 0.075f;
+    [SerializeField]
+    public float rotationSpeed = 0.1f;
+
 
     public Animator animator;
     private CharacterController characterController;
@@ -44,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         IsGrounded();
         Movement();
         Jump();
@@ -62,20 +71,49 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 input = moveAction.ReadValue<Vector2>();
         move = new Vector3(input.x, 0, input.y);
+
+        if (input == Vector2.zero)
+        {
+            damping = 0;
+        }
+        else
+        {
+            damping = 0.075f;
+        }
+
+        var cam = Camera.main;
+        var forward = cam.transform.forward;
+        var right = cam.transform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        move = (forward * input.y + right * input.x).normalized;
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), rotationSpeed);
+
         characterController.Move(move * Time.deltaTime * currentSpeed);
 
         HorizontalInput = input.x;
         VerticalInput = input.y;
 
-        animator.SetFloat("HorizontalInput", HorizontalInput);
-        animator.SetFloat("VerticalInput", VerticalInput);
+        if (move != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        }
+
+        animator.SetFloat("HorizontalInput", HorizontalInput, damping, Time.deltaTime);
+        animator.SetFloat("VerticalInput", VerticalInput, damping, Time.deltaTime);
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         characterController.Move(playerVelocity * Time.deltaTime);
         currentState.UpdateState(this);
 
         Debug.Log(currentSpeed);
-
     }
 
     public void Jump()

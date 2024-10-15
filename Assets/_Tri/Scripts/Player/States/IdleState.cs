@@ -11,6 +11,8 @@ public class IdleState : MovementBaseStates
 
     public override void UpdateState(PlayerMovement movement)
     {
+        movement.currentSpeed = 0f;
+
         if (movement.move.magnitude > 0.1f)
         {
             if (Input.GetKey(KeyCode.LeftShift))
