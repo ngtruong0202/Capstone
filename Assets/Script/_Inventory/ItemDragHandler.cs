@@ -25,7 +25,6 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler,
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             originalParent = transform.parent;
-
             transform.SetParent(transform.parent.parent);
             canvasGroup.blocksRaycasts = false;
         }

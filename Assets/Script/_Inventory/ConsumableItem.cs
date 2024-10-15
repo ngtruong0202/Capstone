@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Itemslots")]
+[CreateAssetMenu(menuName = "Inventory/Itemslots")]
 
 public class ConsumableItem : InventoryItems
 {
@@ -11,7 +11,7 @@ public class ConsumableItem : InventoryItems
     public override string GetInfoDisplayText()
     {
         StringBuilder builder = new StringBuilder();
-        builder.Append(Name).AppendLine();
+        //builder.Append(Rarity.Name).AppendLine();
         builder.Append("<color=green>Use: ").Append(useText).Append("</color>").AppendLine();
         builder.Append("Max Stack: ").Append(MaxStack).AppendLine();
         builder.Append("Sell Price: ").Append(SellPrice).Append("Gold");

@@ -50,7 +50,7 @@ public class TooltipPopup : MonoBehaviour
             popupObject.transform.position = newPos;
         }
 
-        public void DisplayInfo(InventorySlot item)
+        public void DisplayInfo(ItemSlotUI item)
         {
 
             if (item == null || item.SlotItem == null) return;

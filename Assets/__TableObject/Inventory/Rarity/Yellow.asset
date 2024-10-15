@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60bdd67caa08ded49bf985c5aeba92f4, type: 3}
-  m_Name: items
+  m_Script: {fileID: 11500000, guid: 0743aea76ac6e764091f69011d515718, type: 3}
+  m_Name: Yellow
   m_EditorClassIdentifier: 
-  name: New Hotbar Item Name
-  icon: {fileID: 21300000, guid: a845cd7313d516040948359e81dd3426, type: 3}
-  sellPrice: 1
-  maxStack: 5
-  useText: Does something, maybe?
+  name: "V\xE0ng"
+  textColour: {r: 0.96933126, g: 1, b: 0, a: 1}
