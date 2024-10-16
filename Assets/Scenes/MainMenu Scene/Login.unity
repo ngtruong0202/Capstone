@@ -4180,7 +4180,7 @@ MonoBehaviour:
   resetPassButton: {fileID: 1715318756}
   resetPassEmail: {fileID: 231540161}
   resetPassText: {fileID: 293948022}
-  loadingScreen: {fileID: 6378605906298838703, guid: 3ea5fee57003d6445a6353f25995bd0c, type: 3}
+  loadingScreen: {fileID: 4963834855573569827}
   loginUI: {fileID: 1853324476}
   signupUI: {fileID: 1517523382}
   createCharactorUI: {fileID: 1361376112}
@@ -9332,6 +9332,11 @@ PrefabInstance:
 --- !u!224 &4963834855573569826 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1996744856448185792, guid: 3ea5fee57003d6445a6353f25995bd0c, type: 3}
+  m_PrefabInstance: {fileID: 4963834855573569825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4963834855573569827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6378605906298838703, guid: 3ea5fee57003d6445a6353f25995bd0c, type: 3}
   m_PrefabInstance: {fileID: 4963834855573569825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5604045500451864572

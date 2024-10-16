@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        //SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
         loadingScreen.gameObject.SetActive(false);
 
     }
