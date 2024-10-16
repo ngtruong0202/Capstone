@@ -77,14 +77,14 @@ public class EmailPassLogin : MonoBehaviour
         if(password == password2)
         {
             await RegisterUser(email, password);
-            loadingScreen.SetActive(false);
         }
         else
         {
             SignText.text = "Mật khẩu không trùng khớp";
+            loadingScreen.SetActive(false);
         }
-
     }
+
     public async Task RegisterUser(string email, string password)
     {
         try
@@ -99,6 +99,7 @@ public class EmailPassLogin : MonoBehaviour
 
             // Gửi email xác thực
             await SendVerificationEmail(newUser);
+            loadingScreen.SetActive(false);
         }
         catch (FirebaseException e)
         {
@@ -120,6 +121,7 @@ public class EmailPassLogin : MonoBehaviour
                 SignText.text = "Mật khẩu không đủ mạnh.";
             }
             // Xử lý lỗi đăng ký (ví dụ: hiển thị thông báo cho người dùng)
+            loadingScreen.SetActive(false);
         }
     }
 
@@ -131,17 +133,17 @@ public class EmailPassLogin : MonoBehaviour
             Debug.Log("Email xác thực đã được gửi tới: " + user.Email);
             SignText.text = "Email xác thực đã được gửi tới: " + user.Email;
             // Thông báo cho người dùng kiểm tra email của họ
+            loadingScreen.SetActive(false);
         }
         catch (System.Exception e)
         {
             Debug.Log("Lỗi gửi email xác thực: " + e.Message);
 
             // Xử lý lỗi gửi email (ví dụ: hiển thị thông báo cho người dùng)
+            loadingScreen.SetActive(false);
         }
     }
 
-    #region Login
-  
     public async void Login()
     {
         loadingScreen.SetActive(true);
@@ -149,9 +151,6 @@ public class EmailPassLogin : MonoBehaviour
         string email = LoginEmail.text;
         string password = loginPassword.text;
         await LoginUser(email, password);
-        loadingScreen.SetActive(false);
-
-
     }
 
     public async Task LoginUser(string email, string password)
@@ -159,13 +158,30 @@ public class EmailPassLogin : MonoBehaviour
         if (string.IsNullOrEmpty(password))
         {
             loginText.text = "Vui lòng nhập mật khẩu.";
+            loadingScreen.SetActive(false);
             return;
         }
 
         try
         {
             var authResult = await auth.SignInWithEmailAndPasswordAsync(email, password);
-            ReadData();
+            if(!authResult.User.IsEmailVerified)
+            {
+                if (!authResult.User.IsEmailVerified)
+                {
+                    loginText.text = "Email chưa được xác thực. Vui lòng kiểm tra email của bạn.";
+
+                    // Gửi email xác thực
+                    await authResult.User.SendEmailVerificationAsync();
+                    loginText.text += "\nEmail xác thực đã được gửi lại.";
+                }
+                else
+                {
+                    // Email đã được xác thực
+                    ReadData();
+                }
+                    loadingScreen.SetActive(false);
+            }
         }
         catch (FirebaseException e)
         {
@@ -186,11 +202,14 @@ public class EmailPassLogin : MonoBehaviour
                 Debug.Log("Lỗi đăng nhập: " + e.Message);
                 loginText.text = e.Message;
             }
+            loadingScreen.SetActive(false);
         }
     }
 
     public async void ResetPass()
     {
+        loadingScreen.SetActive(true);
+
         string email = resetPassEmail.text;
         await SendPasswordResetEmail(email);
     }
@@ -200,6 +219,7 @@ public class EmailPassLogin : MonoBehaviour
         {
             await auth.SendPasswordResetEmailAsync(email);
             resetPassText.text = "Email khôi phục mật khẩu đã được gửi thành công.";
+            loadingScreen.SetActive(false);
         }
         catch (FirebaseException e)
         {
@@ -212,18 +232,10 @@ public class EmailPassLogin : MonoBehaviour
                 Debug.Log("Lỗi khi gửi email khôi phục mật khẩu: " + e.Message);
                 resetPassText.text = "Lỗi khi gửi email khôi phục mật khẩu.";
             }
+            loadingScreen.SetActive(false);
         }
-    }
 
-    //public async void OnChangePasswordButtonClick()
-    //{
-    //    string newPassword = newPasswordInputField.text;
-    //    string newPassword2 = newPasswordInputField2.text;
-    //    if(newPasswordInputField == newPasswordInputField2)
-    //    {
-    //        await ChangePassword(newPassword);
-    //    }
-    //}
+    }
 
     public async Task ChangePassword(string newPassword)
     {
@@ -247,14 +259,12 @@ public class EmailPassLogin : MonoBehaviour
         }
     }
 
-
     public void LogOut()
     {
         auth.SignOut();
         return;
     }
 
-    #region
     public void QuitGame()
     {
         Application.Quit();
@@ -263,7 +273,6 @@ public class EmailPassLogin : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
     }
-    #endregion
 
     public void ReadData()
     {
@@ -275,9 +284,7 @@ public class EmailPassLogin : MonoBehaviour
                 if (loaded.playerName != null)
                 {
                     GameManager.instance.LoadScene(2, 3);
-
                 }
-
             }
             else
             {
@@ -297,10 +304,8 @@ public class EmailPassLogin : MonoBehaviour
         if(IsPlayerNameInputValid())
         {
             DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, playerInfo);
-            //DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, currency);
             GameManager.instance.LoadScene(2, 3);
         }
-
     }
 
     private bool IsPlayerNameInputValid()
@@ -317,10 +322,6 @@ public class EmailPassLogin : MonoBehaviour
 
             return false;
         }
-
         return true;
     }
-        #endregion
-
-
 }

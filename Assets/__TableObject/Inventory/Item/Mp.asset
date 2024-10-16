@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mp
   icon: {fileID: 21300000, guid: 8c730501f133c5d48a302d1427930cbb, type: 3}
-  rarity: {fileID: 11400000, guid: bfbae45b4f8285b4a90a6b0fe2839b8d, type: 2}
+  rarity: {fileID: 11400000, guid: e204937db6509e841bd80ade69b90124, type: 2}
   sellPrice: 1
   maxStack: 5
   useText: "S\u1EED d\u1EE5ng h\u1ED3i 10% Mp"
