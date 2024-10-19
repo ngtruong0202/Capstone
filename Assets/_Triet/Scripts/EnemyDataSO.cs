@@ -14,7 +14,6 @@ public class EnemyData : ScriptableObject
     public string enemyRaceName;
     public EnemyRace race;
     public EnemyRarity maxRarity;
-    public EnemyType maxType;
     public float basicHp;
     public float basicAtk;
     public float basicAtkSpd;
@@ -23,4 +22,6 @@ public class EnemyData : ScriptableObject
     public float basicCriticalDmg;
     public string description;
     public EnemySkillSO enemySkill;
+    public List<GameObject> spawnPrefab = new List<GameObject>();
+    public int maxSpawnAmount;
 }
