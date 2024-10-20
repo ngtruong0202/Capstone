@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
+  - Tar1
+  - Tar2
+  - Tar3
+  - Tar4
   layers:
   - Default
   - TransparentFX
@@ -11,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - NPC
+  - Player
   - 
   - 
   - 
