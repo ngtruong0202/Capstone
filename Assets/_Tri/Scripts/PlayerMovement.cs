@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = characterController.isGrounded;
         if (grounded && playerVelocity.y < 0)
         {
-            playerVelocity.y = 0;
+            playerVelocity.y = -1;
         }
     }
 

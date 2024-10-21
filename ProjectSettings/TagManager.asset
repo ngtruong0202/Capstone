@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Water
   - NPC
   - Tar1
   - Tar2
@@ -13,7 +14,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Environment
   - Water
   - UI
   - Ground
