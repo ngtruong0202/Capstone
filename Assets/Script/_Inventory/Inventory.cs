@@ -1,8 +1,7 @@
-﻿using Unity.VisualScripting.FullSerializer;
-using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Inventory")]
+[CreateAssetMenu(menuName = "Inventory/inventory")]
+
 
 public class Inventory : ScriptableObject
 {

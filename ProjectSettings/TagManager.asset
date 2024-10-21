@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - NPC
+  - Tar1
+  - Tar2
+  - Tar3
+  - Tar4
   layers:
   - Default
   - TransparentFX
@@ -12,9 +17,9 @@ TagManager:
   - Environment
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - NPC
+  - Player
   - 
   - 
   - 
