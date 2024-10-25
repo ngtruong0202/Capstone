@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private SpawnerManager manager;
     public EnemyDataSO enemyDataSO;
+    public Transform playerPosition;
     [SerializeField] private EnemyRace enemyWantToSpawn;
     public List<Enemy> enemies = new List<Enemy>();
     [SerializeField] private bool isSpawned; // true đã spawn, false chưa spawn
@@ -20,19 +20,19 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(manager.playerPositon.position, transform.position) < 20f)
-        {
-            CheckAndSpawn();
-        }
-        else if (Vector3.Distance(manager.playerPositon.position, transform.position) > 100f)
-        {
-            if (enemies.Count != 0)
-            {
-                foreach (var item in enemies)
-                    item.DestroyEnemy();
-            }
-            gameObject.SetActive(false);
-        }
+        //if (Vector3.Distance(manager.playerPositon.position, transform.position) < 50f)
+        //{
+        //    CheckAndSpawn();
+        //}
+        //else if (Vector3.Distance(manager.playerPositon.position, transform.position) > 200f)
+        //{
+        //    if (enemies.Count != 0)
+        //    {
+        //        foreach (var item in enemies)
+        //            item.DestroyEnemy();
+        //    }
+        //    gameObject.SetActive(false);
+        //}
     }
     private void OnEnable()
     {
@@ -61,13 +61,14 @@ public class EnemySpawner : MonoBehaviour
     }
     private IEnumerator SpawnEnemies()
     {
+        Debug.Log(transform.position);
         var randomAmount = Random.Range(1, enemyData.maxSpawnAmount + 1);
         for(int i = 0; i< randomAmount; i++)
         {
             var enemy = Instantiate(enemyData.spawnPrefab[Random.Range(0, enemyData.spawnPrefab.Count)],
-                transform.position + new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
+                new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
                 Quaternion.identity, transform);
-            enemy.GetComponent<Enemy>().manager = this;
+            enemy.GetComponent<Enemy>().spawner = this;
             enemies.Add(enemy.GetComponent<Enemy>());
             yield return new WaitForSeconds(0.3f);
         }
@@ -77,4 +78,31 @@ public class EnemySpawner : MonoBehaviour
         enemies.Remove(enemy);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckAndSpawn();
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CheckAndSpawn();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (enemies.Count != 0)
+            {
+                for(int i = enemies.Count -1; i >= 0; i--)
+                {
+                    enemies[i].DestroyEnemy();
+                }
+            }
+        }
+    }
 }

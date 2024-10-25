@@ -20,11 +20,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyState currentState;
     private NavMeshAgent navMeshAgent;
     [SerializeField] private float timeToPatrolling;
-    public EnemySpawner manager;
+    public EnemySpawner spawner;
 
     private void GetEnemyData()
     {
-        var enemyInfo = manager.enemyDataSO.datas.Find(data => data.race == race);
+        var enemyInfo = spawner.enemyDataSO.datas.Find(data => data.race == race);
     }
 
     private void InitEnemyData()
@@ -46,17 +46,17 @@ public class Enemy : MonoBehaviour
     }
     public void DestroyEnemy()
     {
-        manager.RemoveEnemySpawned(this);
+        spawner.RemoveEnemySpawned(this);
         Destroy(gameObject);
     }
     //điều khiển idle state
     private void HandleIdleState()
     {
-        //if(manager.playerPositon - transform.position )
+        //if (Vector3.Distance(spawner.playerPositon, transform.position)
     }
     private IEnumerator TimerIdleState()
     {
-        var parentPosition = manager.transform.position;
+        var parentPosition = spawner.transform.position;
         yield return new WaitForSecondsRealtime(timeToPatrolling);
         if(currentState == EnemyState.Idle)
         {
