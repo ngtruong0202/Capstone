@@ -9,34 +9,23 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemyRace enemyWantToSpawn;
     public List<Enemy> enemies = new List<Enemy>();
     [SerializeField] private bool isSpawned; // true đã spawn, false chưa spawn
+    [SerializeField] private bool isInSpawner;
     [SerializeField] private EnemyData enemyData;
     [SerializeField] private float timeRespawn;
+    [SerializeField] private int countEnemySpawned;
+    [SerializeField] private int enemyRemoved;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //if (Vector3.Distance(manager.playerPositon.position, transform.position) < 50f)
-        //{
-        //    CheckAndSpawn();
-        //}
-        //else if (Vector3.Distance(manager.playerPositon.position, transform.position) > 200f)
-        //{
-        //    if (enemies.Count != 0)
-        //    {
-        //        foreach (var item in enemies)
-        //            item.DestroyEnemy();
-        //    }
-        //    gameObject.SetActive(false);
-        //}
+        enemyRemoved = 0;
     }
     private void OnEnable()
     {
         enemyData = enemyDataSO.datas.Find(e => e.race == enemyWantToSpawn);
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
     public void CheckAndSpawn()
     {
@@ -54,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(timeRespawn); // Đợi 1 khoảng thời gian
 
-        if (enemies.Count == 0) // Kiểm tra lại nếu số lượng quái bằng 0
+        if (enemies.Count == 0 && isInSpawner) // Kiểm tra lại nếu số lượng quái bằng 0 và trong vùng spawn
         {
             StartCoroutine(SpawnEnemies()); // Spawn lại quái
         }
@@ -62,8 +51,8 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnEnemies()
     {
         Debug.Log(transform.position);
-        var randomAmount = Random.Range(1, enemyData.maxSpawnAmount + 1);
-        for(int i = 0; i< randomAmount; i++)
+        countEnemySpawned = Random.Range(1, enemyData.maxSpawnAmount + 1);
+        for(int i = 0; i< countEnemySpawned; i++)
         {
             var enemy = Instantiate(enemyData.spawnPrefab[Random.Range(0, enemyData.spawnPrefab.Count)],
                 new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
@@ -76,19 +65,19 @@ public class EnemySpawner : MonoBehaviour
     public void RemoveEnemySpawned(Enemy enemy)
     {
         enemies.Remove(enemy);
+        enemyRemoved += 1;
+        if(enemyRemoved >= countEnemySpawned)
+        {
+            enemyRemoved = 0;
+            CheckAndSpawn();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            CheckAndSpawn();
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
+            isInSpawner = true;
             CheckAndSpawn();
         }
     }
@@ -103,6 +92,7 @@ public class EnemySpawner : MonoBehaviour
                     enemies[i].DestroyEnemy();
                 }
             }
+            isInSpawner = false;
         }
     }
 }

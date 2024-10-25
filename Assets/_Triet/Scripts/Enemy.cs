@@ -44,6 +44,10 @@ public class Enemy : MonoBehaviour
     {
         StateController();
     }
+    private void OnDestroy()
+    {
+        spawner.RemoveEnemySpawned(this);
+    }
     public void DestroyEnemy()
     {
         spawner.RemoveEnemySpawned(this);
