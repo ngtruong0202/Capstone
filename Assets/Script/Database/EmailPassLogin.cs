@@ -165,24 +165,23 @@ public class EmailPassLogin : MonoBehaviour
         try
         {
             var authResult = await auth.SignInWithEmailAndPasswordAsync(email, password);
-            if(!authResult.User.IsEmailVerified)
+            if (!authResult.User.IsEmailVerified)
             {
-                if (!authResult.User.IsEmailVerified)
-                {
-                    loginText.text = "Email chưa được xác thực. Vui lòng kiểm tra email của bạn.";
+                loginText.text = "Email chưa được xác thực. Vui lòng kiểm tra email của bạn.";
 
-                    // Gửi email xác thực
-                    await authResult.User.SendEmailVerificationAsync();
-                    loginText.text += "\nEmail xác thực đã được gửi lại.";
-                }
-                else
-                {
-                    // Email đã được xác thực
-                    ReadData();
-                }
-                    loadingScreen.SetActive(false);
+                // Gửi email xác thực
+                await authResult.User.SendEmailVerificationAsync();
+                loginText.text += "\nEmail xác thực đã được gửi lại.";
             }
+            else
+            {
+                // Email đã được xác thực
+                ReadData();
+            }
+            loadingScreen.SetActive(false);
+
         }
+
         catch (FirebaseException e)
         {
             if (e.ErrorCode == (int)AuthError.InvalidEmail)
@@ -202,6 +201,7 @@ public class EmailPassLogin : MonoBehaviour
                 Debug.Log("Lỗi đăng nhập: " + e.Message);
                 loginText.text = e.Message;
             }
+
             loadingScreen.SetActive(false);
         }
     }
@@ -276,14 +276,14 @@ public class EmailPassLogin : MonoBehaviour
 
     public void ReadData()
     {
-
         DataSever.Instance.LoadDataFn<PlayerInfo>("User/" + auth.CurrentUser.UserId, (loaded) =>
         {
             if (loaded != null)
             {
                 if (loaded.playerName != null)
                 {
-                    GameManager.instance.LoadScene(2, 3);
+                    //truyền vào scene đang ở
+                    GameManager.instance.StartGame("Map");
                 }
             }
             else
@@ -304,7 +304,7 @@ public class EmailPassLogin : MonoBehaviour
         if(IsPlayerNameInputValid())
         {
             DataSever.Instance.SaveDataFn("User/" + auth.CurrentUser.UserId, playerInfo);
-            GameManager.instance.LoadScene(2, 3);
+            GameManager.instance.StartGame("Map");
         }
     }
 

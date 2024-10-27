@@ -827,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f043527c2061b4e854a5d417dfd8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPrefabs: {fileID: 5757999885686892236, guid: 6fcb49c83e1c1514cb1d192546d5ba92, type: 3}
   loadingScreen: {fileID: 67989419}
   bar: {fileID: 1159770898}
   _bar: {fileID: 671272176}
