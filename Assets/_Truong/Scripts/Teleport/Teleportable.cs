@@ -11,12 +11,7 @@ public class Teleportable : MonoBehaviour
     }
     public void TeleportTo(Transform destination)
     {
-        Debug.Log(gameObject.transform.position + "1");
-        Debug.Log(destination.position + "destina");
         rb.MovePosition(destination.position);
-        //gameObject.transform.position = destination.position;
-        Debug.Log(gameObject.transform.position + "2");
-
     }
 
 }
