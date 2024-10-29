@@ -7,10 +7,10 @@ public class EnemySpawner : MonoBehaviour
     public EnemyDataSO enemyDataSO;
     public Transform playerPosition;
     [SerializeField] private EnemyRace enemyWantToSpawn;
-    public List<Enemy> enemies = new List<Enemy>();
+    public List<EnemyStateMachine> enemies = new List<EnemyStateMachine>();
     [SerializeField] private bool isSpawned; // true đã spawn, false chưa spawn
     [SerializeField] private bool isInSpawner;
-    [SerializeField] private EnemyData enemyData;
+    public EnemyData enemyData;
     [SerializeField] private float timeRespawn;
     [SerializeField] private int countEnemySpawned;
     [SerializeField] private int enemyRemoved;
@@ -50,19 +50,18 @@ public class EnemySpawner : MonoBehaviour
     }
     private IEnumerator SpawnEnemies()
     {
-        Debug.Log(transform.position);
         countEnemySpawned = Random.Range(1, enemyData.maxSpawnAmount + 1);
         for(int i = 0; i< countEnemySpawned; i++)
         {
             var enemy = Instantiate(enemyData.spawnPrefab[Random.Range(0, enemyData.spawnPrefab.Count)],
                 new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
                 Quaternion.identity, transform);
-            enemy.GetComponent<Enemy>().spawner = this;
-            enemies.Add(enemy.GetComponent<Enemy>());
+            enemy.GetComponent<EnemyStateMachine>().spawner = this;
+            enemies.Add(enemy.GetComponent<EnemyStateMachine>());
             yield return new WaitForSeconds(0.3f);
         }
     }
-    public void RemoveEnemySpawned(Enemy enemy)
+    public void RemoveEnemySpawned(EnemyStateMachine enemy)
     {
         enemies.Remove(enemy);
         enemyRemoved += 1;
