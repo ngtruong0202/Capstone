@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,9 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
 
     public static GameManager instance;
+
+    public GameObject playerPrefabs;
+
     public GameObject loadingScreen;
     public Slider bar;
     public Image _bar;
@@ -33,47 +35,85 @@ public class GameManager : MonoBehaviour
     {
         loadingScreen.gameObject.SetActive(true);
 
-        //scenesLoading.Add(SceneManager.UnloadSceneAsync(0));
-        scenesLoading.Add(SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive));
-
+        if (!SceneManager.GetSceneByName("Login").isLoaded)
+        {
+            scenesLoading.Add(SceneManager.LoadSceneAsync("Login", LoadSceneMode.Additive));
+        }
+        
         StartCoroutine(GetSceneLoadPropress());
     }
 
-    public void LoadScene(int scene1, int scene2)
+    public void StartGame(string scene)
     {
         loadingScreen.gameObject.SetActive(true);
         if (SceneManager.GetSceneByName("Login").isLoaded)
         {
             scenesLoading.Add(SceneManager.UnloadSceneAsync("Login"));
         }
-        scenesLoading.Add(SceneManager.LoadSceneAsync(scene1, LoadSceneMode.Additive));
-        scenesLoading.Add(SceneManager.LoadSceneAsync(scene2, LoadSceneMode.Additive));
+        if (!SceneManager.GetSceneByName("MainScene").isLoaded)
+        {
+            scenesLoading.Add(SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive));
+        }
+
+        if (!SceneManager.GetSceneByName(scene).isLoaded)
+        {
+            scenesLoading.Add(SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive));
+        }
+
         StartCoroutine(GetSceneLoadPropress());
 
+        Vector3 vector3 = new Vector3(-2, -12, 35);
+
+        Instantiate(playerPrefabs, vector3, Quaternion.identity);
+    }
+
+    public void LoadScene(string newScene, string currentScene)
+    {
+        loadingScreen.gameObject.SetActive(true);
+
+        if (!SceneManager.GetSceneByName("MainScene").isLoaded)
+        {
+            scenesLoading.Add(SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive));
+        }
+
+        //if (!SceneManager.GetSceneByName(newScene).isLoaded)
+        //{
+        //    scenesLoading.Add(SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Additive));
+        //}
+
+        if (SceneManager.GetSceneByName(currentScene).isLoaded)
+        {
+            scenesLoading.Add(SceneManager.UnloadSceneAsync(currentScene));
+        }
+
+        StartCoroutine(GetSceneLoadPropress());
     }
 
     public IEnumerator GetSceneLoadPropress()
     {
-        for (int i = 0; i < scenesLoading.Count; i++)
+        float totalProgress = 0f;
+        while (scenesLoading.Count > 0)
         {
-            while (!scenesLoading[i].isDone)
+            totalProgress = 0f;
+
+            foreach (AsyncOperation operation in scenesLoading)
             {
-                float totalSceneProgress = 0;
-                foreach (AsyncOperation operation in scenesLoading)
-                {
-                    totalSceneProgress += operation.progress;
-                }
-                totalSceneProgress = (totalSceneProgress / scenesLoading.Count) * 100;
-
-                bar.value = (int)totalSceneProgress;
-                //_bar.fillAmount = totalSceneProgress;
-
-                barTxt.text = totalSceneProgress.ToString("0");
-                yield return null;
+                totalProgress += operation.progress;
             }
+
+            float progressPercentage = totalProgress / scenesLoading.Count;
+            _bar.fillAmount = progressPercentage;
+
+            float totaltxt = progressPercentage * 100;
+            barTxt.text = totaltxt.ToString("0");
+
+            if (totalProgress >= scenesLoading.Count)
+            {
+                loadingScreen.SetActive(false);
+                scenesLoading.Clear();
+            }
+
+            yield return null;
         }
-
-        loadingScreen.gameObject.SetActive(false);
-
     }
 }
