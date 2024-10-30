@@ -7,23 +7,18 @@ public class EnemyDetection : MonoBehaviour
 {
     public SphereCollider sphereCollider;
 
-    //public float detectionRadius = 15f;
-    public LayerMask enemyLayer;
-
     public List<Transform> detecedEnemies = new List<Transform>();
-    private Transform currentTarget;
+    public LayerMask enemyLayer;
+    public Transform currentTarget;
+
     private int currentIndex = 0;
 
-    private void Start()
-    {
-        sphereCollider = GetComponent<SphereCollider>();
-
-    }
+  
     private void Update()
     {
         if(Input.GetMouseButtonDown(2))
         {
-            GetRandomEnemy();
+            GetTransformEnemy();
         }
     }
 
@@ -32,10 +27,6 @@ public class EnemyDetection : MonoBehaviour
         if(((1 << other.gameObject.layer) & enemyLayer) != 0)
         {
             detecedEnemies.Add(other.transform);
-            if(currentTarget == null)
-            {
-                ChangeTarget(other.transform);
-            }
         }
     }
 
@@ -43,26 +34,17 @@ public class EnemyDetection : MonoBehaviour
     {
         if(((1 << other.gameObject.layer) & enemyLayer) != 0)
         {
-            detecedEnemies.Remove(other.transform);
-            if(currentTarget == other.transform)
-            {
-                currentTarget = null;
-                ChangeTarget(null);
-            }
+            detecedEnemies.Remove(other.transform);           
         }
-    }
+    }    
 
-    private void ChangeTarget(Transform newTarget)
+    public Transform GetTransformEnemy()
     {
-        if(newTarget == null) return;
+        detecedEnemies.RemoveAll(x => x == null);
+        currentTarget = null;
 
-        currentTarget = newTarget;
-    }
-
-    public Transform GetRandomEnemy()
-    {
-        if(detecedEnemies == null) return null;
-
+        if (detecedEnemies.Count == 0) return null;
+       
         Transform enemy = detecedEnemies[currentIndex];
         currentIndex = (currentIndex + 1) % detecedEnemies.Count;
 
@@ -77,15 +59,25 @@ public class EnemyDetection : MonoBehaviour
         Transform closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
-        foreach(Transform enemy in detecedEnemies)
+        foreach (Transform enemy in detecedEnemies)
         {
             float distance = Vector3.Distance(transform.position, enemy.position);
-            if(distance < closestDistance)
+            if (distance < closestDistance)
             {
                 closestDistance = distance;
                 closestEnemy = enemy;
+                currentTarget = closestEnemy;
             }
         }
+        Debug.Log(closestEnemy.name);
         return closestEnemy;
     }
+
+    private void ChangeTarget(Transform newTarget)
+    {
+        if (newTarget == null) return;
+
+        currentTarget = newTarget;
+    }
+
 }
