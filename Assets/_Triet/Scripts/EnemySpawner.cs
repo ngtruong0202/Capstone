@@ -14,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float timeRespawn;
     [SerializeField] private int countEnemySpawned;
     [SerializeField] private int enemyRemoved;
+    public int enemyDomainX;
+    public int enemyDomainZ;
 
     private void Start()
     {
