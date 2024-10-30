@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     public Rigidbody Rigidbody { get; private set; }
 
+    public Transform MainCameraTransform { get; private set; }
+
     private PlayerMovementStateMachine movementStateMachine;
 
     private void Awake()
@@ -18,6 +20,8 @@ public class Player : MonoBehaviour
         Rigidbody = GetComponent<Rigidbody>();
 
         Input = GetComponent<PlayerInputs>();
+
+        MainCameraTransform = Camera.main.transform;
 
         movementStateMachine = new PlayerMovementStateMachine(this);
     }

@@ -11,9 +11,21 @@ public class PlayerMovementState : IState
     protected float speedModifier = 1f;
 
 
+    protected Vector3 currentTargetRotation;
+    protected Vector3 timeToReachTargetRotation;
+    protected Vector3 dampedTargetRotationCurrentVelocity;
+    protected Vector3 dampedTargetRotationPassedTime;
+
     public PlayerMovementState(PlayerMovementStateMachine playerMovementStateMachine)
     {
         stateMachine = playerMovementStateMachine;
+
+        InitializeData();
+    }
+
+    private void InitializeData()
+    {
+        timeToReachTargetRotation.y = 0.14f;
     }
 
     #region IState Method
@@ -56,11 +68,56 @@ public class PlayerMovementState : IState
 
         Vector3 movementDirection = GetMovementInputDirection();
 
+        float targetRotationYAngle = Rotate(movementDirection);
+
+        Vector3 targetRotationDirection = GetTargetRotationDirection(targetRotationYAngle);
+
         float movementSpeed = GetMovementSpeed();
 
         Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
 
-        stateMachine.Player.Rigidbody.AddForce( movementSpeed * 0.5f * movementDirection - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+        stateMachine.Player.Rigidbody.AddForce( targetRotationDirection * movementSpeed - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+    }
+
+    private float Rotate(Vector3 direction)
+    {
+        float directionAngle = UpdateTargetRotation(direction);
+
+        RotateTowardsTargetRotation();
+
+        return directionAngle;
+    }
+
+
+    private float GetDirectionAngle(Vector3 direction)
+    {
+        float directionAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+
+        if (directionAngle < 0f)
+        {
+            directionAngle += 360f; 
+        }
+
+        return directionAngle;
+    }
+
+    private float AddCameraRotationToAngle(float angle)
+    {
+        angle += stateMachine.Player.MainCameraTransform.eulerAngles.y;
+
+        if (angle > 360f)
+        {
+            angle -= 360f;
+        }
+
+        return angle;
+    }
+
+    private void UpdateTargetRotationData(float targetAngle)
+    {
+        currentTargetRotation.y = targetAngle;
+
+        dampedTargetRotationPassedTime.y = 0f;
     }
     #endregion
 
@@ -82,6 +139,46 @@ public class PlayerMovementState : IState
         playerHorizontalVelocity.y = 0f;
 
         return playerHorizontalVelocity;
+    }
+
+    protected void RotateTowardsTargetRotation()
+    {
+        float currentYAngle = stateMachine.Player.Rigidbody.rotation.eulerAngles.y;
+
+        if (currentYAngle == currentTargetRotation.y)
+        {
+            return;
+        }
+
+        float smoothedYangle = Mathf.SmoothDampAngle(currentYAngle, currentTargetRotation.y, ref dampedTargetRotationCurrentVelocity.y, timeToReachTargetRotation.y - dampedTargetRotationPassedTime.y);
+
+        dampedTargetRotationPassedTime.y += Time.deltaTime;
+
+        Quaternion targetrotation = Quaternion.Euler(0f, smoothedYangle, 0f);
+
+        stateMachine.Player.Rigidbody.MoveRotation(targetrotation);
+    }
+
+    protected float UpdateTargetRotation(Vector3 direction, bool shouldconsiderCameraRotation = true)
+    {
+        float directionAngle = GetDirectionAngle(direction);
+        
+        if (shouldconsiderCameraRotation)
+        {
+            directionAngle = AddCameraRotationToAngle(directionAngle);
+        }
+
+        if (directionAngle != currentTargetRotation.y)
+        {
+            UpdateTargetRotationData(directionAngle);
+        }
+
+        return directionAngle;
+    }
+
+    protected Vector3 GetTargetRotationDirection(float targetAngle)
+    {
+        return Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
     }
     #endregion
 }
