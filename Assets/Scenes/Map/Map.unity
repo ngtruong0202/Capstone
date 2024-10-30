@@ -121,7 +121,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 33d03d97bf57a8243ba2acc2319dc6c5, type: 2}
 --- !u!4 &6302519 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4607728610933304206, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
@@ -1254,7 +1254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4607728610933304284, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 4607728610933304284, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1291,6 +1291,10 @@ PrefabInstance:
     - target: {fileID: 4607728610933304284, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607728610940519514, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1389,6 +1393,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1682346324}
+  rb: {fileID: 1682346327}
+  enemyDetection: {fileID: 1682346328}
 --- !u!95 &1682346324 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4607728610940519514, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
@@ -1446,9 +1452,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!114 &1682346328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,10 +1468,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sphereCollider: {fileID: 1357400156}
+  detecedEnemies: []
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
-  detecedEnemies: []
+  currentTarget: {fileID: 0}
 --- !u!4 &2009554969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3844468866533298215, guid: ea7a10c5c926ecf488472c8aa689c5c2, type: 3}
