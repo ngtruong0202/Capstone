@@ -21,6 +21,7 @@ MonoBehaviour:
   basicDef: 200
   basicCriticalRate: 25
   basicCriticalDmg: 120
+  speed: 2
   description: Dragon
   enemySkill: {fileID: 0}
   spawnPrefab:

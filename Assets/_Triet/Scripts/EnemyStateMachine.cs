@@ -7,11 +7,14 @@ public class EnemyStateMachine : MonoBehaviour
 {
     [Header("State machine")]
     [SerializeField] private EnemyState currentState;
-    [SerializeField] private float timeToPatrolling;
     public EnemySpawner spawner;
+    [SerializeField] EnemyInfomation enemyInfomation;
     [SerializeField] private Animator animator;
-    [SerializeField] float idleTimer;
+    [Header("Time")]
+    [SerializeField] float timer;
     [SerializeField] float timeChangePatrol;
+    [SerializeField] private float patrollingTime;
+    [Header("Patrolling")]
     [SerializeField] bool havePatrolPoint;
     [SerializeField] Vector3 patrolPoint;
     Vector3 enemyDirection;
@@ -19,6 +22,7 @@ public class EnemyStateMachine : MonoBehaviour
     {
         currentState = EnemyState.Idle;
         timeChangePatrol = 50f;
+        patrollingTime = 10f;
     }
     private void FixedUpdate()
     {
@@ -29,11 +33,11 @@ public class EnemyStateMachine : MonoBehaviour
         spawner.RemoveEnemySpawned(this);
         Destroy(gameObject);
     }
-
-    private bool ShouldStartPatrolling()
+    
+    private bool ShouldChangeState(float timeChange)
     {
-        idleTimer += Time.deltaTime;
-        return idleTimer >= timeChangePatrol;
+        timer += Time.deltaTime;
+        return timer >= timeChange;
     }
     private void LoadAnim(string name, float value)
     {
@@ -61,15 +65,22 @@ public class EnemyStateMachine : MonoBehaviour
 
     #region Enemy State Logic
     //điều khiển idle state
+    #region Idle
     private void IdleState()
     {
-        if (CheckDistanceToTarget(spawner.playerPosition.position) <= 5)
+        if (PlayerEnterArea(enemyInfomation.warningArea))
         {
             Debug.Log("Change warning state");
             LoadAnim("isWarning", true);
             ChangeState(EnemyState.Warning);
         }
-        if (!ShouldStartPatrolling())
+        else
+            IdleCoroutine();
+    }
+    // vòng lặp chính của idle state
+    private void IdleCoroutine()
+    {
+        if (!ShouldChangeState(timeChangePatrol))
         {
             AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
             if (currentState.normalizedTime >= 1 && !animator.IsInTransition(0))
@@ -83,47 +94,93 @@ public class EnemyStateMachine : MonoBehaviour
         else
         {
             Debug.Log("Change patrolling state");
-            idleTimer = 0;
+            LoadAnim("isMove", true);
+            timer = 0;
             ChangeState(EnemyState.Patrol);
         }
     }
+    // load ngẫu nhiên 1 trong số các idle anim 
+    private void RandomLoadIdleAnim()
+    {
+        LoadAnim("IdleState", Random.Range(1, 3));
+    }
+    #endregion
     //điều khiển warning state
+    #region Warning
     private void WarningState()
     {
         RotateToTarget(spawner.playerPosition.position);
-        if (CheckDistanceToTarget(spawner.playerPosition.position) <= 3f)
+        if (PlayerEnterArea(enemyInfomation.chaseArea))
         {
             Debug.Log("Change chase state");
             ChangeState(EnemyState.Chase);
         }
-        else if (CheckDistanceToTarget(spawner.playerPosition.position) > 5)
+        else if (!PlayerEnterArea(enemyInfomation.warningArea))
         {
             Debug.Log("Change idle state");
-            LoadAnim("IdleState", Random.Range(1, 3));
+            RandomLoadIdleAnim();
             LoadAnim("isWarning", false);
             ChangeState(EnemyState.Idle);
         }
     }
+    // kiểm tra player vào vùng nào
+    private bool PlayerEnterArea(float area)
+    {
+        return CheckDistanceToTarget(spawner.playerPosition.position) < area;
+    }
+    #endregion
+
     //điều khiển Patrol state
+    #region patrolling
     private void PatrolState()
     {
-        if (!havePatrolPoint)
+        if (PlayerEnterArea(enemyInfomation.warningArea))
         {
-            patrolPoint = new Vector3(Random.Range(-30f, 30f), 0, Random.Range(-30f, 30f));
-            havePatrolPoint = true;
+            Debug.Log("Change warning state");
+            LoadAnim("isWarning", true);
+            LoadAnim("isMove", false);
+            ChangeState(EnemyState.Warning);
         }
         else
         {
-            RotateToTarget(patrolPoint);
-            Debug.Log(enemyDirection.normalized * 0.1f * Time.deltaTime);
-            transform.position += enemyDirection.normalized * 1f * Time.deltaTime;
-            if (CheckDistanceToTarget(patrolPoint) <= 0.1f)
+            EnemyPatrolling();
+        }
+
+    }
+    // vòng lặp của patrolling
+    private void EnemyPatrolling()
+    {
+        if (!ShouldChangeState(patrollingTime))
+        {
+            if (!havePatrolPoint)
             {
-                havePatrolPoint = false;
-                return;
+                patrolPoint = new Vector3(Random.Range(-30f, 30f), 0, Random.Range(-30f, 30f));
+                havePatrolPoint = true;
+            }
+            else
+            {
+                RotateToTarget(patrolPoint);
+                transform.position += enemyDirection.normalized * enemyInfomation.EnemySpeed * Time.deltaTime;
+                if (CheckDistanceToTarget(patrolPoint) <= 0.1f)
+                {
+                    havePatrolPoint = false;
+                    return;
+                }
+                var moveX = enemyDirection.x >= 0 ? 1 : -1; // vì patrolling (tuần tra) nên sẽ đi bộ nên set = 1 và -1
+                var moveZ = enemyDirection.z >= 0 ? 1 : -1;
+                LoadAnim("MoveX", moveX);
+                LoadAnim("MoveZ", moveZ);
             }
         }
+        else
+        {
+            timer = 0;
+            RandomLoadIdleAnim();
+            LoadAnim("isMove", false);
+            ChangeState(EnemyState.Idle);
+        }
     }
+    #endregion
     //
     private void ChaseState()
     {
