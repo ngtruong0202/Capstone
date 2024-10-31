@@ -4,39 +4,30 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private SpawnerManager manager;
     public EnemyDataSO enemyDataSO;
+    public Transform playerPosition;
     [SerializeField] private EnemyRace enemyWantToSpawn;
-    public List<Enemy> enemies = new List<Enemy>();
+    public List<EnemyStateMachine> enemies = new List<EnemyStateMachine>();
     [SerializeField] private bool isSpawned; // true đã spawn, false chưa spawn
-    [SerializeField] private EnemyData enemyData;
+    [SerializeField] private bool isInSpawner;
+    public EnemyData enemyData;
     [SerializeField] private float timeRespawn;
+    [SerializeField] private int countEnemySpawned;
+    [SerializeField] private int enemyRemoved;
+    public int enemyDomainX;
+    public int enemyDomainZ;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Vector3.Distance(manager.playerPositon.position, transform.position) < 20f)
-        {
-            CheckAndSpawn();
-        }
-        else if (Vector3.Distance(manager.playerPositon.position, transform.position) > 100f)
-        {
-            if (enemies.Count != 0)
-            {
-                foreach (var item in enemies)
-                    item.DestroyEnemy();
-            }
-            gameObject.SetActive(false);
-        }
+        enemyRemoved = 0;
     }
     private void OnEnable()
     {
         enemyData = enemyDataSO.datas.Find(e => e.race == enemyWantToSpawn);
+    }
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
     public void CheckAndSpawn()
     {
@@ -54,27 +45,55 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(timeRespawn); // Đợi 1 khoảng thời gian
 
-        if (enemies.Count == 0) // Kiểm tra lại nếu số lượng quái bằng 0
+        if (enemies.Count == 0 && isInSpawner) // Kiểm tra lại nếu số lượng quái bằng 0 và trong vùng spawn
         {
             StartCoroutine(SpawnEnemies()); // Spawn lại quái
         }
     }
     private IEnumerator SpawnEnemies()
     {
-        var randomAmount = Random.Range(1, enemyData.maxSpawnAmount + 1);
-        for(int i = 0; i< randomAmount; i++)
+        countEnemySpawned = Random.Range(1, enemyData.maxSpawnAmount + 1);
+        for(int i = 0; i< countEnemySpawned; i++)
         {
             var enemy = Instantiate(enemyData.spawnPrefab[Random.Range(0, enemyData.spawnPrefab.Count)],
-                transform.position + new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
+                new Vector3(transform.position.x + Random.Range(-i, i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
                 Quaternion.identity, transform);
-            enemy.GetComponent<Enemy>().manager = this;
-            enemies.Add(enemy.GetComponent<Enemy>());
+            enemy.GetComponent<EnemyStateMachine>().spawner = this;
+            enemies.Add(enemy.GetComponent<EnemyStateMachine>());
             yield return new WaitForSeconds(0.3f);
         }
     }
-    public void RemoveEnemySpawned(Enemy enemy)
+    public void RemoveEnemySpawned(EnemyStateMachine enemy)
     {
         enemies.Remove(enemy);
+        enemyRemoved += 1;
+        if(enemyRemoved >= countEnemySpawned)
+        {
+            enemyRemoved = 0;
+            CheckAndSpawn();
+        }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isInSpawner = true;
+            CheckAndSpawn();
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (enemies.Count != 0)
+            {
+                for(int i = enemies.Count -1; i >= 0; i--)
+                {
+                    enemies[i].DestroyEnemy();
+                }
+            }
+            isInSpawner = false;
+        }
+    }
 }
