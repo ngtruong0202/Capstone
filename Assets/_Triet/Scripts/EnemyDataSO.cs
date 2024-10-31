@@ -20,6 +20,7 @@ public class EnemyData : ScriptableObject
     public float basicDef;
     public float basicCriticalRate;
     public float basicCriticalDmg;
+    public float speed;
     public string description;
     public EnemySkillSO enemySkill;
     public List<GameObject> spawnPrefab = new List<GameObject>();

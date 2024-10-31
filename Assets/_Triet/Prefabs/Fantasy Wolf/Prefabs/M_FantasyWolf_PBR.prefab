@@ -860,10 +860,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  timeToPatrolling: 0
   spawner: {fileID: 0}
+  enemyInfomation: {fileID: 3737287537523673640}
   animator: {fileID: 9590188}
-  idleTimer: 0
+  timer: 0
+  timeChangePatrol: 10
+  patrollingTime: 10
+  havePatrolPoint: 0
+  patrolPoint: {x: 0, y: 0, z: 0}
+  maxDistance: 20
 --- !u!114 &3737287537523673640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -884,10 +889,14 @@ MonoBehaviour:
   enemyDef: 0
   enemyCriticalRate: 0
   enemyCriticalDmg: 0
+  enemySpeed: 0
   sliderHpBar: {fileID: 7443024203202985166}
   stateMachine: {fileID: 2165574273158040262}
   enemyUI: {fileID: 1847913283709089547}
   isWork: 0
+  warningArea: 7
+  chaseArea: 5
+  attackArea: 3
 --- !u!1 &154900
 GameObject:
   m_ObjectHideFlags: 0

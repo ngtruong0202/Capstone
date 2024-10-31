@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class EnemyInfomation : MonoBehaviour
 {
     public string enemyName { get; private set; }
+    public float EnemySpeed { get => enemySpeed; set => enemySpeed = value; }
+
     [Header("status")]
     public EnemyRace race;
     [SerializeField] private float enemyMaxHp;
@@ -15,11 +17,16 @@ public class EnemyInfomation : MonoBehaviour
     [SerializeField] private float enemyDef;
     [SerializeField] private float enemyCriticalRate;
     [SerializeField] private float enemyCriticalDmg;
+    [SerializeField] private float enemySpeed;
     [Header("Slider")]
     [SerializeField] private Slider sliderHpBar;
     public EnemyStateMachine stateMachine;
     [SerializeField] private GameObject enemyUI;
     public bool isWork;
+    [Header("Area")]
+    public float warningArea;
+    public float chaseArea;
+    public float attackArea;
 
     private void Start()
     {
@@ -47,6 +54,7 @@ public class EnemyInfomation : MonoBehaviour
         enemyDef = enemyInfo.basicDef;
         enemyCriticalRate = enemyInfo.basicCriticalRate;
         enemyCriticalDmg = enemyInfo.basicCriticalDmg;
+        EnemySpeed = enemyInfo.speed;
     }
     private void LateUpdate()
     {
@@ -70,6 +78,7 @@ public class EnemyInfomation : MonoBehaviour
         else
         {
             Debug.Log("Enemy died");
+            stateMachine.isDead = true;
             stateMachine.ChangeState(EnemyState.Dead);
         }
     }
