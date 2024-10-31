@@ -78,6 +78,7 @@ public class EnemyInfomation : MonoBehaviour
         else
         {
             Debug.Log("Enemy died");
+            stateMachine.isDead = true;
             stateMachine.ChangeState(EnemyState.Dead);
         }
     }

@@ -18,14 +18,24 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] bool havePatrolPoint;
     [SerializeField] Vector3 patrolPoint;
     Vector3 enemyDirection;
+    Vector3 spawnPoint;
+    [SerializeField] float maxDistance;
+    [Header("Attack")]
+    bool attacking;
+    public bool isDead;
     private void Start()
     {
         currentState = EnemyState.Idle;
+        spawnPoint = Vector3.zero;
         timeChangePatrol = 50f;
         patrollingTime = 10f;
     }
     private void FixedUpdate()
     {
+        if (isDead)
+        {
+            ChangeState(EnemyState.Dead);
+        }
         StateController();
     }
     public void DestroyEnemy()
@@ -47,10 +57,15 @@ public class EnemyStateMachine : MonoBehaviour
     {
         animator.SetBool(name, value);
     }
-    // kiểm tra khoảng cách với người chơi
+    // kiểm tra khoảng cách với mục tiêu
     private float CheckDistanceToTarget(Vector3 target)
     {
         return Vector3.Distance(target, transform.position);
+    }
+    // kiểm tra player vào vùng nào (warning, chase, atk,...)
+    private bool PlayerEnterArea(float area)
+    {
+        return CheckDistanceToTarget(spawner.playerPosition.position) <= area;
     }
     // xoay enemy về hướng player
     private void RotateToTarget(Vector3 target)
@@ -75,7 +90,9 @@ public class EnemyStateMachine : MonoBehaviour
             ChangeState(EnemyState.Warning);
         }
         else
+        {
             IdleCoroutine();
+        }
     }
     // vòng lặp chính của idle state
     private void IdleCoroutine()
@@ -110,23 +127,23 @@ public class EnemyStateMachine : MonoBehaviour
     private void WarningState()
     {
         RotateToTarget(spawner.playerPosition.position);
+        // nếu player tiến vào vùng truy đuổi
         if (PlayerEnterArea(enemyInfomation.chaseArea))
         {
             Debug.Log("Change chase state");
+            LoadAnim("isMove", true);
+            LoadAnim("isWarning", false);
             ChangeState(EnemyState.Chase);
         }
-        else if (!PlayerEnterArea(enemyInfomation.warningArea))
+        //nếu player ra khỏi vùng cảnh giác
+        if (!PlayerEnterArea(enemyInfomation.warningArea))
         {
             Debug.Log("Change idle state");
             RandomLoadIdleAnim();
+            LoadAnim("isMove", false);
             LoadAnim("isWarning", false);
             ChangeState(EnemyState.Idle);
         }
-    }
-    // kiểm tra player vào vùng nào
-    private bool PlayerEnterArea(float area)
-    {
-        return CheckDistanceToTarget(spawner.playerPosition.position) < area;
     }
     #endregion
 
@@ -182,17 +199,103 @@ public class EnemyStateMachine : MonoBehaviour
     }
     #endregion
     //
+    #region chase
     private void ChaseState()
     {
-
+        // chạy quá xa hoặc khoảng cách giữa 2 bên ngày càng xa thì phải đổi state
+        if (CheckDistanceToTarget(spawnPoint) >= maxDistance)
+        {
+            Debug.Log("max Distance Change back spawn point state");
+            ChangeState(EnemyState.BackSpawnPoint);
+            return;
+        }
+        // nếu vào đúng khoảng cách tấn công thì đổi state
+        if (PlayerEnterArea(enemyInfomation.attackArea))
+        {
+            ChangeState(EnemyState.Attack);
+        }
+        else
+        {
+            RotateToTarget(spawner.playerPosition.position);
+            transform.position += enemyDirection.normalized * (enemyInfomation.EnemySpeed * 2) * Time.deltaTime;
+            var moveX = enemyDirection.x >= 0 ? 2 : -2; // vì chase (truy duổi) nên sẽ chạy nên set = 2 và -2
+            var moveZ = enemyDirection.z >= 0 ? 2 : -2;
+            LoadAnim("MoveX", moveX);
+            LoadAnim("MoveZ", moveZ);
+        }
     }
+    private void BackSpawnPointState()
+    {
+        RotateToTarget(spawnPoint);
+        if (CheckDistanceToTarget(spawnPoint) <= 0.1f)
+        {
+            ChangeState(EnemyState.Patrol);
+        }
+        transform.position += enemyDirection.normalized * enemyInfomation.EnemySpeed * Time.deltaTime;
+        var moveX = enemyDirection.x >= 0 ? 1 : -1; // vì patrolling (tuần tra) nên sẽ đi bộ nên set = 1 và -1
+        var moveZ = enemyDirection.z >= 0 ? 1 : -1;
+        LoadAnim("MoveX", moveX);
+        LoadAnim("MoveZ", moveZ);
+
+        if (PlayerEnterArea(enemyInfomation.warningArea))
+        {
+            Vector3 enemyDirection = spawnPoint - transform.position;
+            float angle = Vector3.Angle(transform.forward, enemyDirection);
+            if (angle < 10f)
+            {
+                Debug.Log("Change warning state");
+                LoadAnim("isWarning", true);
+                LoadAnim("isMove", false);
+                ChangeState(EnemyState.Warning);
+            }
+        }
+    }
+    #endregion
     private void AttackState()
     {
-
+        if (!PlayerEnterArea(enemyInfomation.attackArea))
+        {
+            attacking = false;
+            LoadAnim("isAttack", attacking);
+            ChangeState(EnemyState.Chase);
+            return;
+        }
+        Vector3 enemyDirection = spawner.playerPosition.position - transform.position;
+        float angle = Vector3.Angle(transform.forward, enemyDirection);
+        if (angle < 10f)
+        {
+            if (!attacking)
+            {
+                attacking = true;
+                LoadAnim("isAttack", attacking);
+                StartCoroutine(WaitingAttack());
+            }
+        }
+        else
+        {
+            RotateToTarget(spawner.playerPosition.position);
+        }
+    }
+    IEnumerator WaitingAttack()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        attacking = false;
     }
     private void DeadState()
     {
-
+        if (isDead)
+        {
+            isDead = false;
+            animator.enabled = false;
+            animator.enabled = true;
+            animator.Play("Death", 0, 0f);
+            StartCoroutine(WaitingDeadEnd());
+        }
+    }
+    IEnumerator WaitingDeadEnd()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + 3f);
+        DestroyEnemy();
     }
     #endregion
 
@@ -205,7 +308,10 @@ public class EnemyStateMachine : MonoBehaviour
                 break;
             case EnemyState.Warning:
                 WarningState();
-                break;                    
+                break;
+            case EnemyState.BackSpawnPoint:
+                BackSpawnPointState();
+                break;
             case EnemyState.Patrol:
                 PatrolState();
                 break;
@@ -231,6 +337,7 @@ public enum EnemyState
     Idle,
     Patrol,
     Warning,
+    BackSpawnPoint,
     Chase,
     Attack,
     Dead
