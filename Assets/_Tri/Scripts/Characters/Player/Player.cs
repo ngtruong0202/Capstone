@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [field: Header("Referrence")]
+    [field: SerializeField] public PlayerSO Data { get; private set; }
+
     public PlayerInputs Input { get; private set; }
 
     public Rigidbody Rigidbody { get; private set; }
