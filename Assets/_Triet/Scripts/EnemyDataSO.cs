@@ -25,4 +25,5 @@ public class EnemyData : ScriptableObject
     public EnemySkillSO enemySkill;
     public List<GameObject> spawnPrefab = new List<GameObject>();
     public int maxSpawnAmount;
+    public bool flyingUnit;
 }

@@ -7,6 +7,7 @@ public class EnemyInfomation : MonoBehaviour
 {
     public string enemyName { get; private set; }
     public float EnemySpeed { get => enemySpeed; set => enemySpeed = value; }
+    public bool FlyingUnit { get => flyingUnit; set => flyingUnit = value; }
 
     [Header("status")]
     public EnemyRace race;
@@ -18,6 +19,7 @@ public class EnemyInfomation : MonoBehaviour
     [SerializeField] private float enemyCriticalRate;
     [SerializeField] private float enemyCriticalDmg;
     [SerializeField] private float enemySpeed;
+    [SerializeField] private bool flyingUnit;
     [Header("Slider")]
     [SerializeField] private Slider sliderHpBar;
     public EnemyStateMachine stateMachine;
@@ -55,6 +57,7 @@ public class EnemyInfomation : MonoBehaviour
         enemyCriticalRate = enemyInfo.basicCriticalRate;
         enemyCriticalDmg = enemyInfo.basicCriticalDmg;
         EnemySpeed = enemyInfo.speed;
+        FlyingUnit = enemyInfo.flyingUnit;
     }
     private void LateUpdate()
     {

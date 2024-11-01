@@ -801,6 +801,9 @@ GameObject:
   - component: {fileID: 9590188}
   - component: {fileID: 2165574273158040262}
   - component: {fileID: 3737287537523673640}
+  - component: {fileID: 1093633841065098826}
+  - component: {fileID: 610822003069088600}
+  - component: {fileID: 7124256054268690955}
   m_Layer: 0
   m_Name: M_FantasyWolf_PBR
   m_TagString: Untagged
@@ -863,12 +866,14 @@ MonoBehaviour:
   spawner: {fileID: 0}
   enemyInfomation: {fileID: 3737287537523673640}
   animator: {fileID: 9590188}
+  agent: {fileID: 1093633841065098826}
   timer: 0
   timeChangePatrol: 10
   patrollingTime: 10
   havePatrolPoint: 0
   patrolPoint: {x: 0, y: 0, z: 0}
   maxDistance: 20
+  isDead: 0
 --- !u!114 &3737287537523673640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +895,7 @@ MonoBehaviour:
   enemyCriticalRate: 0
   enemyCriticalDmg: 0
   enemySpeed: 0
+  flyingUnit: 0
   sliderHpBar: {fileID: 7443024203202985166}
   stateMachine: {fileID: 2165574273158040262}
   enemyUI: {fileID: 1847913283709089547}
@@ -897,6 +903,76 @@ MonoBehaviour:
   warningArea: 7
   chaseArea: 5
   attackArea: 3
+--- !u!195 &1093633841065098826
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153244}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.27
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 360
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.47
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!54 &610822003069088600
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153244}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
+--- !u!65 &7124256054268690955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153244}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5433872, y: 1.3523086, z: 1.9760097}
+  m_Center: {x: -0.005707741, y: 0.6768034, z: 0.4252208}
 --- !u!1 &154900
 GameObject:
   m_ObjectHideFlags: 0
