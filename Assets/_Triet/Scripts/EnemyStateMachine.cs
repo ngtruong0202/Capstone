@@ -10,6 +10,7 @@ public class EnemyStateMachine : MonoBehaviour
     public EnemySpawner spawner;
     [SerializeField] EnemyInfomation enemyInfomation;
     [SerializeField] private Animator animator;
+    [SerializeField] private NavMeshAgent agent;
     [Header("Time")]
     [SerializeField] float timer;
     [SerializeField] float timeChangePatrol;
@@ -74,8 +75,23 @@ public class EnemyStateMachine : MonoBehaviour
         enemyDirection = target - transform.position;
         // xoay enemy
         Quaternion rotation = Quaternion.LookRotation(enemyDirection);
+        // Giữ nguyên góc xoay trên trục x nếu không phải đơn vị bay
+        if (!enemyInfomation.FlyingUnit)
+        {
+            rotation = Quaternion.Euler(0, rotation.eulerAngles.y, rotation.eulerAngles.z);
+        }
         //Thực hiện xoay dần dần để tạo cảm giác mượt mà
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 5f);
+    }
+    private void MoveToTarget(float speed, Vector3 target)
+    {
+        agent.speed = speed;
+        Vector3 targetPosition = target; // Vị trí hợp lệ trên NavMesh
+        if (!enemyInfomation.FlyingUnit)
+        {
+            targetPosition.y = transform.position.y; // Giữ nguyên y nếu không phải là đơn vị bay
+        }
+        agent.SetDestination(targetPosition); // Đặt mục tiêu
     }
 
     #region Enemy State Logic
@@ -130,6 +146,7 @@ public class EnemyStateMachine : MonoBehaviour
         // nếu player tiến vào vùng truy đuổi
         if (PlayerEnterArea(enemyInfomation.chaseArea))
         {
+            agent.Resume();
             Debug.Log("Change chase state");
             LoadAnim("isMove", true);
             LoadAnim("isWarning", false);
@@ -138,6 +155,7 @@ public class EnemyStateMachine : MonoBehaviour
         //nếu player ra khỏi vùng cảnh giác
         if (!PlayerEnterArea(enemyInfomation.warningArea))
         {
+            agent.Resume();
             Debug.Log("Change idle state");
             RandomLoadIdleAnim();
             LoadAnim("isMove", false);
@@ -176,8 +194,7 @@ public class EnemyStateMachine : MonoBehaviour
             }
             else
             {
-                RotateToTarget(patrolPoint);
-                transform.position += enemyDirection.normalized * enemyInfomation.EnemySpeed * Time.deltaTime;
+                MoveToTarget(enemyInfomation.EnemySpeed, patrolPoint);
                 if (CheckDistanceToTarget(patrolPoint) <= 0.1f)
                 {
                     havePatrolPoint = false;
@@ -216,8 +233,7 @@ public class EnemyStateMachine : MonoBehaviour
         }
         else
         {
-            RotateToTarget(spawner.playerPosition.position);
-            transform.position += enemyDirection.normalized * (enemyInfomation.EnemySpeed * 2) * Time.deltaTime;
+            MoveToTarget(enemyInfomation.EnemySpeed * 2, spawner.playerPosition.position);
             var moveX = enemyDirection.x >= 0 ? 2 : -2; // vì chase (truy duổi) nên sẽ chạy nên set = 2 và -2
             var moveZ = enemyDirection.z >= 0 ? 2 : -2;
             LoadAnim("MoveX", moveX);
@@ -226,12 +242,11 @@ public class EnemyStateMachine : MonoBehaviour
     }
     private void BackSpawnPointState()
     {
-        RotateToTarget(spawnPoint);
         if (CheckDistanceToTarget(spawnPoint) <= 0.1f)
         {
             ChangeState(EnemyState.Patrol);
         }
-        transform.position += enemyDirection.normalized * enemyInfomation.EnemySpeed * Time.deltaTime;
+        MoveToTarget(enemyInfomation.EnemySpeed, spawnPoint);
         var moveX = enemyDirection.x >= 0 ? 1 : -1; // vì patrolling (tuần tra) nên sẽ đi bộ nên set = 1 và -1
         var moveZ = enemyDirection.z >= 0 ? 1 : -1;
         LoadAnim("MoveX", moveX);
@@ -243,6 +258,7 @@ public class EnemyStateMachine : MonoBehaviour
             float angle = Vector3.Angle(transform.forward, enemyDirection);
             if (angle < 10f)
             {
+                agent.Stop();
                 Debug.Log("Change warning state");
                 LoadAnim("isWarning", true);
                 LoadAnim("isMove", false);
