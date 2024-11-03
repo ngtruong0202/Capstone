@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     [field: Header("Referrence")]
     [field: SerializeField] public PlayerSO Data { get; private set; }
 
+    [field: Header("Colllisions")]
+    [field: SerializeField] public CapsuleColliderUtility ColliderUtility { get; private set; }
+    [field: SerializeField] public PlayerLayerData LayerData { get; private set; }
+
     public PlayerInputs Input { get; private set; }
 
     public Rigidbody Rigidbody { get; private set; }
@@ -24,9 +28,18 @@ public class Player : MonoBehaviour
 
         Input = GetComponent<PlayerInputs>();
 
+        ColliderUtility.Initialize(gameObject);
+        ColliderUtility.CalculateCapsuleColliderDimensions();
+
         MainCameraTransform = Camera.main.transform;
 
         movementStateMachine = new PlayerMovementStateMachine(this);
+    }
+
+    private void OnValidate()
+    {
+        ColliderUtility.Initialize(gameObject);
+        ColliderUtility.CalculateCapsuleColliderDimensions();
     }
 
     // Start is called before the first frame update
@@ -42,7 +55,7 @@ public class Player : MonoBehaviour
 
         movementStateMachine.Update();
     }
-
+     
     private void FixedUpdate()
     {
         movementStateMachine.PhysicsUpdate();
