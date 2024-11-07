@@ -50,6 +50,20 @@ public class PlayerMovementState : IState
     {
         Move();
     }
+    public virtual void OnAnimationEnterEvent()
+    {
+        
+    }
+
+    public virtual void OnAnimationExitEvent()
+    {
+        
+    }
+
+    public virtual void OnAnimationTransitionEvent()
+    {
+        
+    }
     #endregion
 
     #region Main Method
@@ -198,6 +212,22 @@ public class PlayerMovementState : IState
     protected virtual void RemoveInputActionsCallBack()
     {
         stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStarted;
+    }
+
+    protected void DecelerateHorizontally()
+    {
+        Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+        stateMachine.Player.Rigidbody.AddForce(-playerHorizontalVelocity * stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
+    }
+
+    protected bool IsMovingHorizontally(float minimumMagnitude = 0.1f)
+    {
+        Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+        Vector2 playerHorizontalMovement = new Vector2(playerHorizontalVelocity.x, playerHorizontalVelocity.z);
+
+        return playerHorizontalMovement.magnitude > minimumMagnitude;
     }
     #endregion
 

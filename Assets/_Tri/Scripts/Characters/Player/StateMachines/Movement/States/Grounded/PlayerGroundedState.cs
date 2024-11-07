@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,13 +72,18 @@ public class PlayerGroundedState : PlayerMovementState
         base.AddInputActionsCallBack();
 
         stateMachine.Player.Input.PlayerActions.Movement.canceled += OnMovementCanceled;
+
+        stateMachine.Player.Input.PlayerActions.Dash.started += OnDashStarted;
     }
+
 
     protected override void RemoveInputActionsCallBack()
     {
         base.RemoveInputActionsCallBack();
 
         stateMachine.Player.Input.PlayerActions.Movement.canceled -= OnMovementCanceled;
+
+        stateMachine.Player.Input.PlayerActions.Dash.started -= OnDashStarted;
     }
     protected virtual void OnMove()
     {
@@ -96,6 +102,11 @@ public class PlayerGroundedState : PlayerMovementState
     protected virtual void OnMovementCanceled(InputAction.CallbackContext context)
     {
         stateMachine.ChangeState(stateMachine.IdlingState);
+    }
+
+    protected virtual void OnDashStarted(InputAction.CallbackContext context)
+    {
+        stateMachine.ChangeState(stateMachine.DashingState);
     }
     #endregion
 }
