@@ -9,6 +9,8 @@ public class PlayerDashingState : PlayerGroundedState
 
     private int consecutiveDashesUsed;
 
+    private bool shouldKeepRotating;
+
     public PlayerDashingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
     {
         dashData = movementData.DashData;
@@ -21,17 +23,40 @@ public class PlayerDashingState : PlayerGroundedState
 
         stateMachine.ReusableData.MovementSpeedModifier = dashData.SpeedModifier;
 
+        stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.StrongForce;
+
+        stateMachine.ReusableData.RotationData = dashData.RotationData;
+
         AddForceOnTransitionFromStationaryState();
+
+        shouldKeepRotating = stateMachine.ReusableData.MovementInput != Vector2.zero;
 
         UpdateConsecutiveDashes();
 
         startTime = Time.time;
     }
 
+    public override void Exit()
+    {
+        base.Exit();
+
+        SetBaseRotationData();
+    }
+
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
+
+        if (!shouldKeepRotating)
+        {
+            return;
+        }
+
+        RotateTowardsTargetRotation();
+    }
+
     public override void OnAnimationTransitionEvent()
     {
-        base.OnAnimationTransitionEvent();
-
         if (stateMachine.ReusableData.MovementInput == Vector2.zero)
         {
             stateMachine.ChangeState(stateMachine.HardStoppingState); 
@@ -53,6 +78,8 @@ public class PlayerDashingState : PlayerGroundedState
         Vector3 characterRotationDirection = stateMachine.Player.transform.forward;
 
         characterRotationDirection.y = 0f;
+
+        UpdateTargetRotation(characterRotationDirection, false);
 
         stateMachine.Player.Rigidbody.velocity = characterRotationDirection * GetMovementSpeed();
     }
@@ -80,15 +107,36 @@ public class PlayerDashingState : PlayerGroundedState
     }
     #endregion
 
+    #region Reusable Methods
+    protected override void AddInputActionsCallBack()
+    {
+        base.AddInputActionsCallBack();
+
+        stateMachine.Player.Input.PlayerActions.Movement.performed += OnMovementPerformed;
+    }
+
+    protected override void RemoveInputActionsCallBack()
+    {
+        base.RemoveInputActionsCallBack();
+
+        stateMachine.Player.Input.PlayerActions.Movement.performed -= OnMovementPerformed;
+    }
+    #endregion
+
     #region Input Methods
     protected override void OnMovementCanceled(InputAction.CallbackContext context)
     {
-        stateMachine.ChangeState(stateMachine.HardStoppingState);
+        
+    }
+
+    private void OnMovementPerformed(InputAction.CallbackContext context)
+    {
+        shouldKeepRotating = true;
     }
 
     protected override void OnDashStarted(InputAction.CallbackContext context)
     {
-        
+        stateMachine.ChangeState(stateMachine.HardStoppingState);
     }
     #endregion
 }

@@ -24,6 +24,8 @@ public class PlayerMovementStateMachine : StateMachine
     
     public PLayerHardStoppingState HardStoppingState { get; }
 
+    public PlayerJumpingState JumpingState { get; }
+
     public PlayerMovementStateMachine(Player player)
     {
         Player = player;
@@ -39,5 +41,7 @@ public class PlayerMovementStateMachine : StateMachine
         LightStoppingState = new PlayerLightStoppingState(this);
         MediumStoppingState = new PlayerMediumStoppingState(this);
         HardStoppingState = new PLayerHardStoppingState(this);
+
+        JumpingState = new PlayerJumpingState(this);
     }
 }

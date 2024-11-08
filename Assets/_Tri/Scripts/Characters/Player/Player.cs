@@ -48,6 +48,11 @@ public class Player : MonoBehaviour
         movementStateMachine.ChangeState(movementStateMachine.IdlingState);
     }
 
+    private void OnTriggerEnter(Collider collider)
+    {
+        movementStateMachine.OnTriggerEnter(collider);
+    }
+
     // Update is called once per frame
     private void Update()
     {

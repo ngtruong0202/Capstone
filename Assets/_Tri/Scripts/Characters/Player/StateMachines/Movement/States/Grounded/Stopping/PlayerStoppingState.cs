@@ -22,6 +22,8 @@ public class PlayerStoppingState : PlayerGroundedState
     {
         base.PhysicsUpdate();
 
+        RotateTowardsTargetRotation();
+
         if (!IsMovingHorizontally())
         {
             return;
