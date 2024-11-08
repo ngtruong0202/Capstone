@@ -11,6 +11,7 @@ public class PlayerSprintingState : PlayerMovingState
     private float startTime;
 
     private bool keepSprinting;
+    private bool shouldResetSprintState;
 
     public PlayerSprintingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
     {
@@ -23,6 +24,10 @@ public class PlayerSprintingState : PlayerMovingState
 
         stateMachine.ReusableData.MovementSpeedModifier = sprintData.SpeedModifier;
 
+        stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.StrongForce;
+
+        shouldResetSprintState = true;
+
         startTime = Time.time;
     }
 
@@ -30,7 +35,12 @@ public class PlayerSprintingState : PlayerMovingState
     {
         base.Exit();
 
-        keepSprinting = false;
+        if (shouldResetSprintState)
+        {
+            keepSprinting = false;
+
+            stateMachine.ReusableData.ShouldSprint = false;
+        }
     }
 
     public override void Update()
@@ -87,9 +97,19 @@ public class PlayerSprintingState : PlayerMovingState
     {
         stateMachine.ChangeState(stateMachine.HardStoppingState);
     }
+
+    protected override void OnJumpStarted(InputAction.CallbackContext context)
+    {
+        shouldResetSprintState = false;
+
+        base.OnJumpStarted(context);
+    }
+
     private void OnSprintPerformed(InputAction.CallbackContext context)
     {
         keepSprinting = true;
+
+        stateMachine.ReusableData.ShouldSprint = true;
     }
     #endregion
 }
