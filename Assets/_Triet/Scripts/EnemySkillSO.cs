@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class EnemySkillSO : MonoBehaviour
 {
-
+    public Transform playerPositon;
 }

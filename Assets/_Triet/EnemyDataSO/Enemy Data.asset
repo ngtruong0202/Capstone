@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Enemy Data
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyRaceName: Dragon
-  race: 2
+  enemyRaceName: Wolf
+  race: 4
   maxRarity: 3
-  maxType: 3
   basicHp: 1000
   basicAtk: 200
   basicAtkSpd: 2
   basicDef: 200
   basicCriticalRate: 25
   basicCriticalDmg: 120
+  speed: 2
   description: Dragon
   enemySkill: {fileID: 0}
+  spawnPrefab:
+  - {fileID: 193594, guid: aedbd60e2d85ee240b7af8956da0f2bb, type: 3}
+  - {fileID: 153244, guid: 9b93a6e74d8b43449bd2d977d5252e48, type: 3}
+  maxSpawnAmount: 6

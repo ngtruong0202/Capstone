@@ -3,19 +3,25 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Water
+  - NPC
+  - Tar1
+  - Tar2
+  - Tar3
+  - Tar4
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Environment
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - NPC
+  - Player
+  - Enemy
+  - GroundCheck
   - 
   - 
   - 
