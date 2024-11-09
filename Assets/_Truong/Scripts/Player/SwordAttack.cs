@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,31 +7,62 @@ public class SwordAttack : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private NavMeshAgent agent;
     [SerializeField] private EnemyDetection enemyDetection;
 
     private int currentAttack;
     private float cooldowntime = 1;
     private float timeAttack;
-    private float enemyDistance;
-    private float quickAttackDeltaDistance;
+    
+    [Tooltip("Offset Stoping Distance")][SerializeField] private float quickAttackDeltaDistance;
 
 
     void Update()
     {
+
         timeAttack += Time.deltaTime;
         if (Input.GetMouseButtonDown(0))
         {
-            if (enemyDetection.currentTarget == null)
-                Attack();
-            else
-            {
-                MoveTowardsTarget("MMAKick",enemyDetection.currentTarget.position, quickAttackDeltaDistance);
-            }
-            
+            Attack();           
         }
+        
     }
 
     public void Attack()
+    {
+        if (enemyDetection.currentTarget == null)
+        {  
+            if(enemyDetection.detecedEnemies.Count == 0)
+            {
+                BasicAttack();
+            }
+               
+            else
+            {
+                enemyDetection.GetClosestEnemy();
+                StartCoroutine(EnemyDistance());
+            }
+                
+        }       
+        else
+        {
+            float enemyDistance = Vector3.Distance(agent.transform.position, enemyDetection.currentTarget.transform.position);
+
+            if(enemyDistance <= agent.stoppingDistance)
+            {
+                agent.updateRotation = false;
+                RotateTowardsTarget(enemyDetection.currentTarget.position);
+                agent.updateRotation = true;
+                BasicAttack();
+            }
+            else
+            {
+                StartCoroutine(EnemyDistance());                
+            }         
+        }
+    }
+
+    public void BasicAttack()
     {
         if(timeAttack >= 0.7f)
         {
@@ -54,8 +85,8 @@ public class SwordAttack : MonoBehaviour
 
     public void MoveTowardsTarget(string animationName, Vector3 enemyPos, float deltaDistance)
     {
+        RotateTowardsTarget(enemyPos);
         PerformAttackAnimation(animationName);
-        FaceThis(enemyPos);
 
         Vector3 finalPos = TargetOffset(enemyPos, deltaDistance);
         finalPos.y = 0;
@@ -68,15 +99,16 @@ public class SwordAttack : MonoBehaviour
         animator.SetTrigger(animationName);
     }
 
-    public void FaceThis(Vector3 target)
+    void RotateTowardsTarget(Vector3 targetPosition)
     {
+        //rb.transform.LookAt(targetPosition);
+        Vector3 direction = (targetPosition - rb.transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        agent.transform.rotation = lookRotation;
 
-        Vector3 direction = new Vector3(target.x - transform.position.x, 0, target.z - transform.position.z);
-
-        Quaternion lookAtRotation = Quaternion.LookRotation(direction);
-
-        rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, lookAtRotation, 200 * Time.deltaTime));
     }
+
+
 
     public Vector3 TargetOffset(Vector3 target, float deltaDistance)
     {
@@ -85,11 +117,41 @@ public class SwordAttack : MonoBehaviour
 
     IEnumerator Move(Vector3 targetPosition)
     {
-        while (Vector3.Distance(rb.position, targetPosition) > 0.5f)
+        agent.enabled = false;
+        while (Vector3.Distance(rb.position, targetPosition) > 2f)
         {
-            Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, 5 * Time.deltaTime);
+            Vector3 newPosition = Vector3.MoveTowards(rb.position, targetPosition, 4 * Time.deltaTime);
             rb.MovePosition(newPosition);
             yield return null;
         }
+        agent.enabled = true;
     }
+
+    IEnumerator EnemyDistance()
+    {
+        if (enemyDetection.currentTarget == null)
+        {
+            yield break;
+        }
+
+        while (enemyDetection.currentTarget != null)
+        {  
+            float enemyDistance = Vector3.Distance(agent.transform.position, enemyDetection.currentTarget.position);
+
+            if(enemyDistance < agent.stoppingDistance)
+            {
+                agent.isStopped = true;
+                BasicAttack();
+                yield break;
+            }
+            else
+            {
+                agent.isStopped = false;
+                agent.SetDestination(enemyDetection.currentTarget.position);
+            }
+
+            yield return null;
+        }
+    }
+
 }

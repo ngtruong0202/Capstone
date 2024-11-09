@@ -41,14 +41,23 @@ public class EnemyDetection : MonoBehaviour
     public Transform GetTransformEnemy()
     {
         detecedEnemies.RemoveAll(x => x == null);
-        currentTarget = null;
 
-        if (detecedEnemies.Count == 0) return null;
-       
+        if (detecedEnemies == null && detecedEnemies.Count == 0 || currentIndex >= detecedEnemies.Count) return null;
+        if (detecedEnemies.Count == 1)
+            currentIndex = 0;
+
         Transform enemy = detecedEnemies[currentIndex];
-        currentIndex = (currentIndex + 1) % detecedEnemies.Count;
 
-        currentTarget = enemy;
+        if (enemy != currentTarget)
+        {
+            currentTarget = enemy;
+        }
+        else
+        {
+            currentIndex = (currentIndex + 1) % detecedEnemies.Count;
+            currentTarget = detecedEnemies[currentIndex];
+        }
+
         Debug.Log(currentTarget.name);
 
         return currentTarget;
@@ -56,6 +65,9 @@ public class EnemyDetection : MonoBehaviour
 
     public Transform GetClosestEnemy()
     {
+        detecedEnemies.RemoveAll(x => x == null);
+        if (detecedEnemies.Count == 0) return null;
+
         Transform closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
