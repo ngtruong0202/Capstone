@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public PlayerSO Data { get; private set; }
 
     [field: Header("Colllisions")]
-    [field: SerializeField] public CapsuleColliderUtility ColliderUtility { get; private set; }
+    [field: SerializeField] public PlayerCapsuleColliderUtility ColliderUtility { get; private set; }
     [field: SerializeField] public PlayerLayerData LayerData { get; private set; }
 
     public PlayerInputs Input { get; private set; }
@@ -51,6 +51,11 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         movementStateMachine.OnTriggerEnter(collider);
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        movementStateMachine.OnTriggerExit(collider);
     }
 
     // Update is called once per frame
