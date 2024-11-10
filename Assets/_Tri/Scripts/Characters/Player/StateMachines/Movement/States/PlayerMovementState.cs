@@ -76,6 +76,16 @@ public class PlayerMovementState : IState
             return;
         }
     }
+
+    public void OnTriggerExit(Collider collider)
+    {
+        if (stateMachine.Player.LayerData.IsGroundLayer(collider.gameObject.layer))
+        {
+            OnContactWithGroundExited(collider);
+
+            return;
+        }
+    }
     #endregion
 
     #region Main Method
@@ -153,6 +163,17 @@ public class PlayerMovementState : IState
 
         stateMachine.ReusableData.TimeToReachTargetRotation = stateMachine.ReusableData.RotationData.TargetRotationReachTime;
     }
+
+    protected virtual void AddInputActionsCallBack()
+    {
+        stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStarted;
+    }
+
+    protected virtual void RemoveInputActionsCallBack()
+    {
+        stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStarted;
+    }
+
     protected Vector3 GetMovementInputDirection()
     {
         return new Vector3(stateMachine.ReusableData.MovementInput.x, 0f, stateMachine.ReusableData.MovementInput.y);
@@ -222,14 +243,11 @@ public class PlayerMovementState : IState
         stateMachine.Player.Rigidbody.velocity = Vector3.zero;
     }
 
-    protected virtual void AddInputActionsCallBack()
+    protected void ResetVerticalVelocity()
     {
-        stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStarted;
-    }
+        Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
 
-    protected virtual void RemoveInputActionsCallBack()
-    {
-        stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStarted;
+        stateMachine.Player.Rigidbody.velocity = playerHorizontalVelocity;
     }
 
     protected void DecelerateHorizontally()
@@ -266,6 +284,11 @@ public class PlayerMovementState : IState
     }
 
     protected virtual void OnContactWithGround(Collider collider)
+    {
+
+    }
+
+    protected virtual void OnContactWithGroundExited(Collider collider)
     {
 
     }

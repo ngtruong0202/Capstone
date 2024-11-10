@@ -136,7 +136,6 @@ public class PlayerDashingState : PlayerGroundedState
 
     protected override void OnDashStarted(InputAction.CallbackContext context)
     {
-        stateMachine.ChangeState(stateMachine.HardStoppingState);
     }
     #endregion
 }
