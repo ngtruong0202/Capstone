@@ -734,8 +734,8 @@ MonoBehaviour:
       m_LegacyVelocityFilterStrength: -1
   m_HorizontalRecentering:
     m_enabled: 0
-    m_WaitTime: 1
-    m_RecenteringTime: 2
+    m_WaitTime: 0
+    m_RecenteringTime: 4
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
@@ -3009,27 +3009,6 @@ Transform:
   - {fileID: 1480062178952761145}
   m_Father: {fileID: 8557998223418223623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6956352973467776486
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7349180550259170813}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: 23d26ae5803fc364fb666ce3c6cc4d33, type: 3}
-  m_Controller: {fileID: 9100000, guid: 9b7b1a5b85a81334dbd3ad35d2eb892b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6964932700070323538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,12 +3097,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1301781088095665361}
-  - component: {fileID: 6956352973467776486}
   - component: {fileID: 1577371154193908927}
   - component: {fileID: 8719791829627272040}
   - component: {fileID: 8668810799845868455}
   - component: {fileID: 1807584745948175197}
   - component: {fileID: 535724508387882872}
+  - component: {fileID: 8719791829627272041}
+  - component: {fileID: 8719791829627272042}
   m_Layer: 0
   m_Name: Shadowflame
   m_TagString: Player
@@ -3141,6 +3121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397588897311785810}
   - component: {fileID: 8882569734914757172}
+  - component: {fileID: 8882569734914757173}
   m_Layer: 0
   m_Name: Ch44
   m_TagString: Untagged
@@ -3465,6 +3446,26 @@ MonoBehaviour:
     <GroundLayer>k__BackingField:
       serializedVersion: 2
       m_Bits: 8
+  <CameraUtility>k__BackingField:
+    <VirtualCamera>k__BackingField: {fileID: 713031074}
+    <DefaultHorizontalWaitTime>k__BackingField: 0
+    <DefaultHorizontalRecenteringTime>k__BackingField: 4
+  <AnimationData>k__BackingField:
+    groundedParameterName: Grounded
+    movingParameterName: Moving
+    stoppingParameterName: Stopping
+    landingParameterName: Landing
+    airborneParameterName: Airborne
+    idleParameterName: isIdling
+    dashParameterName: isDashing
+    walkParameterName: isWalking
+    runParameterName: isRunning
+    sprintParameterName: isSprinting
+    mediumStopParameterName: isMediumStopping
+    hardStopParameterName: isHardStopping
+    rollParameterName: isRolling
+    hardLandParameterName: isHardLanding
+    fallParameterName: isFalling
 --- !u!114 &8719791829627272040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3475,6 +3476,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9d057df44d693b49961355fbd731057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &8719791829627272041
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349180550259170813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 23d26ae5803fc364fb666ce3c6cc4d33, type: 3}
+  m_Controller: {fileID: 9100000, guid: 96dd9f29e2793fe448768999d7b97fb9, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8719791829627272042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349180550259170813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe68ca44e27360f418b9ecc4452efb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8778835954955861841
@@ -3643,6 +3677,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00004094839, y: -0.14692938, z: 0.031268567}
     m_Extent: {x: 0.9321286, y: 1.0150791, z: 0.28149375}
   m_DirtyAABB: 0
+--- !u!95 &8882569734914757173
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390747176539443785}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 23d26ae5803fc364fb666ce3c6cc4d33, type: 3}
+  m_Controller: {fileID: 9100000, guid: 96dd9f29e2793fe448768999d7b97fb9, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8887565180507683484
 GameObject:
   m_ObjectHideFlags: 0

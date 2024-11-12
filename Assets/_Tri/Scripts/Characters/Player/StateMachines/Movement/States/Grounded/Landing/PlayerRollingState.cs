@@ -13,11 +13,20 @@ public class PlayerRollingState : PlayerLandingState
     #region IState Methods
     public override void Enter()
     {
-        base.Enter();
-
         stateMachine.ReusableData.MovementSpeedModifier = rollData.SpeedModifier;
 
+        base.Enter();
+
+        StartAnimation(stateMachine.Player.AnimationData.RollParameterHash);
+
         stateMachine.ReusableData.ShouldSprint = false;
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.RollParameterHash);
     }
 
     public override void PhysicsUpdate()
