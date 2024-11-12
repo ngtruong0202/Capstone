@@ -18,11 +18,20 @@ public class PlayerFailingState : PlayerAirborneState
     {
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.FallParameterHash);
+
         playerPositionOnEnter = stateMachine.Player.transform.position;
 
         stateMachine.ReusableData.MovementSpeedModifier = 0;
 
         ResetVerticalVelocity();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.FallParameterHash);
     }
 
     public override void PhysicsUpdate()
@@ -41,7 +50,7 @@ public class PlayerFailingState : PlayerAirborneState
 
     protected override void OnContactWithGround(Collider collider)
     {
-        float fallDistance = Mathf.Abs(playerPositionOnEnter.y - stateMachine.Player.transform.position.y);
+        float fallDistance = playerPositionOnEnter.y - stateMachine.Player.transform.position.y;
 
         if (fallDistance < fallData.MinimumDistanceToBeConsidereHardFall)
         {

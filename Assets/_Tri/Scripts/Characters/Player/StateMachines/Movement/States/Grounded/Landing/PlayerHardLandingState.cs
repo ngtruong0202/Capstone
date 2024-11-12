@@ -10,11 +10,13 @@ public class PlayerHardLandingState : PlayerLandingState
     #region IState Methods
     public override void Enter()
     {
+        stateMachine.ReusableData.MovementSpeedModifier = 0f;
+
         base.Enter();
 
-        stateMachine.Player.Input.PlayerActions.Movement.Disable();
+        StartAnimation(stateMachine.Player.AnimationData.HardLandParameterHash);
 
-        stateMachine.ReusableData.MovementSpeedModifier = 0f;
+        stateMachine.Player.Input.PlayerActions.Movement.Disable();
 
         ResetVelocity();
     }
@@ -22,8 +24,22 @@ public class PlayerHardLandingState : PlayerLandingState
     public override void Exit()
     {
         base.Exit();
+        
+        StopAnimation(stateMachine.Player.AnimationData.HardLandParameterHash);
 
         stateMachine.Player.Input.PlayerActions.Movement.Enable();
+    }
+
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
+
+        if (!IsMovingHorizontally())
+        {
+            return;
+        }
+
+        ResetVelocity();
     }
 
     public override void OnAnimationExitEvent()
