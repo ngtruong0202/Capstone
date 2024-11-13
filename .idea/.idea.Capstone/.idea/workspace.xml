@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Shadowflame.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Shadowflame.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Shadowflame.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Shadowflame.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Airborne/Falling Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Airborne/Falling Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Airborne/Jump.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Airborne/Jump.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Dash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Dash.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Idle.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/Hard Landing.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/Hard Landing.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/LightLanding.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/LightLanding.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/Sprinting Forward Roll.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Landing/Sprinting Forward Roll.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Running.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Walk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Walk.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Stoping/HardStop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Stoping/HardStop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Stoping/LightStop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Stoping/LightStop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Standard Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Standard Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Scenes/Player.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Scenes/Player.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +96,11 @@
       <workItem from="1729136987305" duration="89000" />
       <workItem from="1731234582818" duration="686000" />
       <workItem from="1731266549324" duration="32000" />
-      <workItem from="1731494916596" duration="605000" />
+      <workItem from="1731494916596" duration="1240000" />
+      <workItem from="1731499865107" duration="28000" />
+      <workItem from="1731499929521" duration="65000" />
+      <workItem from="1731500065381" duration="74000" />
+      <workItem from="1731500151924" duration="630000" />
     </task>
     <servers />
   </component>
