@@ -13,14 +13,23 @@ public class PlayerAirborneState : PlayerMovementState
     {
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.AirborneParameterHash);
+
         ResetSprintState();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.AirborneParameterHash);
     }
     #endregion
 
     #region Reusable Methods
     protected override void OnContactWithGround(Collider collider)
     {
-        stateMachine.ChangeState(stateMachine.IdlingState);
+        stateMachine.ChangeState(stateMachine.LightLandingState);
     }
 
     protected virtual void ResetSprintState()

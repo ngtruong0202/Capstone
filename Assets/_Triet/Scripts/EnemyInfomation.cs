@@ -14,10 +14,11 @@ public class EnemyInfomation : MonoBehaviour
     [SerializeField] private float enemyMaxHp;
     [SerializeField] private float enemyCurrentHp;
     [SerializeField] private float enemyAtk;
-    [SerializeField] private float enemyAtkSpeed;
+    [SerializeField] private float enemyAtkCd;
     [SerializeField] private float enemyDef;
-    [SerializeField] private float enemyCriticalRate;
-    [SerializeField] private float enemyCriticalDmg;
+    [SerializeField] private float enemyEndurance;
+    [SerializeField] private float enemyRecoverEndurance;
+    [SerializeField] private float enemyStunDuration;
     [SerializeField] private float enemySpeed;
     [SerializeField] private bool flyingUnit;
     [Header("Slider")]
@@ -49,14 +50,15 @@ public class EnemyInfomation : MonoBehaviour
     private void GetEnemyData()
     {
         var enemyInfo = stateMachine.spawner.enemyData;
-        enemyMaxHp = enemyInfo.basicHp;
-        enemyCurrentHp = enemyInfo.basicHp;
-        enemyAtk = enemyInfo.basicAtk;
-        enemyAtkSpeed = enemyInfo.basicAtkSpd;
-        enemyDef = enemyInfo.basicDef;
-        enemyCriticalRate = enemyInfo.basicCriticalRate;
-        enemyCriticalDmg = enemyInfo.basicCriticalDmg;
+        enemyMaxHp = enemyInfo.hp;
+        enemyCurrentHp = enemyInfo.hp;
+        enemyAtk = enemyInfo.attack;
+        enemyAtkCd = enemyInfo.attackCD;
+        enemyDef = enemyInfo.defense;
+        enemyEndurance = enemyInfo.endurance;
+        enemyRecoverEndurance = enemyInfo.recoverEndurance;
         EnemySpeed = enemyInfo.speed;
+
         FlyingUnit = enemyInfo.flyingUnit;
     }
     private void LateUpdate()

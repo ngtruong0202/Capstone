@@ -15,14 +15,17 @@ public class PlayerSprintingState : PlayerMovingState
 
     public PlayerSprintingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
     {
+        sprintData = movementData.SprintData;
     }
 
     #region IState Methods
     public override void Enter()
     {
+        stateMachine.ReusableData.MovementSpeedModifier = sprintData.SpeedModifier;
+
         base.Enter();
 
-        stateMachine.ReusableData.MovementSpeedModifier = sprintData.SpeedModifier;
+        StartAnimation(stateMachine.Player.AnimationData.SprintParameterHash);
 
         stateMachine.ReusableData.CurrentJumpForce = airborneData.JumpData.StrongForce;
 
@@ -34,6 +37,8 @@ public class PlayerSprintingState : PlayerMovingState
     public override void Exit()
     {
         base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.SprintParameterHash);
 
         if (shouldResetSprintState)
         {
@@ -90,12 +95,21 @@ public class PlayerSprintingState : PlayerMovingState
 
         stateMachine.Player.Input.PlayerActions.Sprint.performed -= OnSprintPerformed;
     }
+
+    protected override void OnFall()
+    {
+        shouldResetSprintState = false;
+
+        base.OnFall();
+    }
     #endregion
 
     #region Input Methods
     protected override void OnMovementCanceled(InputAction.CallbackContext context)
     {
         stateMachine.ChangeState(stateMachine.HardStoppingState);
+
+        base.OnMovementCanceled(context);
     }
 
     protected override void OnJumpStarted(InputAction.CallbackContext context)

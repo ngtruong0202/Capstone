@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,7 +14,18 @@ public class PlayerGroundedState : PlayerMovementState
     {
         base.Enter();
 
+        StartAnimation(stateMachine.Player.AnimationData.GroundedParameterHash);
+
         UpdateShouldSprintState();
+
+        UpdateCameraRecenteringState(stateMachine.ReusableData.MovementInput);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+
+        StopAnimation(stateMachine.Player.AnimationData.GroundedParameterHash);
     }
 
     public override void PhysicsUpdate()
@@ -82,9 +90,24 @@ public class PlayerGroundedState : PlayerMovementState
     {
         float slopeSpeedModifier = movementData.SlopeSpeedAngles.Evaluate(angle);
 
-        stateMachine.ReusableData.MovementOnSlopesSpeedModifier = slopeSpeedModifier;
+        if (stateMachine.ReusableData.MovementOnSlopesSpeedModifier != slopeSpeedModifier)
+        {
+            stateMachine.ReusableData.MovementOnSlopesSpeedModifier = slopeSpeedModifier;
+
+            UpdateCameraRecenteringState(stateMachine.ReusableData.MovementInput);
+        }
 
         return slopeSpeedModifier;
+    }
+    private bool IsThereGroundUnderneath()
+    {
+        BoxCollider groundCheckCollider = stateMachine.Player.ColliderUtility.TriggerColliderData.GroundCheckCollider;
+
+        Vector3 groundColliderCenterInWorldSpace = groundCheckCollider.bounds.center;
+
+        Collider[] overlappedGroundColliders = Physics.OverlapBox(groundColliderCenterInWorldSpace, stateMachine.Player.ColliderUtility.TriggerColliderData.GroundCheckColliderExtends, groundCheckCollider.transform.rotation, stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore);
+
+        return overlappedGroundColliders.Length > 0;
     }
     #endregion
 
@@ -92,8 +115,6 @@ public class PlayerGroundedState : PlayerMovementState
     protected override void AddInputActionsCallBack()
     {
         base.AddInputActionsCallBack();
-
-        stateMachine.Player.Input.PlayerActions.Movement.canceled += OnMovementCanceled;
 
         stateMachine.Player.Input.PlayerActions.Dash.started += OnDashStarted;
 
@@ -103,8 +124,6 @@ public class PlayerGroundedState : PlayerMovementState
     protected override void RemoveInputActionsCallBack()
     {
         base.RemoveInputActionsCallBack();
-
-        stateMachine.Player.Input.PlayerActions.Movement.canceled -= OnMovementCanceled;
 
         stateMachine.Player.Input.PlayerActions.Dash.started -= OnDashStarted;
     
@@ -127,15 +146,34 @@ public class PlayerGroundedState : PlayerMovementState
 
         stateMachine.ChangeState(stateMachine.RunningState);
     }
+
+    protected override void OnContactWithGroundExited(Collider collider)
+    {
+        base.OnContactWithGroundExited(collider);
+
+        if (IsThereGroundUnderneath())
+        {
+            return;
+        }
+
+        Vector3 capsuleColliderCenterInWorldSpace = stateMachine.Player.ColliderUtility.CapsuleColliderData.Collider.bounds.center;
+
+        Ray downwardsRayFromCapsuleBottom = new Ray(capsuleColliderCenterInWorldSpace - stateMachine.Player.ColliderUtility.CapsuleColliderData.ColliderVerticalExtents, Vector3.down);
+
+        if (!Physics.Raycast(downwardsRayFromCapsuleBottom, out _, movementData.GroundToFallRayDistance, stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore))
+        {
+            OnFall();
+        }
+    }
+
+    protected virtual void OnFall()
+    {
+        stateMachine.ChangeState(stateMachine.FailingState);
+    }
     #endregion
 
 
     #region Input Method
-    protected virtual void OnMovementCanceled(InputAction.CallbackContext context)
-    {
-        stateMachine.ChangeState(stateMachine.IdlingState);
-    }
-
     protected virtual void OnDashStarted(InputAction.CallbackContext context)
     {
         stateMachine.ChangeState(stateMachine.DashingState);

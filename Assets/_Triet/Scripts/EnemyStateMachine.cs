@@ -18,8 +18,8 @@ public class EnemyStateMachine : MonoBehaviour
     [Header("Patrolling")]
     [SerializeField] bool havePatrolPoint;
     [SerializeField] Vector3 patrolPoint;
-    Vector3 enemyDirection;
-    Vector3 spawnPoint;
+    [SerializeField] Vector3 enemyDirection;
+    [SerializeField] Vector3 spawnPoint;
     [SerializeField] float maxDistance;
     [Header("Attack")]
     bool attacking;
@@ -27,7 +27,7 @@ public class EnemyStateMachine : MonoBehaviour
     private void Start()
     {
         currentState = EnemyState.Idle;
-        spawnPoint = Vector3.zero;
+        spawnPoint = transform.position;
         timeChangePatrol = 50f;
         patrollingTime = 10f;
     }
@@ -87,6 +87,8 @@ public class EnemyStateMachine : MonoBehaviour
     {
         agent.speed = speed;
         Vector3 targetPosition = target; // Vị trí hợp lệ trên NavMesh
+        Debug.Log(targetPosition);
+        //Debug.Log("enemyInfomation.FlyingUnit " + enemyInfomation.FlyingUnit);
         if (!enemyInfomation.FlyingUnit)
         {
             targetPosition.y = transform.position.y; // Giữ nguyên y nếu không phải là đơn vị bay
@@ -278,7 +280,8 @@ public class EnemyStateMachine : MonoBehaviour
         }
         Vector3 enemyDirection = spawner.playerPosition.position - transform.position;
         float angle = Vector3.Angle(transform.forward, enemyDirection);
-        if (angle < 10f)
+        // lưu ý angle
+        if (angle < 20f)
         {
             if (!attacking)
             {
@@ -296,6 +299,10 @@ public class EnemyStateMachine : MonoBehaviour
     {
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         attacking = false;
+    }
+    private void RetreatState()
+    {
+
     }
     private void DeadState()
     {
@@ -337,6 +344,9 @@ public class EnemyStateMachine : MonoBehaviour
             case EnemyState.Attack:
                 AttackState();
                 break;
+            case EnemyState.Retreat:
+                RetreatState();
+                break;
             case EnemyState.Dead:
                 DeadState();
                 break;
@@ -356,5 +366,6 @@ public enum EnemyState
     BackSpawnPoint,
     Chase,
     Attack,
+    Retreat,
     Dead
 }

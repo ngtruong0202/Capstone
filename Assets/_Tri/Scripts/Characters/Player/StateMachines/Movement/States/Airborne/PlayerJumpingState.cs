@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerJumpingState : PlayerAirborneState
 {
     private PlayerJumpData jumpData;
     private bool shouldKeepRotating;
+    private bool canStartFalling;
+
     public PlayerJumpingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
     {
         jumpData = airborneData.JumpData;
@@ -32,6 +35,25 @@ public class PlayerJumpingState : PlayerAirborneState
         base.Exit();
 
         SetBaseRotationData();
+
+        canStartFalling = false;
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (!canStartFalling && IsMovingUp(0f))
+        {
+            canStartFalling = true;
+        }
+
+        if (!canStartFalling || GetPlayerVerticalVelocity().y > 0)
+        {
+            return;
+        }
+
+        stateMachine.ChangeState(stateMachine.FailingState);
     }
 
     public override void PhysicsUpdate()
@@ -66,6 +88,8 @@ public class PlayerJumpingState : PlayerAirborneState
 
         if (shouldKeepRotating)
         {
+            UpdateTargetRotation(GetMovementInputDirection());
+
             jumpDirection = GetTargetRotationDirection(stateMachine.ReusableData.CurrentTargetRotation.y);
         }
 
@@ -99,6 +123,13 @@ public class PlayerJumpingState : PlayerAirborneState
         ResetVelocity();
         
         stateMachine.Player.Rigidbody.AddForce(jumpForce, ForceMode.VelocityChange);
+    }
+    #endregion
+
+    #region Input Methods
+    protected override void OnMovementCanceled(InputAction.CallbackContext context)
+    {
+        
     }
     #endregion
 }
