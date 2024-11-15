@@ -1043,10 +1043,32 @@ MonoBehaviour:
       <StepHeightPercentage>k__BackingField: 0.25
       <FloatRayDistance>k__BackingField: 2
       <StepReachForce>k__BackingField: 25
+    <TriggerColliderData>k__BackingField:
+      <GroundCheckCollider>k__BackingField: {fileID: 8229265628464473906}
   <LayerData>k__BackingField:
     <GroundLayer>k__BackingField:
       serializedVersion: 2
       m_Bits: 8
+  <CameraUtility>k__BackingField:
+    <VirtualCamera>k__BackingField: {fileID: 0}
+    <DefaultHorizontalWaitTime>k__BackingField: 0
+    <DefaultHorizontalRecenteringTime>k__BackingField: 4
+  <AnimationData>k__BackingField:
+    groundedParameterName: Grounded
+    movingParameterName: Moving
+    stoppingParameterName: Stopping
+    landingParameterName: Landing
+    airborneParameterName: Airborne
+    idleParameterName: isIdling
+    dashParameterName: isDashing
+    walkParameterName: isWalking
+    runParameterName: isRunning
+    sprintParameterName: isSprinting
+    mediumStopParameterName: isMediumStopping
+    hardStopParameterName: isHardStopping
+    rollParameterName: isRolling
+    hardLandParameterName: isHardLanding
+    fallParameterName: isFalling
 --- !u!136 &5999571094856051452
 CapsuleCollider:
   m_ObjectHideFlags: 0
