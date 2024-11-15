@@ -14,42 +14,18 @@ public class PlayerStateReusableData
     public bool ShouldWalk { get; set; }
     public bool ShouldSprint { get; set; }
 
-    private Vector3 currentTargetRotation;
-    private Vector3 timeToReachTargetRotation;
-    private Vector3 dampedTargetRotationCurrentVelocity;
-    private Vector3 dampedTargetRotationPassedTime;
+    private Vector3 _currentTargetRotation;
+    private Vector3 _timeToReachTargetRotation;
+    private Vector3 _dampedTargetRotationCurrentVelocity;
+    private Vector3 _dampedTargetRotationPassedTime;
 
-    public ref Vector3 CurrentTargetRotation
-    {
-        get
-        {
-            return ref currentTargetRotation;
-        }
-    }
+    public ref Vector3 CurrentTargetRotation => ref _currentTargetRotation;
 
-    public ref Vector3 TimeToReachTargetRotation
-    {
-        get
-        {
-            return ref timeToReachTargetRotation;
-        }
-    }
+    public ref Vector3 TimeToReachTargetRotation => ref _timeToReachTargetRotation;
 
-    public ref Vector3 DampedTargetRotationCurrentVelocity
-    {
-        get
-        {
-            return ref dampedTargetRotationCurrentVelocity;
-        }
-    }
+    public ref Vector3 DampedTargetRotationCurrentVelocity => ref _dampedTargetRotationCurrentVelocity;
 
-    public ref Vector3 DampedTargetRotationPassedTime
-    {
-        get
-        {
-            return ref dampedTargetRotationPassedTime;
-        }
-    }
+    public ref Vector3 DampedTargetRotationPassedTime => ref _dampedTargetRotationPassedTime;
 
     public Vector3 CurrentJumpForce { get; set; }
 
