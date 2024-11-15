@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [field: Header("Referrence")]
+    [field: Header("Reference")]
     [field: SerializeField] public PlayerSO Data { get; private set; }
 
-    [field: Header("Colllisions")]
+    [field: Header("Collisions")]
     [field: SerializeField] public PlayerCapsuleColliderUtility ColliderUtility { get; private set; }
     [field: SerializeField] public PlayerLayerData LayerData { get; private set; }
 
