@@ -14,7 +14,7 @@ public class EnemyData : ScriptableObject
     public EnemyRace race;
     public float hp;
     public float defense;
-    public float attack;
+    public int attack;
     public float attackCD;
     public float endurance;
     public float recoverEndurance;

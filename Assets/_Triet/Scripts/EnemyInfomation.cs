@@ -8,12 +8,13 @@ public class EnemyInfomation : MonoBehaviour
     public string enemyName { get; private set; }
     public float EnemySpeed { get => enemySpeed; set => enemySpeed = value; }
     public bool FlyingUnit { get => flyingUnit; set => flyingUnit = value; }
+    public int EnemyAtk { get => enemyAtk; set => enemyAtk = value; }
 
     [Header("status")]
     public EnemyRace race;
     [SerializeField] private float enemyMaxHp;
     [SerializeField] private float enemyCurrentHp;
-    [SerializeField] private float enemyAtk;
+    [SerializeField] private int enemyAtk;
     [SerializeField] private float enemyAtkCd;
     [SerializeField] private float enemyDef;
     [SerializeField] private float enemyEndurance;
