@@ -24,12 +24,14 @@ public class EnemyStateMachine : MonoBehaviour
     [Header("Attack")]
     bool attacking;
     public bool isDead;
+    PlayerHealth playerHealth;
     private void Start()
     {
         currentState = EnemyState.Idle;
         spawnPoint = transform.position;
         timeChangePatrol = 50f;
         patrollingTime = 10f;
+        playerHealth = spawner.playerPosition.gameObject.GetComponent<PlayerHealth>();
     }
     private void FixedUpdate()
     {
@@ -298,6 +300,7 @@ public class EnemyStateMachine : MonoBehaviour
     IEnumerator WaitingAttack()
     {
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        playerHealth.PlayerTakeDamage(enemyInfomation.EnemyAtk);
         attacking = false;
     }
     private void RetreatState()
