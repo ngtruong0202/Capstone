@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <workItem from="1731234582818" duration="686000" />
       <workItem from="1731266549324" duration="32000" />
       <workItem from="1731647677471" duration="3578000" />
-      <workItem from="1731662937668" duration="2138000" />
+      <workItem from="1731662937668" duration="3129000" />
     </task>
     <servers />
   </component>

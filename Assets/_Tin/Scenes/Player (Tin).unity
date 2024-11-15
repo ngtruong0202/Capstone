@@ -735,7 +735,7 @@ MonoBehaviour:
   m_HorizontalRecentering:
     m_enabled: 0
     m_WaitTime: 0
-    m_RecenteringTime: 4
+    m_RecenteringTime: 5.333333
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
@@ -804,8 +804,8 @@ GameObject:
   m_Component:
   - component: {fileID: 713031075}
   - component: {fileID: 713031074}
-  - component: {fileID: 713031077}
   - component: {fileID: 713031073}
+  - component: {fileID: 713031077}
   - component: {fileID: 713031076}
   m_Layer: 0
   m_Name: Virtual Camera
@@ -1050,7 +1050,6 @@ GameObject:
   - component: {fileID: 1479808424}
   - component: {fileID: 1479808423}
   - component: {fileID: 1479808422}
-  - component: {fileID: 1479808425}
   - component: {fileID: 1479808426}
   m_Layer: 0
   m_Name: Main Camera
@@ -1133,18 +1132,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1479808425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479808421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73b0a95be81246699cf0d9ecdc01863, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1479808426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1183,14 @@ PrefabInstance:
       propertyPath: <CameraUtility>k__BackingField.<VirtualCamera>k__BackingField
       value: 
       objectReference: {fileID: 713031074}
+    - target: {fileID: 4352732471803918053, guid: cce8bc5cc793d854d846acc96d49a6a6, type: 3}
+      propertyPath: m_Height
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352732471803918053, guid: cce8bc5cc793d854d846acc96d49a6a6, type: 3}
+      propertyPath: m_Center.y
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 4506251220151956195, guid: cce8bc5cc793d854d846acc96d49a6a6, type: 3}
       propertyPath: m_Name
       value: Shadowflame
