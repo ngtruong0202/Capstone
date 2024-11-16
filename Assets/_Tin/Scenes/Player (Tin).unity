@@ -231,6 +231,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1113745660758008112, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1123157078375196611, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -479,9 +483,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5779085289166931854, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5881477077217250752, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881477077217250752, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5959047556288258536, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
       propertyPath: m_Layer
@@ -530,6 +542,10 @@ PrefabInstance:
     - target: {fileID: 7067943904119212720, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067943904119212720, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7170156058987574935, guid: e0ff4cffabe057b4a88b30a6afc72971, type: 3}
       propertyPath: m_Layer
@@ -796,7 +812,7 @@ MonoBehaviour:
   m_HorizontalRecentering:
     m_enabled: 0
     m_WaitTime: 0
-    m_RecenteringTime: 2.352941
+    m_RecenteringTime: 4
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
