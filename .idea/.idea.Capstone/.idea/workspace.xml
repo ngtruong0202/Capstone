@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rendering/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/uMMORPG/Unity Essentials - Lighting Optimisation Tutorial/Prefabs/Environment/TerrainVillage.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/uMMORPG/Unity Essentials - Lighting Optimisation Tutorial/Prefabs/Environment/TerrainVillage.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +103,7 @@
       <workItem from="1731662937668" duration="3129000" />
       <workItem from="1731690617260" duration="1248000" />
       <workItem from="1731698690801" duration="98000" />
-      <workItem from="1731759470575" duration="513000" />
+      <workItem from="1731759470575" duration="2523000" />
     </task>
     <servers />
   </component>
