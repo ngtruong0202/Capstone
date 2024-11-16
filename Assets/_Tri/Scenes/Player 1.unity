@@ -121,7 +121,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9d4f3492c968d7f4ea8594d4496b59d3, type: 2}
 --- !u!1001 &287095621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1207,6 +1207,68 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1645423658
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5079612057961727138, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_Name
+      value: EnemySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021982074379155144, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422570083710520439, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 1301781088095665361}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 4728831859705206194, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4940bd3e682bdca43838f8404df486c6, type: 3}
 --- !u!1 &59353863672784769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3132,6 +3194,7 @@ GameObject:
   - component: {fileID: 535724508387882872}
   - component: {fileID: 8719791829627272041}
   - component: {fileID: 8719791829627272042}
+  - component: {fileID: 8719791829627272043}
   m_Layer: 0
   m_Name: Shadowflame
   m_TagString: Player
@@ -3539,6 +3602,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe68ca44e27360f418b9ecc4452efb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8719791829627272043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349180550259170813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b0ac01b0dba9c4d984d8997aeb3c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHP: 1000
 --- !u!4 &8778835954955861841
 Transform:
   m_ObjectHideFlags: 0
@@ -3799,3 +3875,4 @@ SceneRoots:
   - {fileID: 287095621}
   - {fileID: 1301781088095665361}
   - {fileID: 713031075}
+  - {fileID: 1645423658}
