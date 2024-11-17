@@ -5,7 +5,917 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MegaSplat/Editor/MegaSplatEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MegaSplat/Editor/MegaSplatEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MicroSplat/Editor/MicroSplatEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MicroSplat/Editor/MicroSplatEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MicroSplat/MicroSplatOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/MicroSplat/MicroSplatOutput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/VegetationStudio.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/VegetationStudio.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/VegetationStudio/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Compatibility/VegetationStudio/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/AboutWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/AboutWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/DocScreensWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/DocScreensWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/MapMagicInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/MapMagicInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/MapMagicInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/MapMagicInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Adjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Adjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/AnyIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/AnyIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/AnyOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/AnyOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Biome.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Biome.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Blend.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Blend.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Blur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Blur.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Cavity.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Cavity.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/CleanUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/CleanUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Combine.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Combine.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Constant.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Constant.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Contrast.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Contrast.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Curve.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Curve.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Erosion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Erosion.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Flatten.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Flatten.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Forest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Forest.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/FunctionIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/FunctionIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/FunctionOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/FunctionOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Generator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Generator.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/GrassIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/GrassIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/GrassOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/GrassOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/HeightIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/HeightIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/HeightOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/HeightOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Import.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Import.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Levels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Levels.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Noise.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Noise.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Normalize.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Normalize.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsAdjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsAdjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/ObjectsOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/PortalIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/PortalIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/PortalOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/PortalOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Propagate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Propagate.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Rarefy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Rarefy.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Scatter.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Scatter.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Selector.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Selector.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/SimpleForm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/SimpleForm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Slide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Slide.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Slope.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Slope.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Split.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Split.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Spread.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Spread.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Stamp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Stamp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Subtract.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Subtract.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Terrace.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Terrace.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TexturesIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TexturesIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TexturesOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TexturesOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TreesIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TreesIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TreesOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/TreesOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/UnityCurve.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/UnityCurve.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Voronoi.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/Voronoi.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Adjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Adjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/AnyIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/AnyIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/AnyOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/AnyOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Biome.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Biome.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Blend.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Blend.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Blur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Blur.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Cavity.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Cavity.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/CleanUp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/CleanUp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Combine.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Combine.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Constant.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Constant.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Contrast.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Contrast.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Curve.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Curve.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Erosion.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Erosion.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Flatten.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Flatten.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Forest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Forest.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/FunctionIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/FunctionIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/FunctionOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/FunctionOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Generator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Generator.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/GrassIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/GrassIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/GrassOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/GrassOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/HeightsIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/HeightsIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/HeightsOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/HeightsOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Import.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Import.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Levels.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Levels.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Noise.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Noise.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Normalize.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Normalize.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsAdjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsAdjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/ObjectsOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/PortalIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/PortalIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/PortalOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/PortalOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Propagate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Propagate.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Scatter.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Scatter.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/SimpleForm.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/SimpleForm.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Slide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Slide.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Slope.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Slope.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Split.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Split.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Stamp.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Stamp.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Subtract.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Subtract.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Terrace.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Terrace.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TexturesIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TexturesIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TexturesOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TexturesOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TreesIn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TreesIn.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TreesOut.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/TreesOut.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/UnityCurve.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/UnityCurve.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Voronoi.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/GeneratorIcons/pro/Voronoi.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/About.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/About.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Comment.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Foldout.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Foldout.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/FoldoutMinimal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/FoldoutMinimal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Group.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Group.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Group_pro.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Group_pro.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Icons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Icons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Icons/pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Icons/pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/InletOutlet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/InletOutlet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Node.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Node.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddPanel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddPanel.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddPanelEmpty.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/AddPanelEmpty.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Bot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Bot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Dragged.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Dragged.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Mid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Mid.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Single.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Single.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/NodeLayers/pro/Top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Bottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Bottom_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Bottom_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinBottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinBottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinBottom_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinBottom_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinMid.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinMid.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinMid_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinMid_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinTop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinTop.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinTop_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/PinTop_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Preview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Preview_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Preview_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Remove.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Remove.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Remove_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Remove_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Top_pressed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/Top_pressed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PinButtons/pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Comment.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Create.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Create.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Duplicate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Duplicate.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Export.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Export.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Expose.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Expose.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Eye.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Eye.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Function.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Function.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Generator.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Generator.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Graph.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Graph.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Group.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Group.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Group.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Group.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupAdd.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupAdd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupAdd.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupAdd.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupSelected.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupSelected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupSelected.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/GroupSelected.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Import.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Import.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Initial.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Initial.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Input.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Input.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Insert.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Insert.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Map.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Map.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Modifier.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Modifier.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Objects.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Objects.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Output.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Output.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Portals.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Portals.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Remove.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Remove.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Reset.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Reset.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Spline.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Spline.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Standard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Standard.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/UnExpose.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/UnExpose.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Ungroup.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Ungroup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Ungroup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Ungroup.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Unlink.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Unlink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Unlink.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Unlink.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Update.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Update.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Value.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/Value.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Comment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Comment.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Group.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Group.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/GroupAdd.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/GroupAdd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/GroupSelected.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/GroupSelected.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Ungroup.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Ungroup.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Unlink.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/Popup/pro/Unlink.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PreviewNA.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PreviewNA.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PreviewSandClock.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/PreviewSandClock.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Adjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Adjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Help.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Help.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Info.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Info.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Preview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Values.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/Off/Values.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Adjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Adjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Info.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Info.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Preview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Values.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/Values.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Adjust.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Adjust.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Info.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Info.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Preview.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Preview.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Values.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Editor/Resources/MapMagic/ValuesAdjustPreview/On/pro/Values.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/LogHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/LogHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagic.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagic.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagicObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagicObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagicObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/MapMagicObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/Plugins/SettingsWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/Plugins/SettingsWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Core/SettingsAsset.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Core/SettingsAsset.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/CTS/Arrays/CTS_Profile_Albedos.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/CTS/Arrays/CTS_Profile_Albedos.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/CTS/Arrays/CTS_Profile_Normals.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/CTS/Arrays/CTS_Profile_Normals.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/MegaSplatGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/MegaSplatGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/MegaSplatMaterial2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/MegaSplatMaterial2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/Texture Array Config_texlist.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MegaSplat/Texture Array Config_texlist.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplat.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplat.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatGraph.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatGraph.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial_keywords.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial_keywords.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial_propdata.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatMaterial_propdata.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatSceneSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplatSceneSettings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplat_Base.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/MicroSplat_Base.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef_diff_tarray.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef_diff_tarray.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef_normSAO_tarray.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/MicroSplat/TextureArrayDef_normSAO_tarray.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/VegetationStudioPro/VSProStorage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/VegetationStudioPro/VSProStorage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/VegetationStudioPro/VSProStorage.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Compatibility/VegetationStudioPro/VSProStorage.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/MinuteIsland.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/MinuteIsland.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/MinuteIsland.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/MinuteIsland.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/SimpleGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/SimpleGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/SimpleGraph.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Graphs/SimpleGraph.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials/Sedge.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials/Sedge.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials/Sedge.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Materials/Sedge.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Nettle.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Nettle.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Sedge.FBX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Meshes/Sedge.FBX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Camomiles.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Camomiles.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Nettle.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Nettle.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Sedge.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Grass/Textures/Sedge.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffBright.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffBright.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffBright_nrm.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffBright_nrm.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffDark.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffDark.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffDark_nrm.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/CliffDark_nrm.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassGreen.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassGreen.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassGreen_nrm.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassGreen_nrm.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassYellow.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/GrassYellow.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/Gravel.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/Gravel.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/Gravel_nrm.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/LandTextures/Gravel_nrm.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/AS Screens Cam Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/AS Screens Cam Lights.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Compatibility Lights.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Compatibility Lights.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Compatibility Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Compatibility Lights.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Light.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Light.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Light.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Light.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Sphere.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Sphere.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Sphere.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Sphere.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Tutorial Lights.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Tutorial Lights.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Tutorial Lights.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Light/Tutorial Lights.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyBox1940.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyBox1940.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyBox1940.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyBox1940.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyCloudyEvening.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/SkyCloudyEvening.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/TerrainURP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/TerrainURP.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/Water.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/Water.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/MinuteIsland.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/MinuteIsland.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/CliffBright.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/CliffBright.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/CliffDark.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/CliffDark.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassGreen.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassGreen.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassYellow.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassYellow.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/Gravel.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/Gravel.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/Gravel.terrainlayer.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/Gravel.terrainlayer.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures/Island4.raw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures/Island4.raw.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures/Wind.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Textures/Wind.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Tutorial.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Tutorial.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TutorialSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TutorialSettings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TutorialSettings.lighting.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TutorialSettings.lighting.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MatrixEditors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MatrixEditors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MatrixEditors.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Editor/MatrixEditors.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/GrassOut.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/GrassOut.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightIn.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightIn.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightOut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightOut.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/HeightOut.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MapMagic.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MapMagic.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MapMagic.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MapMagic.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixInitial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixInitial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixInitial.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixInitial.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixModifiers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixModifiers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixModifiers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/MatrixModifiers.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesIn.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesIn.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesOut.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesOut.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesOut.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Generators/Matrix/Runtime/TexturesOut.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/LockDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/LockDraw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/LockDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/LockDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/Lock.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/Lock.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/GrassData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/GrassData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/GrassData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/GrassData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/HeightData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/HeightData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/TexturesData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/LockDatas/TexturesData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/MapMagic.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/MapMagic.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Locks/MapMagic.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Locks/MapMagic.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Manual.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Manual.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/CurveDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/CurveDraw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/CurveDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/CurveDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GeneratorDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GeneratorDraw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GeneratorDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GeneratorDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphEditorActions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphEditorActions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GraphWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GroupDraw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GroupDraw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GroupDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/GroupDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/LevelsDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/LevelsDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Generator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Generator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Graph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Graph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Graph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Graph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/GraphSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/GraphSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/GraphUpdater.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/GraphUpdater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Group.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Group.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Group.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/LayersGenerators.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/LayersGenerators.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/MapMagic.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/MapMagic.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/MapMagic.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/MapMagic.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Placeholders.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Placeholders.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Portals.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Portals.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Portals.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/Portals.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Nodes/SharedValue.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Nodes/SharedValue.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/CreateRightClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/CreateRightClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/CreateRightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/CreateRightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GeneratorRightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GeneratorRightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GraphRightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GraphRightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GraphTree.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GraphTree.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GroupRightClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GroupRightClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GroupRightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/GroupRightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/PortalSelector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/PortalSelector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/RightClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/RightClick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/RightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/RightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/ValueRightClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Popup/Editor/ValueRightClick.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/DrawPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/DrawPreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/DrawPreview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/DrawPreview.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MatrixPreview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/MatrixPreview.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/ObjectsPreview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/ObjectsPreview.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Preview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Preview.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/ObjectGLPreview.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/ObjectGLPreview.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/ObjectPreview.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/ObjectPreview.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/Preview.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/Preview.cginc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TerrainPreviewHDRP.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TerrainPreviewHDRP.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TerrainPreviewURP.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TerrainPreviewURP.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TexturePreview.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/Shaders/TexturePreview.shader.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/SplinePreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/SplinePreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/SplinePreview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Preview/Editor/SplinePreview.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Products.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Products.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Products/MapMagic.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Products/MapMagic.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Products/MapMagic.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Products/MapMagic.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Products/TileData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Products/TileData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Readme.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Area.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Area.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Area.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Area.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/DirectMatricesHolderInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/DirectMatricesHolderInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/FrameDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/FrameDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/MapMagic.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/MapMagic.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/MapMagic.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/MapMagic.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/PinDraw.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/PinDraw.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/TerrainAiming.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/TerrainAiming.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/TerrainTileInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Editor/TerrainTileInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MapMagic.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MapMagic.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MapMagic.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MapMagic.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MaterialPropertySerializer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/MaterialPropertySerializer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainSettings.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainSettings.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainTileManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/TerrainTileManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Weld.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Terrains/Weld.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/ArrayTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/ArrayTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/ClassArrayElementInterface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/ClassArrayElementInterface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/ClassArrays.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/ClassArrays.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/DrawField.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/DrawField.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/MatrixPreviewWindow.cs.bac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/MatrixPreviewWindow.cs.bac.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/Tools.Editor.asmdef.bac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/Tools.Editor.asmdef.bac.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/VoxelMatrixEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Editor/VoxelMatrixEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Erosion.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Erosion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Erosion.solid.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Erosion.solid.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Extensions/Coordinates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Extensions/Coordinates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Extensions/Reflection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Extensions/Reflection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Cell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/DragDrop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/DragDrop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Draw.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Draw.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Popup/SingleWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Popup/SingleWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Backgrounds/Popup.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Backgrounds/Popup.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Backgrounds/pro/FoldoutOpaque.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Backgrounds/pro/FoldoutOpaque.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Chevrons/TickLeft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Chevrons/TickLeft.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Chevrons/TickRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Chevrons/TickRight.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Edit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Okay.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Okay.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Pallete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Pallete.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/RemoveRed.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/RemoveRed.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Warning.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/Warning.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/pro/Edit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/pro/Edit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/pro/Pallete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Icons/pro/Pallete.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Node/Header.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Resources/DPUI/Node/Header.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/ScrollZoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/ScrollZoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/StylesCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/StylesCache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/TexturesCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/TexturesCache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Tools.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Tools.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Tools.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Tools.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Undo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/GUI/Editor/Undo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/LogWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/LogWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/Resources/LogEntry.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/Resources/LogEntry.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/Resources/LogEntryDisabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Editor/Resources/LogEntryDisabled.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Log/Log.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixAssetInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixAssetInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixObjectInspector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixObjectInspector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/MatrixWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/StripePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/StripePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/Tools.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/Tools.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/Tools.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Editor/Tools.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Matrix.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Matrix.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Matrix3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/Matrix3D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/MatrixObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/MatrixObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/MatrixOps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Matrix/MatrixOps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/MeshWrapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/MeshWrapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Pathfinding.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Pathfinding.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Plugins/x86.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Plugins/x86.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/RayhitBoundingBox.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/RayhitBoundingBox.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit/Editor/Tools.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit/Editor/Tools.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit/Editor/Tools.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/SceneEdit/Editor/Tools.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Serializer/UniversalSerializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Serializer/UniversalSerializer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/Editor/Tools.Editor.asmref" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/Editor/Tools.Editor.asmref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/Editor/Tools.Editor.asmref.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/Editor/Tools.Editor.asmref.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/SplineMatrixOps.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Spline/SplineMatrixOps.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Structs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/Structs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/ThreadManager/ThreadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/ThreadManager/ThreadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/TileManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Tools/TileManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Tools.asmdef.bac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Tools/Tools.asmdef.bac.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorApp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorApp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorStrings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HEU_EditorStrings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HoudiniEngineUnityEditor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/HoudiniEngineUnityEditor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_CookLogsWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_CookLogsWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_CurveUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_CurveUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_DragHandleMulti.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_DragHandleMulti.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_EditorUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_EditorUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_GeoSyncUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_GeoSyncUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HandlesUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HandlesUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HoudiniAssetDebugUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HoudiniAssetDebugUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HoudiniAssetUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_HoudiniAssetUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_InputNodeUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_InputNodeUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_InstanceInputUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_InstanceInputUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_NodeSyncUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_NodeSyncUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_OutputLogUIComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_OutputLogUIComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_PDGAssetLinkUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_PDGAssetLinkUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ParameterUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ParameterUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SelectionWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SelectionWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SessionSyncWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SessionSyncWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SettingsWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SettingsWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ShelfToolsWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ShelfToolsWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SplinesPackageManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_SplinesPackageManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ToolsUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/UI/HEU_ToolsUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/VisualScripting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/VisualScripting/HEU_UnitButtonInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/VisualScripting/HEU_UnitButtonInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/VisualScripting/HoudiniEngineUnityEditor.VisualScripting.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Editor/VisualScripting/HoudiniEngineUnityEditor.VisualScripting.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/ExampleAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/ExampleAssets/ExampleCube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/ExampleAssets/ExampleCube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/EverGreen.otl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/EverGreen.otl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/HEUInstanceAttributesStore.hda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/HEUInstanceAttributesStore.hda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/HEU_Example_Unity_Script.hda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/HEU_Example_Unity_Script.hda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/TerrainGenerator.hda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/HDAs/TerrainGenerator.hda.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Prefabs/InputBoundingVolume.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Prefabs/InputBoundingVolume.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/Textures/heu_terrain_default_splat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/Textures/heu_terrain_default_splat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakeandreplaceIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakeandreplaceIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakegameobjectIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakegameobjectIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakeprefabIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_bakeprefabIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_duplicateassetIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_duplicateassetIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_hengine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_hengine.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_hengine_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_hengine_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_recookhdaIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_recookhdaIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_reloadhdaIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_reloadhdaIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_removeheIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_removeheIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_resetparametersIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_resetparametersIcon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_skin.guiskin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_skin.guiskin.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_skin_d.guiskin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_skin_d.guiskin.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_section_box.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_section_box.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_section_box_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_section_box_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_flat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_flat.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_flat_d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Resources/heu_ui_window_flat_d.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/InstanceAttributesStoreExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/InstanceAttributesStoreExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/ParamModifierExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/ParamModifierExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/TerrainGeneratorExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/TerrainGeneratorExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/UnityScriptExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/UnityScriptExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/VisualScriptingExample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scenes/VisualScriptingExample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetEvents.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetEvents.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetPreset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetPreset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetSerializedMetaData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetSerializedMetaData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetUpdater.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_AssetUpdater.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_BoundingVolume.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_BoundingVolume.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_Curve.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_Curve.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_GeneratedOutput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_GeneratedOutput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_GeoNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_GeoNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_HoudiniAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_HoudiniAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_HoudiniAssetRoot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_HoudiniAssetRoot.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_InputNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_InputNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_InstanceInputUIState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_InstanceInputUIState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_ObjectInstanceInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_ObjectInstanceInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_ObjectNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_ObjectNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_PartData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Asset/HEU_PartData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_AttributeData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_AttributeData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_AttributesStore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_AttributesStore.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_OutputAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_OutputAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_OutputAttributesStore.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Attributes/HEU_OutputAttributesStore.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_AssetDatabase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_AssetDatabase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_Defines.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_Defines.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_HAPIUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_HAPIUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_HoudiniEngineError.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_HoudiniEngineError.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_Platform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_Platform.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PlatformWin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PlatformWin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PluginSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PluginSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PluginStorage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Core/HEU_PluginStorage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ExampleEvergreenQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ExampleEvergreenQuery.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ExampleInstanceCustomAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ExampleInstanceCustomAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptCallbackExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptCallbackExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptMeshInputUVLayoutExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptMeshInputUVLayoutExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptParameterExample.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Examples/HEU_ScriptParameterExample.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIConstants.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIConstants.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIEnums.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIEnums.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIFunctions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIFunctions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIStructs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIStructs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIStructsMembers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HAPIStructsMembers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HARCImports.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HAPI/HEU_HARCImports.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HEU_HoudiniVersion.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HEU_HoudiniVersion.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Handles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Handles/HEU_Handle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Handles/HEU_Handle.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Handles/HEU_HandleParamBinding.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Handles/HEU_HandleParamBinding.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HoudiniEngineUnity.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/HoudiniEngineUnity.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGAssetLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGAssetLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGObjects.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGObjects.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGSession.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PDG/HEU_PDGSession.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterModifier.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterModifier.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_ParameterUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_Parameters.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Parameters/HEU_Parameters.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_Curve.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_Curve.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_GeoNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_GeoNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_HoudiniAsset.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_HoudiniAsset.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_HoudiniAssetSubcomponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_HoudiniAssetSubcomponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_InputNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_InputNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_MaterialData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_MaterialData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_ObjectNode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_ObjectNode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_PDGAssetLink.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_PDGAssetLink.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_Parameters.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_Parameters.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_PartData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_PartData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_VolumeCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/PublicWrappers/IHEU_VolumeCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_MaterialData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_MaterialData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_MaterialFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_MaterialFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_UnityMaterialInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Render/HEU_UnityMaterialInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionHAPI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionHAPI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionPDG.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionPDG.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionSyncInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sessions/HEU_SessionSyncInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_AssetSync.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_AssetSync.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_BaseSync.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_BaseSync.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_GeoSync.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_GeoSync.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_NodeSync.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Sync/HEU_NodeSync.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_Task.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_Task.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_TaskManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_TaskManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedLoadBuffers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedLoadBuffers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedTask.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedTask.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedTaskLoadGeo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tasks/HEU_ThreadedTaskLoadGeo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tests/HEU_AssetEventReceiverTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Tests/HEU_AssetEventReceiverTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_CookLogs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_CookLogs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_EditorUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_EditorUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_Extensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_Extensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeneralUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeneralUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GenerateGeoCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GenerateGeoCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeoGroup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeoGroup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeometryUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_GeometryUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterface.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterface.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceMesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceMesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceSpline.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceSpline.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceTerrain.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceTerrain.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceTilemap.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputInterfaceTilemap.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputMeshUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputMeshUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_InputUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_Logger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_Logger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_MeshData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_MeshData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_MeshIndexFormat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_MeshIndexFormat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_RenderingPipelineDefines.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_RenderingPipelineDefines.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SerializableDictionary.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SerializableDictionary.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_ShelfTools.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_ShelfTools.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SimpleJSON.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SimpleJSON.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SimpleJSONUnity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_SimpleJSONUnity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_TerrainUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_TerrainUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_TestHelpers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_TestHelpers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_ToolsInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_ToolsInfo.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_VolumeCache.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/Utility/HEU_VolumeCache.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_InstantiateHDA.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_InstantiateHDA.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_ModifyHDA.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_ModifyHDA.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_UnitButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_UnitButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_UnitButtonAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HEU_UnitButtonAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HoudiniEngineUnity.VisualScripting.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Scripts/VisualScripting/HoudiniEngineUnity.VisualScripting.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/Color.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/Color.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/SpecularLit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/SpecularLit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/SpecularLitAlpha.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/SpecularLitAlpha.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/StandardLit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/StandardLit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/StandardLitAlpha.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HDRP/StandardLitAlpha.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniLineShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniLineShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniSpecular.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniSpecular.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniSpecularAlpha.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniSpecularAlpha.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniStandard.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniStandard.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniStandardAlpha.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/HoudiniStandardAlpha.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/Legacy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/Legacy/HoudiniAlphaSpecularVertexColorLegacy.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/Legacy/HoudiniAlphaSpecularVertexColorLegacy.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/Legacy/HoudiniSpecularVertexColorLegacy.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/Legacy/HoudiniSpecularVertexColorLegacy.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/Color.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/Color.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/SpecularLit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/SpecularLit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/SpecularLitAlpha.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/SpecularLitAlpha.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/StandardLit.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/StandardLit.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/StandardLitAlpha.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/HoudiniEngineUnity/Shaders/URP/StandardLitAlpha.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin).unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)/ReflectionProbe-0.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +1014,7 @@
       <workItem from="1731690617260" duration="1248000" />
       <workItem from="1731698690801" duration="98000" />
       <workItem from="1731759470575" duration="2523000" />
+      <workItem from="1731838333841" duration="422000" />
     </task>
     <servers />
   </component>
