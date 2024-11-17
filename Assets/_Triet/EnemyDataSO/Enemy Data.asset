@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Enemy Data
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyRaceName: Wolf
   race: 4
-  maxRarity: 3
-  basicHp: 1000
-  basicAtk: 200
-  basicAtkSpd: 2
-  basicDef: 200
-  basicCriticalRate: 25
-  basicCriticalDmg: 120
-  description: Dragon
+  hp: 50
+  defense: 0
+  attack: 10
+  attackCD: 3
+  endurance: 5
+  recoverEndurance: 100
+  stunDuration: 10
+  speed: 2
+  description: Wolf
   enemySkill: {fileID: 0}
   spawnPrefab:
-  - {fileID: 193594, guid: aedbd60e2d85ee240b7af8956da0f2bb, type: 3}
   - {fileID: 153244, guid: 9b93a6e74d8b43449bd2d977d5252e48, type: 3}
   maxSpawnAmount: 6
+  flyingUnit: 0

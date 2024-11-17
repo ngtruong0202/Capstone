@@ -4,22 +4,57 @@ using UnityEngine;
 
 public class PlayerMovementStateMachine : StateMachine
 {
-    public Player Player { get; private set; }
+    public Player Player { get; }
 
-    public PlayerIdlingState IdlingState { get; private set; }
+    public PlayerStateReusableData ReusableData { get; }
 
-    public PlayerWalkingState WalkingState { get; private set; }
+    public PlayerIdlingState IdlingState { get;  }
 
-    public PlayerRunningState RunningState { get; private set; }
+    public PlayerDashingState DashingState { get;  }
 
-    public PlayerSprintingState SprintingState { get; private set; }
+    public PlayerWalkingState WalkingState { get; }
+
+    public PlayerRunningState RunningState { get; }
+
+    public PlayerSprintingState SprintingState { get; }
+
+    public PlayerLightStoppingState LightStoppingState { get; }
+
+    public PlayerMediumStoppingState MediumStoppingState { get; }
+    
+    public PLayerHardStoppingState HardStoppingState { get; }
+
+    public PlayerLightLandingState LightLandingState { get; }
+
+    public PlayerRollingState RollingState { get; }
+
+    public PlayerHardLandingState HardLandingState { get; }
+
+    public PlayerJumpingState JumpingState { get; }
+
+    public PlayerFailingState FailingState { get; }
 
     public PlayerMovementStateMachine(Player player)
     {
         Player = player;
+        ReusableData = new PlayerStateReusableData();
+
         IdlingState = new PlayerIdlingState(this);
+        DashingState = new PlayerDashingState(this);
+
         WalkingState = new PlayerWalkingState(this);
         RunningState = new PlayerRunningState(this);
         SprintingState = new PlayerSprintingState(this);
+
+        LightStoppingState = new PlayerLightStoppingState(this);
+        MediumStoppingState = new PlayerMediumStoppingState(this);
+        HardStoppingState = new PLayerHardStoppingState(this);
+
+        LightLandingState = new PlayerLightLandingState(this);
+        RollingState = new PlayerRollingState(this);
+        HardLandingState = new PlayerHardLandingState(this);
+
+        JumpingState = new PlayerJumpingState(this);
+        FailingState = new PlayerFailingState(this);
     }
 }
