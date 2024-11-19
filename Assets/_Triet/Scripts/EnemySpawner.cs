@@ -17,13 +17,13 @@ public class EnemySpawner : MonoBehaviour
     public int enemyDomainX;
     public int enemyDomainZ;
 
+    private void Awake()
+    {
+        enemyData = enemyDataSO.datas.Find(e => e.race == enemyWantToSpawn);
+    }
     private void Start()
     {
         enemyRemoved = 0;
-    }
-    private void OnEnable()
-    {
-        enemyData = enemyDataSO.datas.Find(e => e.race == enemyWantToSpawn);
     }
     private void OnDisable()
     {
@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator SpawnEnemies()
     {
         countEnemySpawned = Random.Range(1, enemyData.maxSpawnAmount + 1);
-        for(int i = 0; i< countEnemySpawned; i++)
+        for (int i = 0; i< countEnemySpawned; i++)
         {
             var enemy = Instantiate(enemyData.spawnPrefab[Random.Range(0, enemyData.spawnPrefab.Count)],
                 new Vector3(transform.position.x + (countEnemySpawned / 2) + (i + 1), 0, transform.position.z + Random.Range(-i, i + 1)),
