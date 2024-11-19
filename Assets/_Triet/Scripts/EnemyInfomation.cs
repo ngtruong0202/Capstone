@@ -9,7 +9,6 @@ public class EnemyInfomation : MonoBehaviour
     public float EnemySpeed { get => enemySpeed; set => enemySpeed = value; }
     public bool FlyingUnit { get => flyingUnit; set => flyingUnit = value; }
     public int EnemyAtk { get => enemyAtk; set => enemyAtk = value; }
-
     [Header("status")]
     public EnemyRace race;
     [SerializeField] private float enemyMaxHp;
@@ -32,8 +31,10 @@ public class EnemyInfomation : MonoBehaviour
     public float chaseArea;
     public float attackArea;
 
+    Transform cameraPos;
     private void Start()
     {
+        cameraPos = Camera.main.transform;
         GetEnemyData();
         sliderHpBar.maxValue = enemyMaxHp;
         sliderHpBar.value = enemyCurrentHp;
@@ -64,8 +65,8 @@ public class EnemyInfomation : MonoBehaviour
     }
     private void LateUpdate()
     {
-        enemyUI.transform.LookAt(stateMachine.spawner.playerPosition);
-        enemyUI.transform.Rotate(new Vector3(0,180,0));
+        enemyUI.transform.LookAt(cameraPos);
+        enemyUI.transform.Rotate(new Vector3(0, 180, 0));
 
 
         if (Input.GetKeyDown(KeyCode.Backspace) && isWork)
@@ -88,22 +89,4 @@ public class EnemyInfomation : MonoBehaviour
             stateMachine.ChangeState(EnemyState.Dead);
         }
     }
-}
-
-public enum EnemyRace
-{
-    None,
-    Undead,
-    Dragon,
-    Devil,
-    Wolf
-}
-
-public enum EnemyRarity
-{
-    Normal,
-    Elite,
-    Rare,
-    Epic,
-    Legendary
 }
