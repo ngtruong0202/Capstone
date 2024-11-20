@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/MapGraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/MapGraph/FeroniaGraph.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/MapGraph/FeroniaGraph.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Feronia.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Feronia.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassYellow.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/TerrainLayers/GrassYellow.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)_Profiles/Post Process Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Player (Tin)_Profiles/Post Process Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf_Legacy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf_Legacy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Textures/Pine_sssv.tif.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Textures/Pine_sssv.tif.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/MapGraph/FeroniaGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/MapGraph/FeroniaGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scenes/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scenes/Feronia.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +108,8 @@
       <workItem from="1731690617260" duration="1248000" />
       <workItem from="1731698690801" duration="98000" />
       <workItem from="1731759470575" duration="2523000" />
-      <workItem from="1731838333841" duration="3271000" />
+      <workItem from="1731838333841" duration="5981000" />
+      <workItem from="1731861898766" duration="1405000" />
     </task>
     <servers />
   </component>
