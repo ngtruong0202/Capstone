@@ -2,7 +2,7 @@
     "name": "PlayerControl",
     "maps": [
         {
-            "name": "Land",
+            "name": "Player",
             "id": "7f9a25ef-7db0-49d9-9c40-2f087e118e54",
             "actions": [
                 {
@@ -18,6 +18,15 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "7d63c2b3-3695-4a5f-a8d1-addf3ae6fab1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CursorToggle",
+                    "type": "Button",
+                    "id": "3a11072b-bb3f-425a-9be1-9849e24c01f7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -88,6 +97,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9ae66876-6890-4973-a65e-83e1ff10c8b1",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CursorToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

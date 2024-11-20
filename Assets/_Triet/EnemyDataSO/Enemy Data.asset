@@ -15,7 +15,7 @@ MonoBehaviour:
   race: 4
   hp: 50
   defense: 0
-  attack: 3
+  attack: 10
   attackCD: 3
   endurance: 5
   recoverEndurance: 100
@@ -24,7 +24,6 @@ MonoBehaviour:
   description: Wolf
   enemySkill: {fileID: 0}
   spawnPrefab:
-  - {fileID: 193594, guid: aedbd60e2d85ee240b7af8956da0f2bb, type: 3}
   - {fileID: 153244, guid: 9b93a6e74d8b43449bd2d977d5252e48, type: 3}
   maxSpawnAmount: 6
   flyingUnit: 0
