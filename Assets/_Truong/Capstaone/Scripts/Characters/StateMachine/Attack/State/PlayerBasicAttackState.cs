@@ -14,13 +14,8 @@ namespace Truong
         public override void Enter()
         {
             base.Enter();
-
-            //stateMachine.Player.Rigidbody.velocity = Vector3.zero;
-
-            ////stateMachine.Player.Inputs.playerActions.Movement.Disable();
-            //stateMachine.Player.movementStateMachine.ChangeState(stateMachine.Player.movementStateMachine.IdlingState);
-
-
+       
+            ResetState();
             BasicAttacks();
 
             startTime = Time.time;
@@ -29,9 +24,7 @@ namespace Truong
 
         public override void Exit()
         {
-            base.Exit();
-
-            //stateMachine.Player.Inputs.playerActions.Movement.Enable();
+            base.Exit();            
         }
 
         

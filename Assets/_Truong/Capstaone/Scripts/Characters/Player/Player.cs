@@ -8,11 +8,10 @@ namespace Truong
     [RequireComponent(typeof(PlayerInputs))]
     public class Player : MonoBehaviour
     {
-        public GameObject prefab;
         [field: SerializeField] public PlayerSO Data { get; private set; }
         [field: SerializeField] public PlayerAnimation PlayerAnimation { get; private set; }
-        [field: SerializeField] public EnemyDetection EnemyDetection { get; private set; }
 
+        public EnemyDetection EnemyDetection { get; private set; }
         public PlayerInputs Inputs { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Animator Animator { get; private set; }
@@ -23,6 +22,8 @@ namespace Truong
         public PlayerMovementStateMachine movementStateMachine;
         public PlayerAttackStateMachine attackStateMachine;
 
+        [Header("Attack")]
+        [field: SerializeField] public Transform attack4Pos;
 
         private void Awake()
         {
@@ -55,7 +56,7 @@ namespace Truong
 
             if(Input.GetKeyDown(KeyCode.F))
             {
-                Instantiate(prefab);
+                Test();
             }
         }
 
@@ -108,6 +109,26 @@ namespace Truong
                 }
             }
         }
+
+        public void Attack4()
+        {
+            attackStateMachine.PlayerAttackCombo4.Attack4(attack4Pos);
+        }
+
+        public void Test()
+        {
+            GameObject obj = PoolManager.Instance.GetPooledObject("Attack4");
+            if (obj != null)
+            {
+                Vector3 pos = new Vector3(transform.position.x,
+                    transform.position.y + 1, transform.position.z);
+
+                obj.transform.position = pos;
+                obj.transform.rotation = transform.rotation;
+                obj.SetActive(true);
+            }
+        }
+
     }
 
 }
