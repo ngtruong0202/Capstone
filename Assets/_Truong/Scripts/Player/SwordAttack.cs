@@ -5,16 +5,17 @@ using UnityEngine.AI;
 
 public class SwordAttack : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private EnemyDetection enemyDetection;
+    public Animator animator {  get; private set; }
+    public Rigidbody rb {  get; private set; }
+    public NavMeshAgent agent {  get; private set; }
+
+    public EnemyDetection enemyDetection {  get; private set; }
 
     private int currentAttack;
     private float cooldowntime = 1;
     private float timeAttack;
     
-    [Tooltip("Offset Stoping Distance")][SerializeField] private float quickAttackDeltaDistance;
+    [Tooltip("Offset Stoping Distance")][SerializeField] private float quickAttackDeltaDistance = 1.8f;
 
 
     void Update()
@@ -23,7 +24,7 @@ public class SwordAttack : MonoBehaviour
         timeAttack += Time.deltaTime;
         if (Input.GetMouseButtonDown(0))
         {
-            Attack();           
+              
         }
         
     }

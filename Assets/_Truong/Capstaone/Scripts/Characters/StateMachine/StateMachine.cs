@@ -12,7 +12,7 @@ namespace Truong
         {
             currentState?.Exit();
             currentState = state;
-            currentState.Enter();
+            currentState?.Enter();
         }
 
         public void HandleInput()
@@ -27,7 +27,7 @@ namespace Truong
 
         public void PhysicUpdate()
         {
-            currentState?.PhysicUpdate();
+            currentState.PhysicUpdate();
         }
 
         public void OnAnimationEnterEvent()
