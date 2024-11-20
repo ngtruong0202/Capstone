@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,11 +11,13 @@ namespace Truong
         }
 
         protected override void AddInputActionCallbacks()
-        {
+        {          
             stateMachine.Player.Inputs.playerActions.Movement.canceled += OnMovementCanceled;
             stateMachine.Player.Inputs.playerActions.Jump.started += OnJumpStarted;
-            stateMachine.Player.Inputs.playerActions.Dash.started += OnDashStarted;
+            stateMachine.Player.Inputs.playerActions.Dash.started += OnDashStarted;   
         }
+
+        
 
         protected override void RemoveInputActionCallbacks()
         {
@@ -40,6 +43,16 @@ namespace Truong
         protected virtual void OnJumpStarted(InputAction.CallbackContext context)
         {
             stateMachine.ChangeState(stateMachine.JumpingState);
+        }
+
+        public void StopAgent()
+        {
+            if(stateMachine.Player.Agent.enabled)
+            {
+                stateMachine.Player.Agent.isStopped = true;
+                stateMachine.Player.Agent.enabled = false;
+
+            }
         }
     }
 

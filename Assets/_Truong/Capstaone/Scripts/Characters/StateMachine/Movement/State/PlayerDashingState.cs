@@ -26,7 +26,7 @@ namespace Truong
 
             UpdateConsecutiveDashes();
 
-            startTime = Time.time;
+            
 
         }
 

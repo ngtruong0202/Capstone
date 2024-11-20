@@ -1694,16 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b41b1799fc4734cba3a519ea944d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1682346324}
-  rb: {fileID: 1682346327}
-  agent: {fileID: 1682346329}
-  enemyDetection: {fileID: 1682346328}
   quickAttackDeltaDistance: 1.8
---- !u!95 &1682346324 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4607728610940519514, guid: c46b93bb947b2e24b88682e58eede668, type: 3}
-  m_PrefabInstance: {fileID: 1284379810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1682346325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4607728610933304284, guid: c46b93bb947b2e24b88682e58eede668, type: 3}

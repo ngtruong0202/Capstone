@@ -15,17 +15,19 @@ namespace Truong
         public override void Enter()
         {
             base.Enter();
-
-            stateMachine.ReusableData.MovementSpeedModifier = movementData.RunData.SpeedModifier;
+            
+            StopAgent();
 
             StartAnimation(stateMachine.Player.PlayerAnimation.Running);
+
+            stateMachine.ReusableData.MovementSpeedModifier = movementData.RunData.SpeedModifier;    
         }
 
         public override void Exit()
         {
             base.Exit();
-            StopAnimation(stateMachine.Player.PlayerAnimation.Running);
 
+            StopAnimation(stateMachine.Player.PlayerAnimation.Running);
         }
     }
 }

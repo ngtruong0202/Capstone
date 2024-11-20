@@ -1,50 +1,112 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Truong
 {
     [RequireComponent(typeof(PlayerInputs))]
     public class Player : MonoBehaviour
     {
-
+        public GameObject prefab;
         [field: SerializeField] public PlayerSO Data { get; private set; }
         [field: SerializeField] public PlayerAnimation PlayerAnimation { get; private set; }
+        [field: SerializeField] public EnemyDetection EnemyDetection { get; private set; }
 
         public PlayerInputs Inputs { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Animator Animator { get; private set; }
+        public NavMeshAgent Agent { get; private set; }
 
         public Transform MainCameraTransform { get; private set; }
 
-        private PlayerMovementStateMachine movementStateMachine;
+        public PlayerMovementStateMachine movementStateMachine;
+        public PlayerAttackStateMachine attackStateMachine;
+
 
         private void Awake()
         {
             Inputs = GetComponent<PlayerInputs>();
             Rigidbody = GetComponent<Rigidbody>();
             Animator = GetComponent<Animator>();
+            Agent = GetComponent<NavMeshAgent>();
+            EnemyDetection = GetComponent<EnemyDetection>();
 
             PlayerAnimation.Initilize();
             movementStateMachine = new PlayerMovementStateMachine(this);
+            attackStateMachine = new PlayerAttackStateMachine(this);
 
             MainCameraTransform = Camera.main.transform;
         }
 
         private void Start()
         {
-            movementStateMachine.ChangeState(movementStateMachine.IdlingState);
+            CancelAttack();
+            
         }
 
         private void Update()
         {
             movementStateMachine.HandleInput();
             movementStateMachine.UpDate();
+
+            attackStateMachine.HandleInput();
+            attackStateMachine.UpDate();
+
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                Instantiate(prefab);
+            }
         }
 
         private void FixedUpdate()
         {
             movementStateMachine.PhysicUpdate();
+            attackStateMachine.PhysicUpdate();
+        }
+
+        public void CancelAttack()
+        {
+            movementStateMachine.ChangeState(movementStateMachine.IdlingState);
+            attackStateMachine.ChangeState(attackStateMachine.UnAttack);
+        }
+
+        public void Attack()
+        {
+            if (EnemyDetection.currentTarget == null)
+            {
+                if (EnemyDetection.detecedEnemies.Count == 0)
+                {
+                    attackStateMachine.ChangeState(attackStateMachine.BasicAttackState);
+                }
+
+                else
+                {
+                    EnemyDetection.GetClosestEnemy();
+                    StartCoroutine(attackStateMachine.BasicAttackState.EnemyDistance());
+                }
+
+            }
+            else
+            {
+                float enemyDistance = Vector3.Distance(Agent.transform.position,
+                    EnemyDetection.currentTarget.transform.position);
+
+                if (enemyDistance <= Agent.stoppingDistance)
+                {
+                    Agent.updateRotation = false;
+
+                    attackStateMachine.BasicAttackState.RotateTowardsTarget(EnemyDetection.currentTarget.position);
+
+                    Agent.updateRotation = true;
+
+                    attackStateMachine.ChangeState(attackStateMachine.BasicAttackState);
+                }
+                else
+                {
+                    StartCoroutine(attackStateMachine.BasicAttackState.EnemyDistance());
+                }
+            }
         }
     }
 

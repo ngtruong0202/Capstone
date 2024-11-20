@@ -15,6 +15,8 @@ namespace Truong
         public PlayerSprintState SprintingState { get; }
         public PlayerDashingState DashingState { get; }
 
+        //public PlayerBasicAttackState AttackingState { get; }
+
 
         public PlayerMovementStateMachine(Player player)
         {
@@ -27,6 +29,8 @@ namespace Truong
             JumpingState = new PlayerJumpingState(this);
             SprintingState = new PlayerSprintState(this);
             DashingState = new PlayerDashingState(this);
+
+            //AttackingState = new PlayerBasicAttackState(this);
         }
     }
 

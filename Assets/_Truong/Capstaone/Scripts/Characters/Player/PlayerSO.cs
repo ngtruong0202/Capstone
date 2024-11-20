@@ -9,6 +9,8 @@ namespace Truong
     {
         [field: SerializeField] public PlayerGroundedData GroundedData { get; private set; }
 
+        [field: SerializeField] public PlayerAttackData AttackData { get; private set; }
+
     }
 }
 

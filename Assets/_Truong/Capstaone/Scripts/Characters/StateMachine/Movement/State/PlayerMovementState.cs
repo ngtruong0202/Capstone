@@ -20,6 +20,11 @@ namespace Truong
             InitialiazeData();
         }
 
+        public PlayerMovementState(PlayerMovementState movementState)
+        {
+            movementState = this;
+        }
+
         private void InitialiazeData()
         {
             stateMachine.ReusableData.TimeToReachTargetRotation = movementData.BaseRotationData.TargetRotationReachTime;
@@ -192,7 +197,7 @@ namespace Truong
             return new Vector3(stateMachine.ReusableData.MovementInput.x, 0, stateMachine.ReusableData.MovementInput.y);
         }
 
-        protected void ResetVelocity()
+        public void ResetVelocity()
         {
             stateMachine.Player.Rigidbody.velocity = Vector3.zero;
         }
