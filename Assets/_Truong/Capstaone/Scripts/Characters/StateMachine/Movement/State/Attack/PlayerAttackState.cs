@@ -23,7 +23,6 @@ namespace Truong
             stateMachine = playerAttackStateMachine;
 
             movementData = stateMachine.Player.Data.GroundedData;
-   
         }
 
         public virtual void Enter()
@@ -31,22 +30,12 @@ namespace Truong
             Debug.Log("State : " + GetType().Name);
 
             AddInputActionCallbacks();
-            stateMachine.Player.Rigidbody.velocity = Vector3.zero;
 
-            stateMachine.Player.Inputs.playerActions.Movement.Disable();
-
-            stateMachine.Player.movementStateMachine.ChangeState(stateMachine.Player.movementStateMachine.IdlingState);
-
-            stateMachine.Player.Inputs.DisableActionFor(stateMachine.Player.Inputs.playerActions.Attack,
-                stateMachine.Player.Data.AttackData.CooldownTime);
-            
         }
 
         public virtual void Exit()
         {
              RemoveInputActionCallbacks();
-
-           
         }
 
         public virtual void HandleInput()
@@ -62,6 +51,17 @@ namespace Truong
         public virtual void UpDate()
         {
             
+        }
+
+        public void ResetState()
+        {
+            stateMachine.Player.Rigidbody.velocity = Vector3.zero;
+
+            stateMachine.Player.Inputs.playerActions.Movement.Disable();
+
+            stateMachine.Player.Inputs.DisableActionFor(stateMachine.Player.Inputs.playerActions.Attack,
+                stateMachine.Player.Data.AttackData.CooldownTime);
+
         }
 
         public void BasicAttacks()
@@ -96,6 +96,7 @@ namespace Truong
             StartAnimation(stateMachine.Player.PlayerAnimation.attack, currentAttack);
 
         }
+ 
 
         public void MoveTowardsTarget(string animationName, Vector3 enemyPos, float deltaDistance)
         {
@@ -185,7 +186,7 @@ namespace Truong
 
         protected virtual void AddInputActionCallbacks()
         {
-
+            
         }
 
         protected virtual void RemoveInputActionCallbacks()
