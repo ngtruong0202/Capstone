@@ -20,6 +20,7 @@ MonoBehaviour:
   endurance: 5
   recoverEndurance: 100
   stunDuration: 10
+  atkRange: 3.5
   speed: 3
   description: 
   enemySkill: {fileID: 0}
@@ -28,5 +29,5 @@ MonoBehaviour:
   - {fileID: 2210111654627963380, guid: e82b786cd73a50f40a42b9a355ebde92, type: 3}
   - {fileID: 2704255636958882687, guid: 24c3b49c6355bb74fad0e40a1b391c7f, type: 3}
   - {fileID: 366715571823866581, guid: 2ed5d3989c3d040469e0cfdb881becaf, type: 3}
-  maxSpawnAmount: 5
+  maxSpawnAmount: 4
   flyingUnit: 0

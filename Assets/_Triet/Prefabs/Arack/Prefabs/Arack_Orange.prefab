@@ -1248,6 +1248,7 @@ MonoBehaviour:
   enemyRecoverEndurance: 0
   enemyStunDuration: 0
   enemySpeed: 0
+  atkRange: 0
   flyingUnit: 0
   sliderHpBar: {fileID: 7443024203202985166, guid: 9b93a6e74d8b43449bd2d977d5252e48, type: 3}
   stateMachine: {fileID: 396951548133966521}
@@ -1255,7 +1256,6 @@ MonoBehaviour:
   isWork: 0
   warningArea: 7
   chaseArea: 5
-  attackArea: 3.5
 --- !u!195 &2422737217371024687
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5691678646715219391}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.14986141, y: 0.33984783, z: -0.05495046, w: -0.9268363}
   m_LocalPosition: {x: 0, y: 0, z: -0.0411928}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

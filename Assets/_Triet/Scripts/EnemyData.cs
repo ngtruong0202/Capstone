@@ -14,6 +14,7 @@ public class EnemyData : ScriptableObject
     public float endurance;
     public float recoverEndurance;
     public float stunDuration;
+    public float atkRange;
     public float speed;
     public string description;
     public EnemySkillSO enemySkill;

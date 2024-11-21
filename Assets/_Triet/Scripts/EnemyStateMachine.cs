@@ -239,7 +239,7 @@ public class EnemyStateMachine : MonoBehaviour
             return;
         }
         // nếu vào đúng khoảng cách tấn công thì đổi state
-        if (PlayerEnterArea(enemyInfomation.attackArea))
+        if (PlayerEnterArea(enemyInfomation.AtkRange))
         {
             agent.ResetPath();
             ChangeState(EnemyState.Attack);
@@ -283,7 +283,7 @@ public class EnemyStateMachine : MonoBehaviour
     #endregion
     private void AttackState()
     {
-        if (!PlayerEnterArea(enemyInfomation.attackArea))
+        if (!PlayerEnterArea(enemyInfomation.AtkRange))
         {
             attacking = false;
             LoadAnim("isAttack", attacking);
