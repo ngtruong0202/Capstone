@@ -17,7 +17,8 @@ namespace Truong
 
         [Header("Attack")]
         [SerializeField] public string attack = "Attack";
-
+        [SerializeField] public string skill = "Skill";
+       
 
         public int IdlingHash { get; private set; }
         public int Movement { get; private set; }
@@ -25,6 +26,9 @@ namespace Truong
         public int DashingHash { get; private set; }
         public int JumpingHash { get; private set; }
         public int SprintHash { get; private set; }
+
+        public int Skill { get; private set; }
+
 
       
 
@@ -37,7 +41,8 @@ namespace Truong
             JumpingHash = Animator.StringToHash(jumping);
             SprintHash = Animator.StringToHash(sprint);
 
-       
+            Skill = Animator.StringToHash(skill);
+            
         }
     }
 }

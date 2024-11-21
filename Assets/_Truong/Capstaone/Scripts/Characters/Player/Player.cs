@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,14 +9,16 @@ namespace Truong
     [RequireComponent(typeof(PlayerInputs))]
     public class Player : MonoBehaviour
     {
-        [field: SerializeField] public PlayerSO Data { get; private set; }
+        [field: SerializeField] public PlayerSO Data { get; private set; }   
         [field: SerializeField] public PlayerAnimation PlayerAnimation { get; private set; }
+        [field: SerializeField] public PlayerSkillManager SkillManager { get; private set; }
 
         public EnemyDetection EnemyDetection { get; private set; }
         public PlayerInputs Inputs { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Animator Animator { get; private set; }
         public NavMeshAgent Agent { get; private set; }
+        
 
         public Transform MainCameraTransform { get; private set; }
 
@@ -32,6 +35,7 @@ namespace Truong
             Animator = GetComponent<Animator>();
             Agent = GetComponent<NavMeshAgent>();
             EnemyDetection = GetComponent<EnemyDetection>();
+            SkillManager = GetComponent<PlayerSkillManager>();
 
             PlayerAnimation.Initilize();
             movementStateMachine = new PlayerMovementStateMachine(this);
@@ -56,7 +60,7 @@ namespace Truong
 
             if(Input.GetKeyDown(KeyCode.F))
             {
-                Test();
+                
             }
         }
 
@@ -114,6 +118,8 @@ namespace Truong
         {
             attackStateMachine.PlayerAttackCombo4.Attack4(attack4Pos);
         }
+
+        
 
         public void Test()
         {

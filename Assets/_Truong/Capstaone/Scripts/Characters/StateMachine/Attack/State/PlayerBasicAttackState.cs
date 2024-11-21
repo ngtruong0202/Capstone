@@ -15,7 +15,7 @@ namespace Truong
         {
             base.Enter();
        
-            ResetState();
+            ResetAttackState();
             BasicAttacks();
 
             startTime = Time.time;
