@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Skill Q
   m_EditorClassIdentifier: 
   skillImage: {fileID: 0}
+  skillKey: 0
   skillName: 
   skillType: 
   skillDescription: 
   skillID: 0
   skillLevel: 0
-  skillCooldownTime: 0
+  cooldownTime: 5
+  cooldownRemaining: 0
+  isCooldown: 0

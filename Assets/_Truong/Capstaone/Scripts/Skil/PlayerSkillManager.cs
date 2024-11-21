@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Truong
 {
+    [Serializable]
     public class PlayerSkillManager : MonoBehaviour
     {
         public Player Player;
