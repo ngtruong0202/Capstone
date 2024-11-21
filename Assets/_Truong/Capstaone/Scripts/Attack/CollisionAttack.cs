@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CollisionAttack : MonoBehaviour
 {
-    
+    public float time;
 
     private void OnEnable()
     {
-        Invoke(nameof(DisableEffects), 1.5f);
+        Invoke(nameof(DisableEffects), time);
     }
 
     private void OnDisable()

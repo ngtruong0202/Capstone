@@ -15,6 +15,11 @@ namespace Truong
         public PlayerAttackCombo3State PlayerAttackCombo3 {  get; }
         public PlayerAttackCombo4State PlayerAttackCombo4 {  get; }
 
+        public PlayerSkillQState SkillQState { get; }
+        public PlayerSkillEState SkillEState { get; }
+        public PlayerSkillRState SkillRState { get; }
+        public PlayerSkillTState SkillTState { get; }
+
 
         public PlayerAttackStateMachine(Player player)
         {
@@ -26,6 +31,11 @@ namespace Truong
             BasicAttackState = new PlayerBasicAttackState(this);
             PlayerAttackCombo3 = new PlayerAttackCombo3State(this);
             PlayerAttackCombo4 = new PlayerAttackCombo4State(this);
+
+            SkillQState = new PlayerSkillQState(this);
+            SkillEState = new PlayerSkillEState(this);
+            SkillRState = new PlayerSkillRState(this);
+            SkillTState = new PlayerSkillTState(this);
         }
     }
 

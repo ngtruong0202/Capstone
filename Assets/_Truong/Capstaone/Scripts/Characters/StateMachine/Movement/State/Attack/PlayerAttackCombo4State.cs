@@ -14,7 +14,8 @@ namespace Truong
         {
             base.Enter();
 
-            ResetState();
+            ResetAttackState();
+            startTime = Time.time;
 
             stateMachine.Player.Rigidbody.transform.position += stateMachine.Player.Rigidbody.transform.forward * 3f;
 

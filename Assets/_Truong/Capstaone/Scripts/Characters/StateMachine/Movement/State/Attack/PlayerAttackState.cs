@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,7 +54,8 @@ namespace Truong
             
         }
 
-        public void ResetState()
+        #region Attack
+        public void ResetAttackState()
         {
             stateMachine.Player.Rigidbody.velocity = Vector3.zero;
 
@@ -179,6 +181,9 @@ namespace Truong
             }
         }
 
+        #endregion
+
+      
         protected void StartAnimation(string animationHash, int currentAttack)
         {
             stateMachine.Player.Animator.SetTrigger(animationHash + currentAttack);

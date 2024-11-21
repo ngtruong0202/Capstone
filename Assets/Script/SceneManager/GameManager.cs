@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
             _bar.fillAmount = progressPercentage;
 
             float totaltxt = progressPercentage * 100;
-            barTxt.text = totaltxt.ToString("0");
+            barTxt.text = totaltxt.ToString("0") + "%";
 
             if (totalProgress >= scenesLoading.Count)
             {
