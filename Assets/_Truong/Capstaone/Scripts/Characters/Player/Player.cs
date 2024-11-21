@@ -62,6 +62,10 @@ namespace Truong
             {
                 
             }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
+            }
         }
 
         private void FixedUpdate()

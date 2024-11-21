@@ -8830,8 +8830,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998534866337867272}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03926305, y: -0, z: -0, w: 0.9992289}
-  m_LocalPosition: {x: -0.387846, y: 3.4672775, z: -44.14705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.387846, y: 1, z: -41.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13706,13 +13706,14 @@ GameObject:
   - component: {fileID: 7771566413823695464}
   - component: {fileID: 427517192598762593}
   - component: {fileID: 1232819051942152364}
+  - component: {fileID: 8346639170122072068}
   m_Layer: 8
   m_Name: Kirito_Hunter
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3920863545090888079
 Transform:
   m_ObjectHideFlags: 0
@@ -30385,8 +30386,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4821295215215460871}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.03926305, y: -0, z: -0, w: 0.9992289}
-  m_LocalPosition: {x: 0, y: 0, z: -52.26}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -49.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30394,7 +30395,7 @@ Transform:
   - {fileID: 101100678179944993}
   - {fileID: 3838657105308501299}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -4.5, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &7671549588970287680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32084,6 +32085,20 @@ MonoBehaviour:
     skill: Skill
   <SkillManager>k__BackingField: {fileID: 0}
   attack4Pos: {fileID: 6089782332046159732}
+--- !u!114 &8346639170122072068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917951281243121617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedbbe4f9e43d714681b2eef51949f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5925934498249217531}
+  canTeleport: 1
 --- !u!23 &8356420138507504558
 MeshRenderer:
   m_ObjectHideFlags: 0
