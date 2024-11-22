@@ -3188,11 +3188,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1301781088095665361}
   - component: {fileID: 1577371154193908927}
+  - component: {fileID: 535724508387882872}
+  - component: {fileID: 1807584745948175197}
+  - component: {fileID: 8719791829627272041}
   - component: {fileID: 8719791829627272040}
   - component: {fileID: 8668810799845868455}
-  - component: {fileID: 1807584745948175197}
-  - component: {fileID: 535724508387882872}
-  - component: {fileID: 8719791829627272041}
   - component: {fileID: 8719791829627272042}
   - component: {fileID: 8719791829627272043}
   m_Layer: 0
