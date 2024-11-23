@@ -9,6 +9,7 @@ public class EnemyInfomation : MonoBehaviour
     public float EnemySpeed { get => enemySpeed; set => enemySpeed = value; }
     public bool FlyingUnit { get => flyingUnit; set => flyingUnit = value; }
     public int EnemyAtk { get => enemyAtk; set => enemyAtk = value; }
+    public float AtkRange { get => atkRange; set => atkRange = value; }
 
     [Header("status")]
     public EnemyRace race;
@@ -21,6 +22,7 @@ public class EnemyInfomation : MonoBehaviour
     [SerializeField] private float enemyRecoverEndurance;
     [SerializeField] private float enemyStunDuration;
     [SerializeField] private float enemySpeed;
+    [SerializeField] private float atkRange;
     [SerializeField] private bool flyingUnit;
     [Header("Slider")]
     [SerializeField] private Slider sliderHpBar;
@@ -30,10 +32,11 @@ public class EnemyInfomation : MonoBehaviour
     [Header("Area")]
     public float warningArea;
     public float chaseArea;
-    public float attackArea;
 
+    Transform cameraPos;
     private void Start()
     {
+        cameraPos = Camera.main.transform;
         GetEnemyData();
         sliderHpBar.maxValue = enemyMaxHp;
         sliderHpBar.value = enemyCurrentHp;
@@ -59,13 +62,14 @@ public class EnemyInfomation : MonoBehaviour
         enemyEndurance = enemyInfo.endurance;
         enemyRecoverEndurance = enemyInfo.recoverEndurance;
         EnemySpeed = enemyInfo.speed;
+        atkRange = enemyInfo.atkRange;
 
         FlyingUnit = enemyInfo.flyingUnit;
     }
     private void LateUpdate()
     {
-        enemyUI.transform.LookAt(stateMachine.spawner.playerPosition);
-        enemyUI.transform.Rotate(new Vector3(0,180,0));
+        enemyUI.transform.LookAt(cameraPos);
+        enemyUI.transform.Rotate(new Vector3(0, 180, 0));
 
 
         if (Input.GetKeyDown(KeyCode.Backspace) && isWork)
@@ -88,22 +92,4 @@ public class EnemyInfomation : MonoBehaviour
             stateMachine.ChangeState(EnemyState.Dead);
         }
     }
-}
-
-public enum EnemyRace
-{
-    None,
-    Undead,
-    Dragon,
-    Devil,
-    Wolf
-}
-
-public enum EnemyRarity
-{
-    Normal,
-    Elite,
-    Rare,
-    Epic,
-    Legendary
 }

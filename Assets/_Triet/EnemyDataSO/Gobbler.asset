@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66092d9420df4c54e8b333a7cf86aea9, type: 3}
+  m_Name: Gobbler
+  m_EditorClassIdentifier: 
+  race: 7
+  hp: 200
+  defense: 100
+  attack: 5
+  attackCD: 10
+  endurance: 50
+  recoverEndurance: 65
+  stunDuration: 20
+  atkRange: 2
+  speed: 1
+  description: 
+  enemySkill: {fileID: 0}
+  spawnPrefab:
+  - {fileID: 4155173196019840610, guid: 8ef1f7faf92f70148a2237a31aac204a, type: 3}
+  - {fileID: 5913095231124562995, guid: 63eab75d5d03845488ab034b61f38141, type: 3}
+  - {fileID: 6182247980586143319, guid: dc25a6bc3872048438c56a7e3f3f59ba, type: 3}
+  - {fileID: 5447342107732448593, guid: b31b5231d06d4044589d7f76777bc99f, type: 3}
+  maxSpawnAmount: 4
+  flyingUnit: 0

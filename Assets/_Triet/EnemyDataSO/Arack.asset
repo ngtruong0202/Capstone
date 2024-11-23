@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66092d9420df4c54e8b333a7cf86aea9, type: 3}
+  m_Name: Arack
+  m_EditorClassIdentifier: 
+  race: 5
+  hp: 50
+  defense: 0
+  attack: 3
+  attackCD: 3
+  endurance: 5
+  recoverEndurance: 100
+  stunDuration: 10
+  atkRange: 3.5
+  speed: 3
+  description: 
+  enemySkill: {fileID: 0}
+  spawnPrefab:
+  - {fileID: 7220883205115265423, guid: 2f59be481e777fe43a9af3cd80840786, type: 3}
+  - {fileID: 2210111654627963380, guid: e82b786cd73a50f40a42b9a355ebde92, type: 3}
+  - {fileID: 2704255636958882687, guid: 24c3b49c6355bb74fad0e40a1b391c7f, type: 3}
+  - {fileID: 366715571823866581, guid: 2ed5d3989c3d040469e0cfdb881becaf, type: 3}
+  maxSpawnAmount: 4
+  flyingUnit: 0
