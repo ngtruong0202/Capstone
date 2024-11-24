@@ -9,7 +9,7 @@ TerrainLayer:
   m_Name: RockyHillside
   m_DiffuseTexture: {fileID: 2800000, guid: 41ecdf25935b2ea479b4e6e6bce94957, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: d72af3ab197c9ec408df37417c3e0ceb, type: 3}
-  m_MaskMapTexture: {fileID: 2800000, guid: d618849966bc90f42bdd20f006f56650, type: 3}
+  m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
