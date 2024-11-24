@@ -249,7 +249,76 @@ Transform:
   m_GameObject: {fileID: 151917525}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.93, y: 0.33690166, z: 14.71}
+  m_LocalPosition: {x: -0.6499996, y: 0.33690166, z: 1.6300001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &491412911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 491412913}
+  - component: {fileID: 491412912}
+  m_Layer: 0
+  m_Name: 'PoolManager '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &491412912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491412911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bba52b3587ec764f95a92d8dd896a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Attack3
+    prefab: {fileID: 435114672331356783, guid: 67294aa8ad75b954d866ba4da44f0aef, type: 3}
+    size: 1
+    pos: {fileID: 1672722056}
+  - tag: Attack4
+    prefab: {fileID: 6234818455853893159, guid: 96c30f207bdbb3243abb88e8d5255d1e, type: 3}
+    size: 1
+    pos: {fileID: 1672722056}
+  - tag: Skill1
+    prefab: {fileID: 5921197867985272257, guid: 9d3d658504c896c448a616658632b0ed, type: 3}
+    size: 1
+    pos: {fileID: 1672722056}
+  - tag: Skill2
+    prefab: {fileID: 1168529248583268, guid: 76d29242e44bd1d4481337c8f53681ac, type: 3}
+    size: 1
+    pos: {fileID: 1672722056}
+  - tag: Skill3
+    prefab: {fileID: 2134000535842535392, guid: 8967753c297c3124d98b0c7df5216ac2, type: 3}
+    size: 1
+    pos: {fileID: 1672722056}
+  - tag: Skill4
+    prefab: {fileID: 2930022303931718384, guid: 6e85b27b8ab9837428defce13b02db7c, type: 3}
+    size: 1
+    pos: {fileID: 1637060558457392040}
+--- !u!4 &491412913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491412911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.44748193, y: 0.93061465, z: -0.07487624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -500,7 +569,7 @@ Transform:
   m_GameObject: {fileID: 891700197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.68, y: 0.33690166, z: -9.14}
+  m_LocalPosition: {x: -0.8999996, y: 0.33690166, z: -9.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -552,7 +621,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: c9795c8808be79e42be506d690851099, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 31abba265786fd54cb99e6f43347461d, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &938188440
 Transform:
@@ -974,13 +1043,13 @@ Transform:
   m_GameObject: {fileID: 1495972860}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.82, y: 0.33690166, z: 14.71}
+  m_LocalPosition: {x: -11.81, y: 0.33690166, z: 1.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1727919047
+--- !u!1 &1672722055
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -988,62 +1057,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1727919049}
-  - component: {fileID: 1727919048}
+  - component: {fileID: 1672722056}
   m_Layer: 0
-  m_Name: PoolManager  (1)
+  m_Name: Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1727919048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727919047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bba52b3587ec764f95a92d8dd896a3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools:
-  - tag: Attack3
-    prefab: {fileID: 435114672331356783, guid: 67294aa8ad75b954d866ba4da44f0aef, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
-  - tag: Attack4
-    prefab: {fileID: 6234818455853893159, guid: 96c30f207bdbb3243abb88e8d5255d1e, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
-  - tag: Skill1
-    prefab: {fileID: 5921197867985272257, guid: 9d3d658504c896c448a616658632b0ed, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
-  - tag: Skill2
-    prefab: {fileID: 1168529248583268, guid: 76d29242e44bd1d4481337c8f53681ac, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
-  - tag: Skill3
-    prefab: {fileID: 2134000535842535392, guid: 8967753c297c3124d98b0c7df5216ac2, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
-  - tag: Skill4
-    prefab: {fileID: 2930022303931718384, guid: 6e85b27b8ab9837428defce13b02db7c, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
---- !u!4 &1727919049
+--- !u!4 &1672722056
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727919047}
+  m_GameObject: {fileID: 1672722055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44748193, y: 0.93061465, z: -0.07487624}
+  m_LocalPosition: {x: -1.7955345, y: 1.1805596, z: -12.864403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13701,9 +13732,9 @@ GameObject:
   - component: {fileID: 4727377965752306851}
   - component: {fileID: 5925934498249217531}
   - component: {fileID: 7510852693712449619}
+  - component: {fileID: 7771566413823695464}
   - component: {fileID: 2396571295579638499}
   - component: {fileID: 8346639170122072067}
-  - component: {fileID: 7771566413823695464}
   - component: {fileID: 427517192598762593}
   - component: {fileID: 1232819051942152364}
   - component: {fileID: 8346639170122072068}
@@ -33664,6 +33695,7 @@ SceneRoots:
   - {fileID: 1495972865}
   - {fileID: 922967007}
   - {fileID: 151917530}
-  - {fileID: 1727919049}
   - {fileID: 7668865327134257295}
   - {fileID: 1452667125956364115}
+  - {fileID: 491412913}
+  - {fileID: 1672722056}

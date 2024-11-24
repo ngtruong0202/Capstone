@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dirt
-  m_DiffuseTexture: {fileID: 2800000, guid: 07baef5fc6f4d194f9c136eb6c259137, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 2d83a42fa90cba94cb7b8205f735a781, type: 3}
+  m_Name: CrackedCliff
+  m_DiffuseTexture: {fileID: 2800000, guid: 78a1e805ea3e59f45948f047707f891f, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 20ba5e6f6bb914a4c911a8e8edc28b0e, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 2, y: 2}
   m_TileOffset: {x: 0, y: 0}

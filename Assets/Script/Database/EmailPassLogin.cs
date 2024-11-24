@@ -298,8 +298,7 @@ public class EmailPassLogin : MonoBehaviour
     public void CreateCharactor()
     {
         string playername = playerName.text;
-        PlayerInfo playerInfo = new PlayerInfo(auth.CurrentUser.UserId, playername);
-        Currency currency = new Currency(1000,1000 );
+        PlayerInfo playerInfo = new PlayerInfo(auth.CurrentUser.UserId, playername);      
         
         if(IsPlayerNameInputValid())
         {

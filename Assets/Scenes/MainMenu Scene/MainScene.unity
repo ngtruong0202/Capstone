@@ -1295,6 +1295,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486093906}
   m_CullTransparentMesh: 1
+--- !u!1 &1829233009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1829233010}
+  m_Layer: 0
+  m_Name: Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1829233010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829233009}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7955345, y: 1.1805596, z: -12.864403}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2004084002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,27 +1359,27 @@ MonoBehaviour:
   - tag: Attack3
     prefab: {fileID: 435114672331356783, guid: 67294aa8ad75b954d866ba4da44f0aef, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
   - tag: Attack4
     prefab: {fileID: 6234818455853893159, guid: 96c30f207bdbb3243abb88e8d5255d1e, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
   - tag: Skill1
     prefab: {fileID: 5921197867985272257, guid: 9d3d658504c896c448a616658632b0ed, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
   - tag: Skill2
     prefab: {fileID: 1168529248583268, guid: 76d29242e44bd1d4481337c8f53681ac, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
   - tag: Skill3
     prefab: {fileID: 2134000535842535392, guid: 8967753c297c3124d98b0c7df5216ac2, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
   - tag: Skill4
     prefab: {fileID: 2930022303931718384, guid: 6e85b27b8ab9837428defce13b02db7c, type: 3}
     size: 1
-    pos: {fileID: 0}
+    pos: {fileID: 1829233010}
 --- !u!4 &2004084004
 Transform:
   m_ObjectHideFlags: 0
@@ -1374,3 +1405,4 @@ SceneRoots:
   - {fileID: 1093330193}
   - {fileID: 661231915}
   - {fileID: 2004084004}
+  - {fileID: 1829233010}
