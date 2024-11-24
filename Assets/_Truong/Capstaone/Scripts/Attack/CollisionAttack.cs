@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollisionAttack : MonoBehaviour
 {
     public float time;
+    Vector3 cureentPos;
 
     private void OnEnable()
     {
@@ -13,6 +14,7 @@ public class CollisionAttack : MonoBehaviour
 
     private void OnDisable()
     {
+        
         CancelInvoke(nameof(DisableEffects));
     }
 

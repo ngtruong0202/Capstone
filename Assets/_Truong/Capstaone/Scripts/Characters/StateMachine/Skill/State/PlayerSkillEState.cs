@@ -17,7 +17,7 @@ namespace Truong
 
             stateMachine.Player.SkillManager.OnSkill(skill);
 
-            StartAnimation(stateMachine.Player.PlayerAnimation.skill, 1);
+            StartAnimation(stateMachine.Player.PlayerAnimation.skill, 2);
         }
     }
 

@@ -31,7 +31,7 @@ namespace Truong
             GameObject obj = PoolManager.Instance.GetPooledObject(effect);
             if (obj != null)
             {
-
+                //obj.transform.parent = null;
                 obj.transform.position = transform.position;
                 obj.transform.rotation = transform.rotation;
                 obj.SetActive(true);

@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        loadingScreen.gameObject.SetActive(false);
+        loadingScreen.SetActive(false);
 
     }
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(string scene)
     {
-        loadingScreen.gameObject.SetActive(true);
+        loadingScreen.SetActive(true);
         if (SceneManager.GetSceneByName("Login").isLoaded)
         {
             scenesLoading.Add(SceneManager.UnloadSceneAsync("Login"));
@@ -62,9 +62,6 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(GetSceneLoadPropress());
 
-        Vector3 vector3 = new Vector3(-2, -12, 35);
-
-        Instantiate(playerPrefabs, vector3, Quaternion.identity);
     }
 
     public void LoadScene(string newScene, string currentScene)
@@ -75,11 +72,6 @@ public class GameManager : MonoBehaviour
         {
             scenesLoading.Add(SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Additive));
         }
-
-        //if (!SceneManager.GetSceneByName(newScene).isLoaded)
-        //{
-        //    scenesLoading.Add(SceneManager.LoadSceneAsync(newScene, LoadSceneMode.Additive));
-        //}
 
         if (SceneManager.GetSceneByName(currentScene).isLoaded)
         {
@@ -111,9 +103,18 @@ public class GameManager : MonoBehaviour
             {
                 loadingScreen.SetActive(false);
                 scenesLoading.Clear();
+
+                SpawnPlayer();
             }
 
             yield return null;
         }
+    }
+
+    private void SpawnPlayer()
+    {
+        Vector3 vector3 = new Vector3(-2, -12, 35);
+
+        Instantiate(playerPrefabs, vector3, Quaternion.identity);
     }
 }
