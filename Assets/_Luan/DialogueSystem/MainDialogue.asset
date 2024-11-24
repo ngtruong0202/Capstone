@@ -111,6 +111,8 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
       cancelSubtitle:
         key: 27
         buttonName: 
@@ -503,7 +505,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 19.918003, y: 8.714125}
+    canvasScrollPosition: {x: 59.727142, y: 13.039751}
     canvasZoom: 0.64000034
   syncInfo:
     syncActors: 0
