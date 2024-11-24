@@ -20,5 +20,5 @@ MonoBehaviour:
   skillID: 0
   skillLevel: 0
   cooldownTime: 5
-  cooldownRemaining: 0
+  cooldownRemaining: -0.002372526
   isCooldown: 0
