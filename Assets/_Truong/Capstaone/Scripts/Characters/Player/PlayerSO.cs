@@ -11,6 +11,10 @@ namespace Truong
 
         [field: SerializeField] public PlayerAttackData AttackData { get; private set; }
 
+        [field: SerializeField] public PlayerSkillSO[] SkillData { get; private set; }
+
+        [field: SerializeField] public List<Pool> pools { get; private set; }
     }
 }
 
+   

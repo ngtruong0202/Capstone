@@ -15,9 +15,7 @@ namespace Truong
         {
             base.Enter();
 
-            PlayerSkillSO skill = stateMachine.Player.SkillManager.skillSO[3];
-
-            stateMachine.Player.SkillManager.OnSkill(skill);
+            stateMachine.Player.SkillManager.UseSkill(3);
 
             StartAnimation(stateMachine.Player.PlayerAnimation.skill, 4);
         }

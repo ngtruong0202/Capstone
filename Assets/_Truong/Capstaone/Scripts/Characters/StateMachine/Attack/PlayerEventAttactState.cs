@@ -10,7 +10,6 @@ namespace Truong
         {
         }
 
-       
         protected override void AddInputActionCallbacks()
         {
             stateMachine.Player.Inputs.playerActions.Attack.started += OnAttackStarted;
@@ -39,21 +38,29 @@ namespace Truong
 
         private void OnSkillQStarted(InputAction.CallbackContext context)
         {
+            if (stateMachine.Player.Data.SkillData[0].isCooldown) return;
+
             stateMachine.ChangeState(stateMachine.SkillQState);
         }
 
         private void OnSkillEStarted(InputAction.CallbackContext context)
         {
+            if (stateMachine.Player.Data.SkillData[1].isCooldown) return;
+
             stateMachine.ChangeState(stateMachine.SkillEState);
         }
 
         private void OnSkillRStarted(InputAction.CallbackContext context)
         {
+            if (stateMachine.Player.Data.SkillData[2].isCooldown) return;
+
             stateMachine.ChangeState(stateMachine.SkillRState);
         }
 
         private void OnSkillTStarted(InputAction.CallbackContext context)
         {
+            if (stateMachine.Player.Data.SkillData[3].isCooldown) return;
+
             stateMachine.ChangeState(stateMachine.SkillTState);
         }
     }

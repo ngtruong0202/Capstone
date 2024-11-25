@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708f636621e0ee14faad8d8d08ce4616, type: 3}
   m_Name: Skill R
   m_EditorClassIdentifier: 
-  skillImage: {fileID: 0}
+  skillImage: {fileID: 21300000, guid: d2f53e299be1c4e489de4ae73c42ca99, type: 3}
   skillKey: 0
   skillName: 
   skillType: 
   skillDescription: 
-  skillID: 0
+  skillID: 3
   skillLevel: 0
   cooldownTime: 5
-  cooldownRemaining: -0.003900653
+  cooldownRemaining: -0.04748547
   isCooldown: 0

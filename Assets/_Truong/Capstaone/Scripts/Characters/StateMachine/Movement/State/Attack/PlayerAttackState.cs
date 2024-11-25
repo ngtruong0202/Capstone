@@ -12,11 +12,7 @@ namespace Truong
         protected PlayerGroundedData movementData;
 
         public int currentAttack;
-        public float cooldowntime;
-        public float timeAttack;
         public float startTime;
-        public float cooldownTime = 1;
-
 
 
         public PlayerAttackState(PlayerAttackStateMachine playerAttackStateMachine)
@@ -183,7 +179,17 @@ namespace Truong
 
         #endregion
 
-      
+        public PlayerSkillSO GetSkill(int idskill)
+        {
+            foreach(PlayerSkillSO skill in stateMachine.Player.Data.SkillData)
+            {
+                if(skill.skillID == idskill)
+                    return skill;
+            }
+  
+            return null;
+        }
+
         protected void StartAnimation(string animationHash, int currentAttack)
         {
             stateMachine.Player.Animator.SetTrigger(animationHash + currentAttack);

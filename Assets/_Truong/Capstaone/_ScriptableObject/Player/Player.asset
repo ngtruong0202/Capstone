@@ -12,3 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc00786d2cb2604d8bd0fd49a463d7c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
+  <GroundedData>k__BackingField:
+    <BaseSpeed>k__BackingField: 5
+    <BaseRotationData>k__BackingField:
+      <TargetRotationReachTime>k__BackingField: {x: 0, y: 0, z: 0}
+    <RunData>k__BackingField:
+      <SpeedModifier>k__BackingField: 1
+    <DashData>k__BackingField:
+      <SpeedModifier>k__BackingField: 2
+      <TimeToBeConsideredConsecutive>k__BackingField: 1
+      <ConsecutiveDashesLimitAmount>k__BackingField: 2
+      <DashLimitReachedCooldown>k__BackingField: 1.75
+    <SprintData>k__BackingField:
+      <SpeedMotifier>k__BackingField: 1.7
+      <SprintToRunTime>k__BackingField: 1
+  <AttackData>k__BackingField:
+    <CooldownTime>k__BackingField: 1
+    <ResetAttackTime>k__BackingField: 2
+  <SkillData>k__BackingField:
+  - {fileID: 11400000, guid: f986118d7c86a414aabe6cdd9c34b9a7, type: 2}
+  - {fileID: 11400000, guid: 24a7a6d0d7c3d50449b10d55d267df38, type: 2}
+  - {fileID: 11400000, guid: f93587d174184e74c9cf7e78e39018ab, type: 2}
+  - {fileID: 11400000, guid: 5eb0360f399df944ababaa1ee7e67658, type: 2}
+  <pools>k__BackingField:
+  - {fileID: 11400000, guid: c1a1be68efd53fd4f80d9924efc30261, type: 2}
+  - {fileID: 11400000, guid: 68022b3fd273c5446af763e471a93f3d, type: 2}
+  - {fileID: 11400000, guid: b60eb4f4c5c220c4a9285bdd5f04fe90, type: 2}
+  - {fileID: 11400000, guid: 9b34e078c59fc9b4b8fe82573b711cbd, type: 2}
+  - {fileID: 11400000, guid: 5bb521555f59a1244b8ab65b585f19d6, type: 2}
+  - {fileID: 11400000, guid: 8179a6ac75b10764b9d1e8174bc77129, type: 2}
