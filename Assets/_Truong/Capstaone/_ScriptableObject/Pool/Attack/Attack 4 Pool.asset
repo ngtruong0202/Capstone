@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4264a4ec5b60a744e95e5d085aede0f9, type: 3}
+  m_Name: Attack 4 Pool
+  m_EditorClassIdentifier: 
+  tag: Attack4
+  prefab: {fileID: 6234818455853893159, guid: 96c30f207bdbb3243abb88e8d5255d1e, type: 3}
+  size: 1
+  pos: {fileID: 1284015068043099992, guid: ef59fa1fd9164d64e90965bbd7b70131, type: 3}

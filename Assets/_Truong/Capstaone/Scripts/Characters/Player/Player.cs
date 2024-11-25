@@ -47,7 +47,6 @@ namespace Truong
         private void Start()
         {
             CancelAttack();
-            
         }
 
         private void Update()

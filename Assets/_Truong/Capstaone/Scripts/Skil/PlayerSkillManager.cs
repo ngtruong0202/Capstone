@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Truong
@@ -9,21 +10,30 @@ namespace Truong
     public class PlayerSkillManager : MonoBehaviour
     {
         public Player Player;
-        public PlayerAttackStateMachine attackStateMachine;
-
-
-        public List<PlayerSkillSO> skillSO = new List<PlayerSkillSO>();
         
+        public delegate void StartSkill(PlayerSkillSO skillSO);
+        public static event StartSkill OnStartSkill;
+
+
+        public delegate void SkillEvent(PlayerSkillSO skill);
+        public static event SkillEvent OnSkillCooldownStart;
+        public static event SkillEvent OnSkillCooldownEnd;
+
 
         private void Awake()
         {
-            Player = GetComponent<Player>();
-            attackStateMachine = new PlayerAttackStateMachine(Player);
+            Player = GetComponent<Player>();    
         }
 
-        private void Start()
+        public void UseSkill(int skillId)
         {
-            
+            PlayerSkillSO skill = Player.Data.SkillData[skillId];
+
+            if (skill != null && skill.CanUse())
+            {
+                skill.StartCooldown();
+                OnSkillCooldownStart?.Invoke(skill);
+            }
         }
 
         public void AttackEffect(string effect)
@@ -31,41 +41,23 @@ namespace Truong
             GameObject obj = PoolManager.Instance.GetPooledObject(effect);
             if (obj != null)
             {
-                //obj.transform.parent = null;
                 obj.transform.position = transform.position;
                 obj.transform.rotation = transform.rotation;
                 obj.SetActive(true);
             }
         }
 
-        public void OnSkill(PlayerSkillSO SkillData)
+        public void AttackEffectParent(string effect)
         {
-            if (SkillData.isCooldown)
+            GameObject obj = PoolManager.Instance.GetPooledObject(effect);
+            if (obj != null)
             {
-                Debug.Log("Skill is on cooldown! Time left: " + Mathf.Ceil(SkillData.cooldownRemaining) + "s");
-                return;
+                obj.transform.parent = null;
+                obj.transform.position = transform.position;
+                obj.transform.rotation = transform.rotation;
+                obj.SetActive(true);
             }
-
-            
-            Debug.Log("Skill Activated!");
-            StartCoroutine(StartCooldown(SkillData));
         }
-
-        private IEnumerator StartCooldown(PlayerSkillSO SkillData)
-        {
-            SkillData.isCooldown = true;
-            SkillData.cooldownRemaining = SkillData.cooldownTime;
-
-            while (SkillData.cooldownRemaining > 0)
-            {
-                SkillData.cooldownRemaining -= Time.deltaTime;
-                yield return null;
-            }
-
-            SkillData.isCooldown = false;
-            Debug.Log("Skill is ready to use!");
-        }
-
     }
 }
 
