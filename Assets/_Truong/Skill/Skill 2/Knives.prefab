@@ -4936,7 +4936,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168529248583268}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -5141,6 +5141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 3
+  currentPos: {fileID: 0}
 --- !u!1 &1222912878218796
 GameObject:
   m_ObjectHideFlags: 0
@@ -10016,7 +10017,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a5058d915be7b8c4b874a6d45c51d72b, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
