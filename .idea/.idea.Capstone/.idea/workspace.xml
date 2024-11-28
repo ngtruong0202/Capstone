@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Map/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Map/Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Scenes/SampleScene/NavMesh-NavMesh Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Scenes/SampleScene/NavMesh-NavMesh Surface.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Map/NavMesh-Environment.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefab/Map/NavMesh-Environment.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Map/Environment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Map/Environment.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Skill/Skill 2/Knives.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Skill/Skill 2/Knives.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "TrongTin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -105,6 +107,7 @@
       <workItem from="1731690617260" duration="1248000" />
       <workItem from="1731698690801" duration="98000" />
       <workItem from="1732122182233" duration="8000" />
+      <workItem from="1732727695173" duration="174000" />
     </task>
     <servers />
   </component>
