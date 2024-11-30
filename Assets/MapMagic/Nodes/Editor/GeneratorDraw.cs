@@ -143,11 +143,6 @@ namespace MapMagic.Nodes.GUI
 				if (Cell.current.valChanged)
 				{
 					gen.version ++;
-
-					#if MM_DEBUG
-					Log.Add("DrawGenerator ValueChanged", id:null, idName:null, ("gen ver:",gen.version), ("graph ver:", graph.IdsVersions()));
-					#endif
-
 					GraphWindow.current?.RefreshMapMagic();
 				}
 			}
@@ -241,7 +236,7 @@ namespace MapMagic.Nodes.GUI
 			}
 
 			float dpiFactor = UI.current.DpiScaleFactor;
-			float zoom = UI.current.scrollZoom != null ? UI.current.scrollZoom.zoom.x : 1;
+			float zoom = UI.current.scrollZoom != null ? UI.current.scrollZoom.zoom : 1;
 
 			Vector2 roundVal = new Vector2(  //0.5002 prevents cells un-align for the reason I don't remember
 				moveTo.x > 0  ?  0.5002f  :  -0.5002f,
@@ -356,7 +351,7 @@ namespace MapMagic.Nodes.GUI
 
 		public static T[] DrawLayersAddRemove<T> (Generator gen, T[] layers, bool inversed=false, bool unlinkBackground=false) where T : class, new()
 		{
-			float backCol = UI.current.styles.isPro ? 0.25f : 0.66f; 
+			float backCol = StylesCache.isPro ? 0.25f : 0.66f; 
 			Draw.Rect( new Color(backCol, backCol, backCol) );
 
 			Cell layersCell = Cell.Parent;
@@ -372,7 +367,7 @@ namespace MapMagic.Nodes.GUI
 
 		public static void DrawLayersThemselves<T> (Generator gen, T[] layers, bool inversed=false, Action<Generator,int> layerEditor=null) where T : class
 		{
-			float backCol = UI.current.styles.isPro ? 0.25f : 0.66f; 
+			float backCol = StylesCache.isPro ? 0.25f : 0.66f; 
 			Draw.Rect( new Color(backCol, backCol, backCol) );
 
 			Cell layersCell = Cell.Parent;
@@ -833,8 +828,6 @@ namespace MapMagic.Nodes.GUI
 
 						else if (portalExit != null)
 						{
-							IPortalEnter<object> linkedEnter = portalExit.RefreshEnter(graph);
-
 							//icon
 							Cell.EmptyRowPx(offsetSize/2);
 							Texture2D genIcon = UI.current.textures.GetTexture("GeneratorIcons/PortalOut");
@@ -847,8 +840,8 @@ namespace MapMagic.Nodes.GUI
 								 
 							{
 								string label = "(Empty)";
-								if (linkedEnter != null)
-									label = linkedEnter.Name;
+								if (portalExit.Enter != null)
+									label = portalExit.Enter.Name;
 								Draw.Label(label, style:UI.current.styles.bigLabel);
 							}
 
@@ -924,13 +917,13 @@ namespace MapMagic.Nodes.GUI
 			}
 		}
 
-		public static T DrawGlobalVar<T> (T val, string label, string tooltip=null)
+		public static T DrawGlobalVar<T> (T val, string label)
 		{
 			using (Cell.RowRel(1-Cell.current.fieldWidth)) 
 			{
 				Cell.EmptyRowPx(3);
 				using (Cell.RowPx(9)) Draw.Icon(UI.current.textures.GetTexture("DPUI/Icons/Linked"));
-				using (Cell.Row) Draw.Label(label, tooltip:tooltip);
+				using (Cell.Row) Draw.Label(label);
 
 				if (val != null  &&  val is float)
 					val = (T)(object)Draw.DragValue((float)(object)val);
@@ -1207,7 +1200,7 @@ namespace MapMagic.Nodes.GUI
 
 				Texture2D splineTex = UI.current.textures.GetTexture("DPUI/SplineTex");
 
-				float curWidth = width*UI.current.scrollZoom.zoom.x+2f;
+				float curWidth = width*UI.current.scrollZoom.zoom+2f;
 
 				//20 skin
 				if (!dotted)
@@ -1369,7 +1362,7 @@ namespace MapMagic.Nodes.GUI
 			public static Color GetGeneratorColor (Generator gen) => GetGeneratorColor(Generator.GetGenericType(gen));
 			public static Color GetGeneratorColor (Type genericType)
 			{
-				if (UI.current.styles.isPro) return GetGeneratorColorPro(genericType);
+				if (StylesCache.isPro) return GetGeneratorColorPro(genericType);
 
 				Color color;
 
@@ -1409,7 +1402,7 @@ namespace MapMagic.Nodes.GUI
 			public static Color GetLinkColor (IOutlet<object> outlet) => GetLinkColor(Generator.GetGenericType(outlet));
 			public static Color GetLinkColor (Type genericType)
 			{
-				bool isPro = UI.current.styles.isPro;
+				bool isPro = StylesCache.isPro;
 
 				if (genericType == typeof(MatrixWorld))
 				{
