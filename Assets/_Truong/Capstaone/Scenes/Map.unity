@@ -284,31 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bba52b3587ec764f95a92d8dd896a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools:
-  - tag: Attack3
-    prefab: {fileID: 435114672331356783, guid: 67294aa8ad75b954d866ba4da44f0aef, type: 3}
-    size: 1
-    pos: {fileID: 1672722056}
-  - tag: Attack4
-    prefab: {fileID: 6234818455853893159, guid: 96c30f207bdbb3243abb88e8d5255d1e, type: 3}
-    size: 1
-    pos: {fileID: 1672722056}
-  - tag: Skill1
-    prefab: {fileID: 5921197867985272257, guid: 9d3d658504c896c448a616658632b0ed, type: 3}
-    size: 1
-    pos: {fileID: 1672722056}
-  - tag: Skill2
-    prefab: {fileID: 1168529248583268, guid: 76d29242e44bd1d4481337c8f53681ac, type: 3}
-    size: 1
-    pos: {fileID: 1672722056}
-  - tag: Skill3
-    prefab: {fileID: 2134000535842535392, guid: 8967753c297c3124d98b0c7df5216ac2, type: 3}
-    size: 1
-    pos: {fileID: 1672722056}
-  - tag: Skill4
-    prefab: {fileID: 2930022303931718384, guid: 6e85b27b8ab9837428defce13b02db7c, type: 3}
-    size: 1
-    pos: {fileID: 1637060558457392040}
 --- !u!4 &491412913
 Transform:
   m_ObjectHideFlags: 0
@@ -8726,11 +8701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  skillSO:
-  - {fileID: 11400000, guid: f986118d7c86a414aabe6cdd9c34b9a7, type: 2}
-  - {fileID: 11400000, guid: 24a7a6d0d7c3d50449b10d55d267df38, type: 2}
-  - {fileID: 11400000, guid: f93587d174184e74c9cf7e78e39018ab, type: 2}
-  - {fileID: 11400000, guid: 5eb0360f399df944ababaa1ee7e67658, type: 2}
 --- !u!137 &1256465335901949321
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -13896,7 +13866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3920863545090888079
 Transform:
   m_ObjectHideFlags: 0
