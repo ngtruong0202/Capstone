@@ -31,7 +31,7 @@ namespace MapMagic.Core
 	[DisallowMultipleComponent]
 	public class MapMagicObject : MonoBehaviour, IMapMagic, ISerializationCallbackReceiver
 	{
-		public static readonly SemVer version = new SemVer(2,1,16); 
+		public static readonly SemVer version = new SemVer(2,1,12); 
 
 		//graph
 		public Graph graph;
@@ -137,8 +137,6 @@ namespace MapMagic.Core
 
 		public void Update () 
 		{ 
-			Debug.developerConsoleVisible = true;
-
 			tiles.Update((Vector3)tileSize, pinned:tiles.pinned, holder:this, distsOnly:!isPlaying); //distsOnly: only updating distance priority in editor
 			
 			Den.Tools.Tasks.CoroutineManager.Update();
@@ -214,28 +212,36 @@ namespace MapMagic.Core
 
 		#region IMapMagic
 
-		
 			public void Refresh (bool clearAll=false) 
 			/// Makes current mapMagic to generate changed
 			/// If clearAll then clears all and generates from scratch
 			{
 				if (graph == null) return;
 
-				if (instantGenerate)
-					foreach (TerrainTile tile in tiles.All())
-						tile.Refresh(graph, clearAll);
+				ClearChanged(clearAll);
 
-				else
-				{
-					StopGenerate();
-					ClearChanged(clearAll);	
-				}
+				if (instantGenerate)
+					StartGenerate();
 			}
 
 			private void ClearChanged (bool clearAll=false)
 			{
 				foreach (TerrainTile tile in tiles.All())
-					tile.ClearChanged(graph, clearAll);
+				{
+					if (clearAll)
+					{
+						tile.StopGenerate(); //this will reset tile tasks
+
+						tile.main?.data?.Clear(inSubs:true);
+						tile.draft?.data?.Clear(inSubs:true); 
+					}
+
+					if (tile.main?.data!=null) 
+						graph.ClearChanged(tile.main.data, clearAll);
+					
+					if (tile.draft?.data!=null) 
+						graph.ClearChanged(tile.draft.data, clearAll);
+				}
 			}
 
 			public bool ContainsGraph (Graph graph)
@@ -321,7 +327,7 @@ namespace MapMagic.Core
 
         #region Start/Stop Generate
 
-			public void StartGenerate (bool main=true, bool draft=true)
+			private void StartGenerate (bool main=true, bool draft=true)
 			/// Start generating all tiles (if the specified lod is enabled)
 			{
 				if (graph == null)
@@ -356,7 +362,7 @@ namespace MapMagic.Core
 			{
 				if (graph != null)
 					foreach (TerrainTile tile in tiles.All())
-						tile.Stop();
+						tile.StopGenerate();
 			}
 
         #endregion
@@ -422,7 +428,6 @@ namespace MapMagic.Core
 		public MicroSplatApplyType microSplatApplyType = MicroSplatApplyType.Textures;
 		public bool useCustomControlTextures = false;
 		public bool microSplatNormals = false;
-		public UnityEngine.Object microSplatTexArrConfig;
 		public UnityEngine.Object megaSplatTexList;
 		public UnityEngine.Object vegetationPackage;
 		public bool assignComponent; //assign ms/ms/cts component to terrain

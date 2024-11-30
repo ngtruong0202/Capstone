@@ -130,7 +130,7 @@ namespace MapMagic.Nodes.MatrixGenerators {
 
 		public override void Generate (TileData data, StopToken stop) 
 		{
-			Log.AddThreaded("Textures");
+			Log.Add("Textures");
 
 			//generating
 			MatrixWorld[] dstMatrices = BaseGenerate(data, stop);
@@ -170,7 +170,7 @@ namespace MapMagic.Nodes.MatrixGenerators {
 			data.MarkApply(applyData);
 
 			#if MM_DEBUG
-			Log.AddThreaded("TexturesOut Finalized");
+			Log.Add("TexturesOut Finalized");
 			#endif
 		}
 
@@ -253,7 +253,7 @@ namespace MapMagic.Nodes.MatrixGenerators {
 				Profiler.EndSample();
 
 				#if MM_DEBUG
-				Log.AddThreaded("TexturesOut Applied");
+				Log.Add("TexturesOut Applied");
 				#endif
 			}
 

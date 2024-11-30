@@ -194,7 +194,6 @@ namespace MapMagic.Nodes.MatrixGenerators
 		[Val("Type")]		public FormType type = FormType.Cone;
 		[Val("Intensity")]	public float intensity = 1;
 		[Val("Scale")]		public float scale = 1;
-		[Val("Ratio")]		public float ratio = 1;
 		[Val("Offset")]		public Vector2 offset;
 		[Val("Wrap")]		public CoordRect.TileMode wrap = CoordRect.TileMode.Tile;
 
@@ -205,8 +204,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 		public override void Generate (TileData data, StopToken stop) 
 		{
 			MatrixWorld matrix = new MatrixWorld(data.area.full.rect, data.area.full.worldPos, data.area.full.worldSize, data.globals.height);
-			Vector2D ratScale = ratio<1 ? new Vector2D(scale*ratio, scale) : new Vector2D(scale, scale*(2-ratio));
-			SimpleForm(matrix, (Vector2D)offset, ratScale * (Vector2D)data.area.active.worldSize, stop); //size is chunk-size relative
+			SimpleForm(matrix, (Vector2D)offset, scale * (Vector2D)data.area.active.worldSize, stop); //size is chunk-size relative
 			matrix.Clamp01();
 			data.StoreProduct(this, matrix);
 		}
@@ -214,6 +212,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 		public void SimpleForm (MatrixWorld matrix, Vector2D formOffset, Vector2D formSize, StopToken stop=null)
 		{
 			Vector2D center = formSize/2 + formOffset;
+			float radius = Mathf.Min(formSize.x,formSize.z) / 2f;
 
 			Coord min = matrix.rect.Min; Coord max = matrix.rect.Max;
 
@@ -250,11 +249,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 							val = valX<valZ? valX*2 : valZ*2;
 							break;
 						case FormType.Cone:
-							//float radius = Mathf.Min(formSize.x,formSize.z) / 2f;
-							//val = 1 - ((center-formPos).Magnitude)/radius;
-							Vector2D vec = 2*(center-formPos)/formSize;
-							float dist = vec.Magnitude;
-							val = 1  -  dist;  
+							val = 1 - ((center-formPos).Magnitude)/radius;
 							if (val<0) val = 0;
 							break;
 					}
@@ -385,7 +380,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 				Matrix.ReadMatrix(srcMatrix, dstMatrix, wrapMode);
 
 			else if (srcMatrix.PixelSize.x >= dstMatrix.PixelSize.x)
-				ImportWithEnlarge(srcMatrix, dstMatrix, wrapMode, stop, compatibility:true);
+				ImportWithEnlarge(srcMatrix, dstMatrix, wrapMode, stop);
 
 			else
 				ImportWithDownscale(srcMatrix, dstMatrix, wrapMode, stop);
@@ -412,7 +407,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 		}
 
 
-		public static void ImportWithEnlarge (MatrixWorld src, MatrixWorld dst, CoordRect.TileMode wrapMode, StopToken stop, bool compatibility=false)
+		public static void ImportWithEnlarge (MatrixWorld src, MatrixWorld dst, CoordRect.TileMode wrapMode, StopToken stop)
 		/// Takes a part of raw (src) and expands it to fill tile (dst)
 		/// The new function, but doesn't work for some reason (no offset)
 		{
@@ -421,8 +416,7 @@ namespace MapMagic.Nodes.MatrixGenerators
 			Vector2D rectRatio = (Vector2D)dst.rect.size / (Vector2D)src.rect.size;
 
 			Vector2D ratio = worldRatio / rectRatio;
-			Vector2D readPos = (Vector2D)dst.rect.offset * ratio;
-			if (compatibility) readPos -= (Vector2D)src.worldPos / src.PixelSize; //IDK why. Works properly _without_ this for clusters, but it will change the way Import works
+			Vector2D readPos = (Vector2D)dst.rect.offset * ratio  -  (Vector2D)src.worldPos / src.PixelSize; 
 			Vector2D readSize = (Vector2D)dst.rect.size * ratio; //was /ratio, but we need dst-1 for size
 
 			//int pixelMarg = Mathf.Max((int)(0.5f/ratio.x), 2); //2 initially, but increases for big scale values  //can't rescale when src dst pixelsizes are about the same

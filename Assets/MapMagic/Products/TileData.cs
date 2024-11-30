@@ -185,23 +185,9 @@ namespace MapMagic.Products
 					lastVersion[gen.id] = gen.version;
 			}
 
-			public void ClearReady (ulong genId) 
-			{
-				#if MM_DEBUG
-				//Log.AddThreaded("TileData.ClearReady genId", ("coord:",area.Coord), ("draft:",isDraft));
-				#endif
+			public void ClearReady (ulong genId)  =>  lastVersion.Remove(genId);
 
-				lastVersion.Remove(genId);
-			}
-
-			public void ClearReady (Generator gen)
-			{
-				#if MM_DEBUG
-				//Log.AddThreaded("TileData.ClearReady gen", ("coord:",area.Coord), ("draft:",isDraft), ("node:",gen.GetType().Name));
-				#endif
-
-				lastVersion.Remove(gen.id);
-			}
+			public void ClearReady (Generator gen)  =>  lastVersion.Remove(gen.id);
 
 			public bool AreAllRelevantReady (Graph graph, bool inSubs=false)
 			{
