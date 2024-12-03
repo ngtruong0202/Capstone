@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765873455404262384}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rock_A_02_Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &765873455404262384
 Transform:
@@ -44,28 +44,52 @@ PrefabInstance:
       value: Rock_A_01
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 126
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 126
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 126
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 126
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 126
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_RootOrder
@@ -206,23 +230,23 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 765873455404262384}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 100010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3347025444965814513}
+      addedObject: {fileID: 1405058117547349550}
   m_SourcePrefab: {fileID: 100100000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
---- !u!1 &1338854965163658714 stripped
+--- !u!1 &1338854965163658704 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+  m_CorrespondingSourceObject: {fileID: 100010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
   m_PrefabInstance: {fileID: 1338854965163625338}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &3347025444965814513
+--- !u!64 &1405058117547349550
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338854965163658714}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 1338854965163658704}
+  m_Material: {fileID: 13400000, guid: 64e77c58663b8ea43824514b8ca55ab0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -236,7 +260,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
 --- !u!4 &1338854965164020218 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
