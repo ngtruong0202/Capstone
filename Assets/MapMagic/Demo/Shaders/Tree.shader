@@ -41,7 +41,7 @@ Shader "Demo/Tree"
 		sampler2D _SSSVanishMap;
 		half _Glossiness;
 		half4 _Specular;
-		fixed4 _Color;
+		half4 _Color;
 		half _Saturation;
 		half _SSS;
 		float _SSSDistance;
