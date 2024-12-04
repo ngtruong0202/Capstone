@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Grass_A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Grass_A.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Materials/Grass_A.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Materials/Grass_A.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Feronia Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Feronia Lighting Settings.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +114,7 @@
       <workItem from="1733142765374" duration="54000" />
       <workItem from="1733142976622" duration="35000" />
       <workItem from="1733143026660" duration="72000" />
+      <workItem from="1733286428086" duration="3564000" />
     </task>
     <servers />
   </component>
