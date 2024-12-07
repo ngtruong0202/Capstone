@@ -5,11 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded/Aiming.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States/Grounded.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Grass_A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Grass_A.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Materials/Grass_A.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Details/Materials/Grass_A.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-2.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-2.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-3.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-3.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-4.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-4.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-5.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-5.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-6.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-6.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-7.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-7.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-8.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-8.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-9.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-9.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +148,7 @@
       <workItem from="1733142976622" duration="35000" />
       <workItem from="1733143026660" duration="72000" />
       <workItem from="1733286428086" duration="3564000" />
+      <workItem from="1733569494925" duration="2517000" />
     </task>
     <servers />
   </component>
