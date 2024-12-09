@@ -152,6 +152,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5433444577596912567}
     - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
@@ -159,6 +163,10 @@ PrefabInstance:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 5433444577596912567}
+    - target: {fileID: 2300004, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
@@ -167,6 +175,10 @@ PrefabInstance:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 5433444577596912567}
+    - target: {fileID: 2300006, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
@@ -175,6 +187,10 @@ PrefabInstance:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 5433444577596912567}
+    - target: {fileID: 2300008, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
@@ -183,6 +199,10 @@ PrefabInstance:
       propertyPath: m_ProbeAnchor
       value: 
       objectReference: {fileID: 5433444577596912567}
+    - target: {fileID: 2300010, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2300010, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
