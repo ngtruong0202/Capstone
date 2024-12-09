@@ -5,43 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded/Aiming.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States/Grounded.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherMovementStateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherMovementStateMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherRunningState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherRunningState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherSprintingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherSprintingState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherWalkingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherWalkingState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/PlayerArcherIdlingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/PlayerArcherIdlingState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/PlayerArcherMovementState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/PlayerArcherMovementState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-2.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-2.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-3.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-3.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-4.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-4.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-5.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-5.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-6.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-6.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-7.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-7.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-8.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-8.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-9.exr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-9.exr.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/PlayerControl.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/Data/States/Grounded/Aiming.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Player/StateMachines/Combat/States/Grounded.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +45,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -149,6 +142,7 @@
       <workItem from="1733143026660" duration="72000" />
       <workItem from="1733286428086" duration="3564000" />
       <workItem from="1733569494925" duration="2517000" />
+      <workItem from="1733754657838" duration="5109000" />
     </task>
     <servers />
   </component>
