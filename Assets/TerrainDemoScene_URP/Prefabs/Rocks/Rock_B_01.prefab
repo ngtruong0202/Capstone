@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1755a5b76c1de4c4b94a31d0addf6190, type: 2}
     - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_ProbeAnchor
@@ -153,6 +153,10 @@ PrefabInstance:
       objectReference: {fileID: 5433444577596912567}
     - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
@@ -168,6 +172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
@@ -177,6 +185,10 @@ PrefabInstance:
       objectReference: {fileID: 5433444577596912567}
     - target: {fileID: 2300006, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300006, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
@@ -189,6 +201,10 @@ PrefabInstance:
       objectReference: {fileID: 5433444577596912567}
     - target: {fileID: 2300008, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
@@ -201,6 +217,10 @@ PrefabInstance:
       objectReference: {fileID: 5433444577596912567}
     - target: {fileID: 2300010, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300010, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300010, guid: 8d8873bd1f85c3942bf7f961cec01074, type: 3}
