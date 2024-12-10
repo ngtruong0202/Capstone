@@ -148,6 +148,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
@@ -157,6 +161,10 @@ PrefabInstance:
       objectReference: {fileID: 765873455404262384}
     - target: {fileID: 2300004, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
@@ -176,6 +184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300006, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.44445956
       objectReference: {fileID: 0}
@@ -192,6 +204,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_ScaleInLightmap
       value: 0.23243774
       objectReference: {fileID: 0}
@@ -205,6 +221,10 @@ PrefabInstance:
       objectReference: {fileID: 765873455404262384}
     - target: {fileID: 2300010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300010, guid: 3bb55b9dc42e34c47b35dea94575a162, type: 3}

@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/OcclusionCullingData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/OcclusionCullingData.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineBig2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineMed3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineSmall1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineSmall1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineSmall2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Prefabs/PineSmall2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_A_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_A_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_A_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_A_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_B_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_B_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_B_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_B_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_C_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_C_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_C_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TerrainDemoScene_URP/Prefabs/Rocks/Rock_C_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-1_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-2_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-3_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-3_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-3_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/Lightmap-3_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-0.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia/ReflectionProbe-1.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Skybox/SkyboxMountains.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Skybox/SkyboxMountains.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +114,7 @@
       <workItem from="1733286428086" duration="3564000" />
       <workItem from="1733569494925" duration="2517000" />
       <workItem from="1733754657838" duration="6575000" />
-      <workItem from="1733775046801" duration="1217000" />
+      <workItem from="1733775046801" duration="1927000" />
     </task>
     <servers />
   </component>

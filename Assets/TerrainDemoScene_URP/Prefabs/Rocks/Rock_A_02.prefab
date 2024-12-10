@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5d53f2d3d2871cc40bfce7f567098cbe, type: 2}
     - target: {fileID: 2300002, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_ReceiveGI
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_ProbeAnchor
@@ -153,6 +153,10 @@ PrefabInstance:
       objectReference: {fileID: 8877216319164120280}
     - target: {fileID: 2300002, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300002, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
@@ -168,6 +172,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300004, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300004, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_StaticShadowCaster
       value: 1
       objectReference: {fileID: 0}
@@ -177,6 +185,10 @@ PrefabInstance:
       objectReference: {fileID: 8877216319164120280}
     - target: {fileID: 2300006, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300006, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300006, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
@@ -189,6 +201,10 @@ PrefabInstance:
       objectReference: {fileID: 8877216319164120280}
     - target: {fileID: 2300008, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
       propertyPath: m_MotionVectors
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
+      propertyPath: m_DynamicOccludee
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300008, guid: 0347a2ca593e212468d38a00c0f15925, type: 3}
