@@ -9,7 +9,8 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] private EnemyState currentState;
     public EnemySpawner spawner;
     [SerializeField] EnemyInfomation enemyInfomation;
-    [SerializeField] private Animator animator;
+    [SerializeField] EnemyBehaviourTree enemyBehaviour;
+    public Animator animator;
     [SerializeField] private NavMeshAgent agent;
     [Header("Time")]
     [SerializeField] float timerIdle;
@@ -23,14 +24,11 @@ public class EnemyStateMachine : MonoBehaviour
     [SerializeField] Vector3 spawnPoint;
     [SerializeField] float maxDistance;
     [Header("Attack")]
-    bool attacking;
     public bool isDead;
-    PlayerHealth playerHealth;
     private void Start()
     {
         currentState = EnemyState.Idle;
         spawnPoint = transform.position;
-        playerHealth = spawner.playerPosition.gameObject.GetComponent<PlayerHealth>();
     }
     private void FixedUpdate()
     {
@@ -283,35 +281,22 @@ public class EnemyStateMachine : MonoBehaviour
     #endregion
     private void AttackState()
     {
+        enemyBehaviour.CountdownTimer();
         if (!PlayerEnterArea(enemyInfomation.AtkRange))
         {
-            attacking = false;
-            LoadAnim("isAttack", attacking);
+            enemyBehaviour.ExitAttackState();
             ChangeState(EnemyState.Chase);
             return;
         }
         Vector3 enemyDirection = spawner.playerPosition.position - transform.position;
         float angle = Vector3.Angle(transform.forward, enemyDirection);
         // lưu ý angle
-        if (angle < 20f)
-        {
-            if (!attacking)
-            {
-                attacking = true;
-                LoadAnim("isAttack", attacking);
-                StartCoroutine(WaitingAttack());
-            }
-        }
-        else
+        if(angle > 20f)
         {
             RotateToTarget(spawner.playerPosition.position);
         }
-    }
-    IEnumerator WaitingAttack()
-    {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        playerHealth.PlayerTakeDamage(enemyInfomation.EnemyAtk);
-        attacking = false;
+        if (!enemyBehaviour.CanAttack(enemyInfomation.EnemyAtkCd) || !enemyBehaviour.CompletedPreAtk()) return;
+        enemyBehaviour.EnemyAttack();
     }
     private void RetreatState()
     {
