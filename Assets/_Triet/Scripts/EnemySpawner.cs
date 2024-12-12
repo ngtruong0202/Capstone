@@ -29,6 +29,17 @@ public class EnemySpawner : MonoBehaviour
     {
         StopAllCoroutines();
     }
+
+    public int GetEnemyComboList()
+    {
+        return enemyData.amountComboList;
+    }
+
+    public int GetEnemyWaitingComboList()
+    {
+        return enemyData.amoutWaitingCombolist;
+    }
+
     public void CheckAndSpawn()
     {
         if (!isSpawned)
