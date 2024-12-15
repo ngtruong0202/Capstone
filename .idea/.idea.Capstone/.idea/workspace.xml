@@ -5,7 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Trees/Pine/Materials/Pine.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Player/Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Player/Archer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherMovementStateMachine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherMovementStateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherRunningState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherRunningState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherSprintingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherSprintingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherWalkingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/Moving/PlayerArcherWalkingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/PlayerArcherIdlingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/Grounded/PlayerArcherIdlingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/PlayerArcherMovementState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/States/PlayerArcherMovementState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Controllers/PlayerAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Controllers/PlayerAnimatorController.controller" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +137,7 @@
       <workItem from="1733569494925" duration="2517000" />
       <workItem from="1733754657838" duration="6575000" />
       <workItem from="1733775046801" duration="1927000" />
+      <workItem from="1734177571675" duration="6372000" />
     </task>
     <servers />
   </component>
