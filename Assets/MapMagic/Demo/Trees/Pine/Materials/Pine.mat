@@ -239,7 +239,7 @@ Material:
     - _EnableInstancedPerPixelNormal: 1
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.123
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _HeightTransition: 0
     - _HueVariationKwToggle: 0
@@ -289,7 +289,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.72327036, g: 0.66768885, b: 0.56633425, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DistanceFades: {r: 500, g: 2000, b: 500, a: 2000}
     - _DistanceFadesCached: {r: 500, g: 2000, b: 500, a: 2000}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
