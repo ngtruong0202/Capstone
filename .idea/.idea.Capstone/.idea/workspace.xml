@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Controllers/PlayerArcherAnimatorController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Controllers/PlayerArcherAnimatorController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/ScriptableObjects/Characters/Player/Player.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Scripts/Characters/Player/StateMachines/Movement/States/Airborne/PlayerAirborneState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Scripts/Characters/Player/StateMachines/Movement/States/Airborne/PlayerAirborneState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +120,7 @@
       <workItem from="1733754657838" duration="6575000" />
       <workItem from="1733775046801" duration="1927000" />
       <workItem from="1734177571675" duration="6372000" />
+      <workItem from="1734609201964" duration="2253000" />
     </task>
     <servers />
   </component>
