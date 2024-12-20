@@ -10,6 +10,7 @@ public class EnemyInfomation : MonoBehaviour
     public bool FlyingUnit { get => flyingUnit; set => flyingUnit = value; }
     public int EnemyAtk { get => enemyAtk; set => enemyAtk = value; }
     public float AtkRange { get => atkRange; set => atkRange = value; }
+    public float EnemyAtkCd { get => enemyAtkCd; set => enemyAtkCd = value; }
 
     [Header("status")]
     public EnemyRace race;
@@ -26,12 +27,16 @@ public class EnemyInfomation : MonoBehaviour
     [SerializeField] private bool flyingUnit;
     [Header("Slider")]
     [SerializeField] private Slider sliderHpBar;
+    [Space]
     public EnemyStateMachine stateMachine;
+    [SerializeField] private EnemyBehaviourTree behaviourTree;
     [SerializeField] private GameObject enemyUI;
     public bool isWork;
     [Header("Area")]
     public float warningArea;
     public float chaseArea;
+
+
 
     Transform cameraPos;
     private void Start()
@@ -50,6 +55,10 @@ public class EnemyInfomation : MonoBehaviour
             temp -= 1f;
             sliderHpBar.value = temp;
         }
+    }
+    public bool CheckEnemyHealth()
+    {
+        return enemyCurrentHp <= (enemyMaxHp * 0.5);
     }
     private void GetEnemyData()
     {
@@ -79,6 +88,7 @@ public class EnemyInfomation : MonoBehaviour
     }
     public void EnemyTakeDame(float damage)
     {
+        behaviourTree.CheckEnemyHealth();
         bool isDied = enemyCurrentHp - damage <= 0;
         if (!isDied)
         {
@@ -92,4 +102,5 @@ public class EnemyInfomation : MonoBehaviour
             stateMachine.ChangeState(EnemyState.Dead);
         }
     }
+
 }

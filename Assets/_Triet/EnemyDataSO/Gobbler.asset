@@ -23,7 +23,8 @@ MonoBehaviour:
   atkRange: 2
   speed: 1
   description: 
-  enemySkill: {fileID: 0}
+  amountComboList: 2
+  amoutWaitingCombolist: 1
   spawnPrefab:
   - {fileID: 4155173196019840610, guid: 8ef1f7faf92f70148a2237a31aac204a, type: 3}
   - {fileID: 5913095231124562995, guid: 63eab75d5d03845488ab034b61f38141, type: 3}

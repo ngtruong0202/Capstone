@@ -17,7 +17,8 @@ public class EnemyData : ScriptableObject
     public float atkRange;
     public float speed;
     public string description;
-    public EnemySkillSO enemySkill;
+    public int amountComboList;
+    public int amoutWaitingCombolist;
     public List<GameObject> spawnPrefab = new List<GameObject>();
     public int maxSpawnAmount;
     public bool flyingUnit;

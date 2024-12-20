@@ -750,6 +750,7 @@ GameObject:
   - component: {fileID: -8725007534185732166}
   - component: {fileID: 3817526760772014752}
   - component: {fileID: 8235807214092600885}
+  - component: {fileID: -6361491404371619623}
   m_Layer: 0
   m_Name: Gobbler_TintYellow
   m_TagString: Untagged
@@ -810,11 +811,13 @@ MonoBehaviour:
   currentState: 0
   spawner: {fileID: 0}
   enemyInfomation: {fileID: -8725007534185732166}
+  enemyBehaviour: {fileID: -6361491404371619623}
   animator: {fileID: 1599662636258432401}
   agent: {fileID: 3817526760772014752}
   timerIdle: 0
   timerPatrol: 0
   timeChangePatrol: 10
+  timerAttack: 0
   patrollingTime: 10
   havePatrolPoint: 0
   patrolPoint: {x: 0, y: 0, z: 0}
@@ -844,14 +847,15 @@ MonoBehaviour:
   enemyRecoverEndurance: 0
   enemyStunDuration: 0
   enemySpeed: 0
+  atkRange: 0
   flyingUnit: 0
   sliderHpBar: {fileID: 7443024203202985166, guid: 9b93a6e74d8b43449bd2d977d5252e48, type: 3}
   stateMachine: {fileID: 2028632386102657470}
+  behaviourTree: {fileID: -6361491404371619623}
   enemyUI: {fileID: 5691678646715219391, guid: 24c3b49c6355bb74fad0e40a1b391c7f, type: 3}
   isWork: 0
   warningArea: 7
   chaseArea: 5
-  attackArea: 2
 --- !u!195 &3817526760772014752
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -901,6 +905,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &-6361491404371619623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447342107732448593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ad79dce69187e4ba10fc98fcc97777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateMachine: {fileID: 2028632386102657470}
+  enemyInfomation: {fileID: -8725007534185732166}
 --- !u!1 &5459417599943302233
 GameObject:
   m_ObjectHideFlags: 0
