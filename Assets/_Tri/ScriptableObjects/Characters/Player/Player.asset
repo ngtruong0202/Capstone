@@ -96,7 +96,7 @@ MonoBehaviour:
         <WaitTime>k__BackingField: -1
         <RecenteringTime>k__BackingField: -1
     <RunData>k__BackingField:
-      <SpeedModifier>k__BackingField: 1
+      <SpeedModifier>k__BackingField: 1.5
     <SprintData>k__BackingField:
       <SpeedModifier>k__BackingField: 1.7
       <SprintToRunTime>k__BackingField: 1
@@ -216,7 +216,7 @@ MonoBehaviour:
       <WeakForce>k__BackingField: {x: 1, y: 5, z: 1}
       <MediumForce>k__BackingField: {x: 3.5, y: 5, z: 3.5}
       <StrongForce>k__BackingField: {x: 5, y: 5, z: 5}
-      <DecelerationForce>k__BackingField: 0.5
+      <DecelerationForce>k__BackingField: 0
     <FallData>k__BackingField:
       <FallSpeedLimit>k__BackingField: 15
       <MinimumDistanceToBeConsidereHardFall>k__BackingField: 3
