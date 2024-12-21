@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/TerrainURP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MapMagic/Demo/Materials/TerrainURP.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Luan/Materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Luan/Materials/Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Luan/Materials/Random.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Luan/Materials/Random.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Luan/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Luan/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Running.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Running.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Sprint.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Animations/Basic Movement/Grounded/Moving/Sprint.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tri/Scripts/Characters/Player/StateMachines/Movement/States/Airborne/PlayerFailingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tri/Scripts/Characters/Player/StateMachines/Movement/States/Airborne/PlayerFailingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf_Legacy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Triet/Prefabs/Fantasy Wolf/Materials/M_FantasyWolf_Legacy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Triet/Prefabs/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Triet/Prefabs/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials/T_Body_Metallic.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials/T_Body_Metallic.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials/T_Body_Metallic.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Capstaone/Hunter_1/Texture/Materials/T_Body_Metallic.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Truong/Player/Kirito/Hunter_1/Materials/M_Eyes.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Truong/Player/Kirito/Hunter_1/Materials/M_Eyes.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +132,7 @@
       <workItem from="1733775046801" duration="1927000" />
       <workItem from="1734177571675" duration="6372000" />
       <workItem from="1734609201964" duration="2253000" />
+      <workItem from="1734761709979" duration="392000" />
     </task>
     <servers />
   </component>

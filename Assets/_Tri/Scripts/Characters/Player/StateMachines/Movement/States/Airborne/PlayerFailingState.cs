@@ -50,6 +50,14 @@ public class PlayerFailingState : PlayerAirborneState
 
     protected override void OnContactWithGround(Collider collider)
     {
+        if (stateMachine.ReusableData.MovementInput != Vector2.zero)
+        {
+            stateMachine.ChangeState(stateMachine.RunningState);
+
+            return;
+        }
+        
+        
         float fallDistance = playerPositionOnEnter.y - stateMachine.Player.transform.position.y;
 
         if (fallDistance < fallData.MinimumDistanceToBeConsidereHardFall)
