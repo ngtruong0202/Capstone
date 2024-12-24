@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="" />
+    <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/InputActions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations/PlayerArcherAnimationData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations/PlayerArcherAnimationData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States/PlayerArcherStateReusableData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States/PlayerArcherStateReusableData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines/PlayerArcherStateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines/PlayerArcherStateMachine.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/PlayerArcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/PlayerArcher.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Test.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Test.cs.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachines/Combat/PlayerArcherStateMachine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations/PlayerArcherAnimationData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@14.0.11/Runtime/UniversalRenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -116,6 +134,8 @@
       <workItem from="1734177571675" duration="6372000" />
       <workItem from="1734609201964" duration="2253000" />
       <workItem from="1734761709979" duration="1472000" />
+      <workItem from="1734946272571" duration="824000" />
+      <workItem from="1734967701233" duration="5433000" />
     </task>
     <servers />
   </component>
