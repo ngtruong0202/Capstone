@@ -15,10 +15,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposable
+public partial class PlayerArcherInputActions: IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @PlayerArcherInputAction()
+    public PlayerArcherInputActions()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerArcherInputAction"",
@@ -92,17 +92,8 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
                 },
                 {
                     ""name"": ""Aim"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""03821967-472f-4615-b238-7850ab5f8d87"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Fire"",
                     ""type"": ""Button"",
-                    ""id"": ""a386dd48-ec10-4d2e-adee-88610037d4f8"",
+                    ""id"": ""7831a028-275e-4ee5-a1be-edb71e61224f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -233,23 +224,12 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ae7dabc1-6760-4bd0-82d4-ee9f05c45234"",
+                    ""id"": ""b257641e-9bda-483f-af97-82146b219199"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Aim"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""91933471-7bda-41af-befc-3c981fe0f60d"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -268,7 +248,6 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
-        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -338,11 +317,10 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Aim;
-    private readonly InputAction m_Player_Fire;
     public struct PlayerActions
     {
-        private @PlayerArcherInputAction m_Wrapper;
-        public PlayerActions(@PlayerArcherInputAction wrapper) { m_Wrapper = wrapper; }
+        private PlayerArcherInputActions m_Wrapper;
+        public PlayerActions(PlayerArcherInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @WalkToggle => m_Wrapper.m_Player_WalkToggle;
         public InputAction @Look => m_Wrapper.m_Player_Look;
@@ -351,7 +329,6 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
-        public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -385,9 +362,6 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
             @Aim.started += instance.OnAim;
             @Aim.performed += instance.OnAim;
             @Aim.canceled += instance.OnAim;
-            @Fire.started += instance.OnFire;
-            @Fire.performed += instance.OnFire;
-            @Fire.canceled += instance.OnFire;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -416,9 +390,6 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
             @Aim.started -= instance.OnAim;
             @Aim.performed -= instance.OnAim;
             @Aim.canceled -= instance.OnAim;
-            @Fire.started -= instance.OnFire;
-            @Fire.performed -= instance.OnFire;
-            @Fire.canceled -= instance.OnFire;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -446,6 +417,5 @@ public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposa
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
     }
 }
