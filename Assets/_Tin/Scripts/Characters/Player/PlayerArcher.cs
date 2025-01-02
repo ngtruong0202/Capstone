@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Tin.Scripts.Characters.Player
 {
-    [RequireComponent(typeof(PlayerArcherInputActions))]
+    [RequireComponent(typeof(PlayerArcherInputs))]
     public class PlayerArcher : MonoBehaviour
     {
         public Rigidbody Rigidbody { get; private set; }
@@ -15,7 +15,7 @@ namespace _Tin.Scripts.Characters.Player
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody>();
-            ArcherInput = new PlayerArcherInputs();
+            ArcherInput = gameObject.AddComponent<PlayerArcherInputs>();
             ArcherStateMachine = new PlayerArcherStateMachine(this);
         }
 

@@ -1,6 +1,5 @@
 using _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded;
 using _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.Moving;
-using UnityEngine;
 
 namespace _Tin.Scripts.Characters.Player.StateMachine.Movement
 {

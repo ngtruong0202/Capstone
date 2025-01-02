@@ -5,66 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/PlayerArcherStateMachine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/PlayerArcherStateMachine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherMovingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherMovingState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherRunningState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherRunningState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherSprintingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherSprintingState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherWalkingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherWalkingState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherDashingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherDashingState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherGroundedState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherGroundedState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherIdlingState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherIdlingState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Animations.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Animations/PlayerArcherAnimationEventTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Animations/PlayerArcherAnimationEventTrigger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Cameras.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Cameras/PlayerArcherCameraUtility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Cameras/PlayerArcherCameraUtility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Colliders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Colliders/PlayerArcherCapsuleColliderUtility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Colliders/PlayerArcherCapsuleColliderUtility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Input.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Input/PlayerArcherInputs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Input/PlayerArcherInputs.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.inputactions.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/InputActions/PlayerArcherInputAction.inputactions.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Player/Archer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Prefabs/Player/Archer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations/PlayerArcherAnimationData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/Animations/PlayerArcherAnimationData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States/PlayerArcherStateReusableData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/Data/States/PlayerArcherStateReusableData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/PlayerArcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/PlayerArcher.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines/PlayerArcherStateMachine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/PlayerArcher/StateMachines/PlayerArcherStateMachine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/PlayerArcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Input/PlayerArcherInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/Utilities/Input/PlayerArcherInputs.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,6 +124,8 @@
       <workItem from="1734761709979" duration="1472000" />
       <workItem from="1734946272571" duration="824000" />
       <workItem from="1734967701233" duration="5433000" />
+      <workItem from="1735745646560" duration="1391000" />
+      <workItem from="1735817201009" duration="2425000" />
     </task>
     <servers />
   </component>
