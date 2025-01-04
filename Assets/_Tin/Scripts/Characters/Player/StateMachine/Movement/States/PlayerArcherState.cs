@@ -8,6 +8,11 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         private Vector2 MovementInput { get; set; }
         private const float BaseSpeed = 5f;
         private const float SpeedModifier = 1f;
+        
+        protected Vector3 currentTargetRotation;
+        protected Vector3 timeToReachTargetRotation;
+        protected Vector3 dampedTargetRotationCurrentVelocity;
+        protected Vector3 dampedTargetRotationPassedTime;
 
         protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine) => 
             _archerStateMachine = archerStateMachine;
@@ -39,7 +44,35 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             
             Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
             
-            _archerStateMachine.PlayerArcher.Rigidbody.AddForce(movementDirection * (5F * movementSpeed) - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+            _archerStateMachine.PlayerArcher.Rigidbody.AddForce(
+                movementDirection * (5F * movementSpeed) - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+        }
+
+        private float RotatePlayer(Vector3 direction)
+        {
+            var directionAngle = GetDirectionAngle(direction);
+
+            directionAngle = AddCameraToRotationAngle(directionAngle);
+
+            return directionAngle;
+        }
+        
+        private static float GetDirectionAngle(Vector3 direction)
+        {
+            var directionAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+
+            if(directionAngle < 0)
+                directionAngle += 360f;
+            return directionAngle;
+        }
+
+        private float AddCameraToRotationAngle(float angle)
+        {
+            angle += _archerStateMachine.PlayerArcher.MainCameraTransform.eulerAngles.y;
+
+            if(angle > 360f)
+                angle -= 360f;
+            return angle;
         }
         #endregion
 

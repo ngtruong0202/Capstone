@@ -8,6 +8,7 @@ namespace _Tin.Scripts.Characters.Player
     public class PlayerArcher : MonoBehaviour
     {
         public Rigidbody Rigidbody { get; private set; }
+        public Transform MainCameraTransform { get; private set; }
         public PlayerArcherInputs ArcherInput { get; private set; }
         // This will present the player's state machine
         private PlayerArcherStateMachine ArcherStateMachine { get; set; }
@@ -15,6 +16,10 @@ namespace _Tin.Scripts.Characters.Player
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody>();
+            
+            if (Camera.main != null) 
+                MainCameraTransform = Camera.main.transform;
+            
             ArcherInput = gameObject.AddComponent<PlayerArcherInputs>();
             ArcherStateMachine = new PlayerArcherStateMachine(this);
         }
