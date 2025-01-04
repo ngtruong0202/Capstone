@@ -6,12 +6,12 @@ namespace _Tin.Scripts.Characters.Player.Utilities.Input
 {
     public class PlayerArcherInputs : MonoBehaviour
     {
-        public PlayerArcherInputActions ArcherInputActions { get; private set; }
-        public PlayerArcherInputActions.PlayerActions PlayerArcherActions { get; private set; }
+        public PlayerArcherInputAction ArcherInputActions { get; private set; }
+        public PlayerArcherInputAction.PlayerActions PlayerArcherActions { get; private set; }
         
         private void Awake()
         {
-            ArcherInputActions = new PlayerArcherInputActions();
+            ArcherInputActions = new PlayerArcherInputAction();
             PlayerArcherActions = ArcherInputActions.Player;
         }
 

@@ -15,10 +15,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public partial class PlayerArcherInputActions: IInputActionCollection2, IDisposable
+public partial class @PlayerArcherInputAction: IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
-    public PlayerArcherInputActions()
+    public @PlayerArcherInputAction()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerArcherInputAction"",
@@ -319,8 +319,8 @@ public partial class PlayerArcherInputActions: IInputActionCollection2, IDisposa
     private readonly InputAction m_Player_Aim;
     public struct PlayerActions
     {
-        private PlayerArcherInputActions m_Wrapper;
-        public PlayerActions(PlayerArcherInputActions wrapper) { m_Wrapper = wrapper; }
+        private @PlayerArcherInputAction m_Wrapper;
+        public PlayerActions(@PlayerArcherInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @WalkToggle => m_Wrapper.m_Player_WalkToggle;
         public InputAction @Look => m_Wrapper.m_Player_Look;
