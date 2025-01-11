@@ -5,14 +5,16 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
     public class PlayerArcherState : IState
     {
         private readonly PlayerArcherStateMachine _archerStateMachine;
-        private Vector2 MovementInput { get; set; }
+        protected Vector2 MovementInput { get; private set; }
         private const float BaseSpeed = 5f;
-        private const float SpeedModifier = 1f;
+        protected float SpeedModifier = 1f;
 
         private Vector3 _currentTargetRotation;
         private Vector3 _timeToReachTargetRotation;
         private Vector3 _dampedTargetRotationCurrentVelocity;
         private Vector3 _dampedTargetRotationPassedTime;
+
+        protected bool shouldWalk;
 
         protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine)
         {
@@ -39,7 +41,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         private void ReadMovementInput() => 
             MovementInput = _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.ReadValue<Vector2>();
 
-        private void AddForceToPlayer() //Move
+        protected void AddForceToPlayer() //Move
         {
             if (MovementInput == Vector2.zero || SpeedModifier == 0f)
                 return;
@@ -133,9 +135,11 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private Vector3 GetTargetRotationDirection(float targetAngle) => 
             Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        
+        protected void ResetVelocity() => _archerStateMachine.PlayerArcher.Rigidbody.velocity = Vector3.zero;
 
         private Vector3 GetMovementInputDirection() => new(MovementInput.x, 0f, MovementInput.y);
-        private static float GetMovementSpeed() => BaseSpeed * SpeedModifier;
+        private float GetMovementSpeed() => BaseSpeed * SpeedModifier;
         #endregion
     }
 }
