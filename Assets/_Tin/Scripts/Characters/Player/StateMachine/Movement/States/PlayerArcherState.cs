@@ -8,14 +8,19 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         private Vector2 MovementInput { get; set; }
         private const float BaseSpeed = 5f;
         private const float SpeedModifier = 1f;
-        
-        protected Vector3 currentTargetRotation;
-        protected Vector3 timeToReachTargetRotation;
-        protected Vector3 dampedTargetRotationCurrentVelocity;
-        protected Vector3 dampedTargetRotationPassedTime;
 
-        protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine) => 
+        private Vector3 _currentTargetRotation;
+        private Vector3 _timeToReachTargetRotation;
+        private Vector3 _dampedTargetRotationCurrentVelocity;
+        private Vector3 _dampedTargetRotationPassedTime;
+
+        protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine)
+        {
             _archerStateMachine = archerStateMachine;
+            InitializeData();
+        }
+
+        private void InitializeData() => _timeToReachTargetRotation.y = 0.14f;
 
         #region IState Methods
         public virtual void Enter() => Debug.Log("PlayerArcherState Enter: " + GetType().Name);
@@ -39,20 +44,25 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             if (MovementInput == Vector2.zero || SpeedModifier == 0f)
                 return;
             
-            var movementDirection = GetMovementDirection();
+            var movementDirection = GetMovementInputDirection();
+            
+            var targetRotationYAngle = RotatePlayer(movementDirection);
+            
+            var targetRotationDirection = GetTargetRotationDirection(targetRotationYAngle);
+            
             var movementSpeed = GetMovementSpeed();
             
-            Vector3 currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
+            var currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
             
             _archerStateMachine.PlayerArcher.Rigidbody.AddForce(
-                movementDirection * (5F * movementSpeed) - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
+                targetRotationDirection * movementSpeed - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
         }
-
+        
         private float RotatePlayer(Vector3 direction)
         {
-            var directionAngle = GetDirectionAngle(direction);
+            var directionAngle = UpdateTargetRotation(direction);
 
-            directionAngle = AddCameraToRotationAngle(directionAngle);
+            RotateTowardsTargetRotation();
 
             return directionAngle;
         }
@@ -74,6 +84,12 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
                 angle -= 360f;
             return angle;
         }
+        
+        private void UpdateTargetRotationData(float targetAngle)
+        {
+            _currentTargetRotation.y = targetAngle;
+            _dampedTargetRotationPassedTime.y = 0f;
+        }
         #endregion
 
         #region Reusable Methods
@@ -84,7 +100,41 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
             return playerHorizontalVelocity;
         }
-        private Vector3 GetMovementDirection() => new(MovementInput.x, 0f, MovementInput.y);
+
+        private void RotateTowardsTargetRotation()
+        {
+            var currentYAngle = _archerStateMachine.PlayerArcher.Rigidbody.rotation.eulerAngles.y;
+            
+            if(Mathf.Approximately(currentYAngle, _currentTargetRotation.y))
+                return;
+            
+            var smoothedYAngle = Mathf.SmoothDampAngle(currentYAngle, _currentTargetRotation.y, 
+                ref _dampedTargetRotationCurrentVelocity.y, _timeToReachTargetRotation.y - _dampedTargetRotationCurrentVelocity.y);
+            
+            _dampedTargetRotationPassedTime.y += Time.deltaTime;
+            
+            var targetRotation = Quaternion.Euler(0f, smoothedYAngle, 0f);
+            
+            _archerStateMachine.PlayerArcher.Rigidbody.MoveRotation(targetRotation);
+        }
+        
+        private float UpdateTargetRotation(Vector3 direction, bool shouldConsiderCameraRotation = true)
+        {
+            var directionAngle = GetDirectionAngle(direction);
+            
+            if(shouldConsiderCameraRotation)
+                directionAngle = AddCameraToRotationAngle(directionAngle);
+            
+            if(Mathf.Approximately(directionAngle, _currentTargetRotation.y)) 
+                UpdateTargetRotationData(directionAngle);
+
+            return directionAngle;
+        }
+
+        private Vector3 GetTargetRotationDirection(float targetAngle) => 
+            Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+
+        private Vector3 GetMovementInputDirection() => new(MovementInput.x, 0f, MovementInput.y);
         private static float GetMovementSpeed() => BaseSpeed * SpeedModifier;
         #endregion
     }
