@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 {
     public class PlayerArcherState : IState
     {
-        private readonly PlayerArcherStateMachine _archerStateMachine;
+        protected readonly PlayerArcherStateMachine _archerStateMachine;
         protected Vector2 MovementInput { get; private set; }
         private const float BaseSpeed = 5f;
         protected float SpeedModifier = 1f;
@@ -25,8 +26,17 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         private void InitializeData() => _timeToReachTargetRotation.y = 0.14f;
 
         #region IState Methods
-        public virtual void Enter() => Debug.Log("PlayerArcherState Enter: " + GetType().Name);
-        public virtual void Exit(){}
+        public virtual void Enter()
+        {
+            Debug.Log("PlayerArcherState Enter: " + GetType().Name);
+            AddInputActionCallbacks();
+        }
+
+        public virtual void Exit()
+        {
+            RemoveInputActionCallbacks();
+        }
+
         public virtual void HandleInput() => ReadMovementInput();
         public virtual void Update(){}
         public virtual void PhysicsUpdate() => AddForceToPlayer();
@@ -140,6 +150,23 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private Vector3 GetMovementInputDirection() => new(MovementInput.x, 0f, MovementInput.y);
         private float GetMovementSpeed() => BaseSpeed * SpeedModifier;
+        
+        protected virtual void AddInputActionCallbacks()
+        {
+            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started += OnWalkToggleStarted;
+        }
+        
+        protected virtual void RemoveInputActionCallbacks()
+        {
+            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started -= OnWalkToggleStarted;
+        }
+        #endregion
+
+        #region Input Methods
+        protected virtual void OnWalkToggleStarted(InputAction.CallbackContext context)
+        {
+            shouldWalk = !shouldWalk;
+        }
         #endregion
     }
 }

@@ -23,7 +23,18 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded
             if(MovementInput == Vector2.zero)
                 return;
 
-            AddForceToPlayer();
+            OnAddForceToPlayer();
+        }
+
+        private void OnAddForceToPlayer()
+        {
+            if(shouldWalk)
+            {
+                _archerStateMachine.ChangeState(_archerStateMachine.ArcherWalkingState);
+                return;
+            }
+            
+            _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
         }
 
         #endregion
