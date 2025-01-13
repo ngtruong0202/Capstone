@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a311655f-44bd-4d50-be6a-95376f5bfdaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Capstone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Feronia.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherRunningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherRunningState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherSprintingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherSprintingState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherWalkingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/Moving/PlayerArcherWalkingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherGroundedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherGroundedState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherIdlingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/Grounded/PlayerArcherIdlingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Tin/Scripts/Characters/Player/StateMachine/Movement/States/PlayerArcherState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +130,7 @@
       <workItem from="1735817201009" duration="2425000" />
       <workItem from="1735991728556" duration="358000" />
       <workItem from="1735992519854" duration="310000" />
-      <workItem from="1736594050425" duration="7460000" />
+      <workItem from="1736594050425" duration="8596000" />
     </task>
     <servers />
   </component>

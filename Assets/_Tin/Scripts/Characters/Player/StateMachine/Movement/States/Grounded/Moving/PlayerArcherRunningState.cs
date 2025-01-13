@@ -2,7 +2,7 @@ using UnityEngine.InputSystem;
 
 namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.Moving
 {
-    public class PlayerArcherRunningState : PlayerArcherState
+    public class PlayerArcherRunningState : PlayerArcherGroundedState
     {
         public PlayerArcherRunningState(PlayerArcherStateMachine playerArcherStateMachine) : base(playerArcherStateMachine)
         {}
