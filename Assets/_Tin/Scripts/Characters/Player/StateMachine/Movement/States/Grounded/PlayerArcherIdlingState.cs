@@ -25,18 +25,6 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded
 
             OnAddForceToPlayer();
         }
-
-        private void OnAddForceToPlayer()
-        {
-            if(shouldWalk)
-            {
-                _archerStateMachine.ChangeState(_archerStateMachine.ArcherWalkingState);
-                return;
-            }
-            
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
-        }
-
         #endregion
     }
 }

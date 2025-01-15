@@ -24,9 +24,11 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.M
             base.OnWalkToggleStarted(context);
             _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
         }
-
-        private void OnMovementCanceled(InputAction.CallbackContext context) => 
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherIdlingState);
+        
+        protected override void OnMovementCanceled(InputAction.CallbackContext context)
+        {
+            base.OnMovementCanceled(context);
+        }
 
         #endregion
     }
