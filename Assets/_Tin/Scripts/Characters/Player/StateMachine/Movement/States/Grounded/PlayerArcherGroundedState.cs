@@ -12,23 +12,23 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded
         protected override void AddInputActionCallbacks()
         {
             base.AddInputActionCallbacks();
-            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.canceled += OnMovementCanceled;
+            ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.canceled += OnMovementCanceled;
         }
         protected override void RemoveInputActionCallbacks()
         {
             base.RemoveInputActionCallbacks();
-            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.canceled -= OnMovementCanceled;
+            ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.canceled -= OnMovementCanceled;
         }
         
         protected virtual void OnAddForceToPlayer()
         {
-            if(shouldWalk)
+            if(ArcherStateMachine.ArcherStateReusableData.ShouldWalk)
             {
-                _archerStateMachine.ChangeState(_archerStateMachine.ArcherWalkingState);
+                ArcherStateMachine.ChangeState(ArcherStateMachine.ArcherWalkingState);
                 return;
             }
             
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
+            ArcherStateMachine.ChangeState(ArcherStateMachine.ArcherRunningState);
         }
         #endregion
         
@@ -36,11 +36,11 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded
         protected override void OnWalkToggleStarted(InputAction.CallbackContext context)
         {
             base.OnWalkToggleStarted(context);
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
+            ArcherStateMachine.ChangeState(ArcherStateMachine.ArcherRunningState);
         }
 
         protected virtual void OnMovementCanceled(InputAction.CallbackContext context) => 
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherIdlingState);
+            ArcherStateMachine.ChangeState(ArcherStateMachine.ArcherIdlingState);
         #endregion
     }
 }

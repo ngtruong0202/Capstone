@@ -1,3 +1,4 @@
+using _Tin.Scripts.Characters.Player.Data.States;
 using _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded;
 using _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.Moving;
 
@@ -7,6 +8,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement
     public class PlayerArcherStateMachine : global::StateMachine
     {
         public PlayerArcher PlayerArcher { get; private set; }
+        public PlayerArcherStateReusableData ArcherStateReusableData { get; private set; }
         // This will present all the states of the player archer
         public PlayerArcherIdlingState ArcherIdlingState { get; private set; }
         public PlayerArcherRunningState ArcherRunningState { get; private set; }
@@ -17,6 +19,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement
         public PlayerArcherStateMachine(PlayerArcher playerArcher)
         {
             PlayerArcher = playerArcher;
+            ArcherStateReusableData = new PlayerArcherStateReusableData();
             // Initialize all the states
             ArcherIdlingState = new PlayerArcherIdlingState(this);
             ArcherRunningState = new PlayerArcherRunningState(this);

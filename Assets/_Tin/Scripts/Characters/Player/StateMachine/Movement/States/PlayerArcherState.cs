@@ -1,3 +1,4 @@
+using _Tin.Scripts.Characters.Player.Data.States.Grounded;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,25 +6,17 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 {
     public class PlayerArcherState : IState
     {
-        protected readonly PlayerArcherStateMachine _archerStateMachine;
-        protected Vector2 MovementInput { get; private set; }
-        private const float BaseSpeed = 5f;
-        protected float SpeedModifier = 1f;
-
-        private Vector3 _currentTargetRotation;
-        private Vector3 _timeToReachTargetRotation;
-        private Vector3 _dampedTargetRotationCurrentVelocity;
-        private Vector3 _dampedTargetRotationPassedTime;
-
-        protected bool shouldWalk;
-
+        protected readonly PlayerArcherStateMachine ArcherStateMachine;
+        protected readonly PlayerArcherGroundedData ArcherMovementData;
         protected PlayerArcherState(PlayerArcherStateMachine archerStateMachine)
         {
-            _archerStateMachine = archerStateMachine;
+            ArcherStateMachine = archerStateMachine;
+            ArcherMovementData = ArcherStateMachine.PlayerArcher.Data.ArcherGroundedData;
             InitializeData();
         }
 
-        private void InitializeData() => _timeToReachTargetRotation.y = 0.14f;
+        private void InitializeData() => ArcherStateMachine.ArcherStateReusableData.TimeToReachTargetRotation.y =
+            ArcherMovementData.BaseArcherRotationData.TargetRotationReachTime;
 
         #region IState Methods
         public virtual void Enter()
@@ -49,11 +42,12 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         #region Main Methods
         private void ReadMovementInput() => 
-            MovementInput = _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.ReadValue<Vector2>();
+            ArcherStateMachine.ArcherStateReusableData.MovementInput = ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.Movement.ReadValue<Vector2>();
 
         protected void AddForceToPlayer() //Move
         {
-            if (MovementInput == Vector2.zero || SpeedModifier == 0f)
+            if (ArcherStateMachine.ArcherStateReusableData.MovementInput == Vector2.zero ||
+                ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier == 0f)
                 return;
             
             var movementDirection = GetMovementInputDirection();
@@ -66,7 +60,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             
             var currentPlayerHorizontalVelocity = GetPlayerHorizontalVelocity();
             
-            _archerStateMachine.PlayerArcher.Rigidbody.AddForce(
+            ArcherStateMachine.PlayerArcher.Rigidbody.AddForce(
                 targetRotationDirection * movementSpeed - currentPlayerHorizontalVelocity, ForceMode.VelocityChange);
         }
         
@@ -90,7 +84,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private float AddCameraToRotationAngle(float angle)
         {
-            angle += _archerStateMachine.PlayerArcher.MainCameraTransform.eulerAngles.y;
+            angle += ArcherStateMachine.PlayerArcher.MainCameraTransform.eulerAngles.y;
 
             if(angle > 360f)
                 angle -= 360f;
@@ -99,15 +93,15 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         
         private void UpdateTargetRotationData(float targetAngle)
         {
-            _currentTargetRotation.y = targetAngle;
-            _dampedTargetRotationPassedTime.y = 0f;
+            ArcherStateMachine.ArcherStateReusableData.CurrentTargetRotation.y = targetAngle;
+            ArcherStateMachine.ArcherStateReusableData.DampedTargetRotationPassedTime.y = 0f;
         }
         #endregion
 
         #region Reusable Methods
         private Vector3 GetPlayerHorizontalVelocity()
         {
-            var playerHorizontalVelocity = _archerStateMachine.PlayerArcher.Rigidbody.velocity;
+            var playerHorizontalVelocity = ArcherStateMachine.PlayerArcher.Rigidbody.velocity;
             playerHorizontalVelocity.y = 0f;
 
             return playerHorizontalVelocity;
@@ -115,19 +109,22 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private void RotateTowardsTargetRotation()
         {
-            var currentYAngle = _archerStateMachine.PlayerArcher.Rigidbody.rotation.eulerAngles.y;
+            var currentYAngle = ArcherStateMachine.PlayerArcher.Rigidbody.rotation.eulerAngles.y;
             
-            if(Mathf.Approximately(currentYAngle, _currentTargetRotation.y))
+            if(Mathf.Approximately(currentYAngle, ArcherStateMachine.ArcherStateReusableData.CurrentTargetRotation.y))
                 return;
             
-            var smoothedYAngle = Mathf.SmoothDampAngle(currentYAngle, _currentTargetRotation.y, 
-                ref _dampedTargetRotationCurrentVelocity.y, _timeToReachTargetRotation.y - _dampedTargetRotationCurrentVelocity.y);
+            var smoothedYAngle = Mathf.SmoothDampAngle(currentYAngle,
+                ArcherStateMachine.ArcherStateReusableData.CurrentTargetRotation.y, 
+                ref ArcherStateMachine.ArcherStateReusableData.DampedTargetRotationCurrentVelocity.y,
+                ArcherStateMachine.ArcherStateReusableData.TimeToReachTargetRotation.y -
+                ArcherStateMachine.ArcherStateReusableData.DampedTargetRotationCurrentVelocity.y);
             
-            _dampedTargetRotationPassedTime.y += Time.deltaTime;
+            ArcherStateMachine.ArcherStateReusableData.DampedTargetRotationPassedTime.y += Time.deltaTime;
             
             var targetRotation = Quaternion.Euler(0f, smoothedYAngle, 0f);
             
-            _archerStateMachine.PlayerArcher.Rigidbody.MoveRotation(targetRotation);
+            ArcherStateMachine.PlayerArcher.Rigidbody.MoveRotation(targetRotation);
         }
         
         private float UpdateTargetRotation(Vector3 direction, bool shouldConsiderCameraRotation = true)
@@ -137,7 +134,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
             if(shouldConsiderCameraRotation)
                 directionAngle = AddCameraToRotationAngle(directionAngle);
             
-            if(Mathf.Approximately(directionAngle, _currentTargetRotation.y)) 
+            if(Mathf.Approximately(directionAngle, ArcherStateMachine.ArcherStateReusableData.CurrentTargetRotation.y)) 
                 UpdateTargetRotationData(directionAngle);
 
             return directionAngle;
@@ -146,27 +143,22 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
         private Vector3 GetTargetRotationDirection(float targetAngle) => 
             Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
         
-        protected void ResetVelocity() => _archerStateMachine.PlayerArcher.Rigidbody.velocity = Vector3.zero;
+        protected void ResetVelocity() => ArcherStateMachine.PlayerArcher.Rigidbody.velocity = Vector3.zero;
 
-        private Vector3 GetMovementInputDirection() => new(MovementInput.x, 0f, MovementInput.y);
-        private float GetMovementSpeed() => BaseSpeed * SpeedModifier;
+        private Vector3 GetMovementInputDirection() => new(ArcherStateMachine.ArcherStateReusableData.MovementInput.x,
+            0f, ArcherStateMachine.ArcherStateReusableData.MovementInput.y);
+        private float GetMovementSpeed() => ArcherMovementData.BaseSpeed * ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier;
         
-        protected virtual void AddInputActionCallbacks()
-        {
-            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started += OnWalkToggleStarted;
-        }
-        
-        protected virtual void RemoveInputActionCallbacks()
-        {
-            _archerStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started -= OnWalkToggleStarted;
-        }
+        protected virtual void AddInputActionCallbacks() => 
+            ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started += OnWalkToggleStarted;
+
+        protected virtual void RemoveInputActionCallbacks() => 
+            ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started -= OnWalkToggleStarted;
         #endregion
 
         #region Input Methods
-        protected virtual void OnWalkToggleStarted(InputAction.CallbackContext context)
-        {
-            shouldWalk = !shouldWalk;
-        }
+        protected virtual void OnWalkToggleStarted(InputAction.CallbackContext context) =>
+            ArcherStateMachine.ArcherStateReusableData.ShouldWalk = !ArcherStateMachine.ArcherStateReusableData.ShouldWalk;
         #endregion
     }
 }

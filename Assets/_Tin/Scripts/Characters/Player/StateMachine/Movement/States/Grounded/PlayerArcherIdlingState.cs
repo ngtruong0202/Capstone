@@ -13,14 +13,14 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded
             base.Enter();
             Debug.Log("PlayerArcherIdlingState Enter: " + GetType().Name);
             
-            SpeedModifier = 0f;
+            ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier = 0f;
             ResetVelocity();
         }
 
         public override void Update()
         {
             base.Update();
-            if(MovementInput == Vector2.zero)
+            if(ArcherStateMachine.ArcherStateReusableData.MovementInput == Vector2.zero)
                 return;
 
             OnAddForceToPlayer();

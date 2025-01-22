@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace _Tin.Scripts.Characters.Player.Data.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "Player", menuName = "Custom/Characters/Player")]
+    [CreateAssetMenu(fileName = "Player", menuName = "Custom/Characters/PlayerArcher")]
     public class PlayerArcherSo : ScriptableObject
     {
         [field: SerializeField] public PlayerArcherGroundedData ArcherGroundedData { get; private set; } 

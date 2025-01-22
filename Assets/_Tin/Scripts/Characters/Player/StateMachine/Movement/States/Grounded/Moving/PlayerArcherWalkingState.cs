@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.Moving
 {
-    public class PlayerArcherWalkingState : PlayerArcherGroundedState
+    public class PlayerArcherWalkingState : PlayerArcherMovingState
     {
         public PlayerArcherWalkingState(PlayerArcherStateMachine playerArcherStateMachine) : base(playerArcherStateMachine)
         {}
@@ -14,7 +14,8 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.M
             base.Enter();
             Debug.Log("PlayerArcherWalkingState Enter: " + GetType().Name);
             
-            SpeedModifier = 0.25f;
+            ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier =
+                ArcherMovementData.ArcherWalkData.SpeedModifier;
         }
         #endregion
 
@@ -22,7 +23,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States.Grounded.M
         protected override void OnWalkToggleStarted(InputAction.CallbackContext context)
         {
             base.OnWalkToggleStarted(context);
-            _archerStateMachine.ChangeState(_archerStateMachine.ArcherRunningState);
+            ArcherStateMachine.ChangeState(ArcherStateMachine.ArcherRunningState);
         }
         
         protected override void OnMovementCanceled(InputAction.CallbackContext context)

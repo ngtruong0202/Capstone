@@ -1,3 +1,4 @@
+using _Tin.Scripts.Characters.Player.Data.ScriptableObjects;
 using _Tin.Scripts.Characters.Player.StateMachine.Movement;
 using _Tin.Scripts.Characters.Player.Utilities.Input;
 using UnityEngine;
@@ -7,6 +8,8 @@ namespace _Tin.Scripts.Characters.Player
     [RequireComponent(typeof(PlayerArcherInputs))]
     public class PlayerArcher : MonoBehaviour
     {
+        [field: Header("References")]
+        [field: SerializeField] public PlayerArcherSo Data { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public PlayerArcherInputs ArcherInput { get; private set; }
