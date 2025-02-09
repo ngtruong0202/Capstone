@@ -21,7 +21,7 @@ namespace _Tin.Scripts.Characters.Player.Data.States.Grounded
         [field: SerializeField] public PlayerArcherWalkData ArcherWalkData { get; private set; }
         [field: SerializeField] public PlayerArcherRunData ArcherRunData { get; private set; }
         [field: SerializeField] public PlayerArcherSprintData ArcherSprintData { get; private set; }
-        [field: SerializeField] public PlayerArcherDashData ArcherDashData { get; private set; }
+        [field: SerializeField] public Moving.PlayerArcherDashData ArcherDashData { get; private set; }
         [field: SerializeField] public PlayerArcherStopData ArcherStopData { get; private set; }
         [field: SerializeField] public PlayerArcherRollData ArcherRollData { get; private set; }
     }

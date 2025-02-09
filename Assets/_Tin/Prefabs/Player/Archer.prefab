@@ -1774,6 +1774,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Data>k__BackingField: {fileID: 11400000, guid: b6ac57fb433a91b41b0b4557276321f3, type: 2}
+  <ArcherCapsuleColliderUtility>k__BackingField:
+    <DefaultColliderData>k__BackingField:
+      <Height>k__BackingField: 1.8
+      <CenterY>k__BackingField: 0.9
+      <Radius>k__BackingField: 0.2
+    <SlopeData>k__BackingField:
+      <StepHeightPercentage>k__BackingField: 0.25
+      <FloatRayDistance>k__BackingField: 2
+      <StepReachForce>k__BackingField: 25
+    <TriggerColliderData>k__BackingField:
+      <GroundCheckCollider>k__BackingField: {fileID: 3582122186894998186}
+  <ArcherLayerData>k__BackingField:
+    <GroundLayer>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 8
 --- !u!114 &6881695589497074203
 MonoBehaviour:
   m_ObjectHideFlags: 0

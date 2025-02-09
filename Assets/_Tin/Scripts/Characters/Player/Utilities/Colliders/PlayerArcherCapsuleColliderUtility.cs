@@ -1,17 +1,17 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class PlayerArcherCapsuleColliderUtility : CapsuleColliderUtility
+namespace _Tin.Scripts.Characters.Player.Utilities.Colliders
 {
-    [field: SerializeField] public PlayerTriggerColliderData TriggerColliderData { get; private set; }
-
-    protected override void OnInitialize()
+    [Serializable]
+    public class PlayerArcherCapsuleColliderUtility : CapsuleColliderUtility
     {
-        base.OnInitialize();
+        [field: SerializeField] public PlayerTriggerColliderData TriggerColliderData { get; private set; }
 
-        TriggerColliderData.Initialize();
+        protected override void OnInitialize()
+        {
+            base.OnInitialize();
+            TriggerColliderData.Initialize();
+        }
     }
 }

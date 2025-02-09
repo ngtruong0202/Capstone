@@ -106,6 +106,8 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
             return playerHorizontalVelocity;
         }
+        
+        protected Vector3 GetPlayerArcherVerticalVelocity() => new Vector3(0f, ArcherStateMachine.PlayerArcher.Rigidbody.velocity.y, 0f);
 
         private void RotateTowardsTargetRotation()
         {
@@ -147,7 +149,10 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement.States
 
         private Vector3 GetMovementInputDirection() => new(ArcherStateMachine.ArcherStateReusableData.MovementInput.x,
             0f, ArcherStateMachine.ArcherStateReusableData.MovementInput.y);
-        private float GetMovementSpeed() => ArcherMovementData.BaseSpeed * ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier;
+
+        protected float GetMovementSpeed() => ArcherMovementData.BaseSpeed *
+                                              ArcherStateMachine.ArcherStateReusableData.MovementSpeedModifier *
+                                              ArcherStateMachine.ArcherStateReusableData.MovementOnSlopesSpeedModifier;
         
         protected virtual void AddInputActionCallbacks() => 
             ArcherStateMachine.PlayerArcher.ArcherInput.PlayerArcherActions.WalkToggle.started += OnWalkToggleStarted;

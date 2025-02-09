@@ -14,6 +14,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement
         public PlayerArcherRunningState ArcherRunningState { get; private set; }
         public PlayerArcherWalkingState ArcherWalkingState { get; private set; }
         public PlayerArcherSprintingState ArcherSprintingState { get; private set; }
+        public PlayerArcherDashingState ArcherDashingState { get; private set; }
         
         // Constructor of the PlayerArcherStateMachine
         public PlayerArcherStateMachine(PlayerArcher playerArcher)
@@ -25,6 +26,7 @@ namespace _Tin.Scripts.Characters.Player.StateMachine.Movement
             ArcherRunningState = new PlayerArcherRunningState(this);
             ArcherWalkingState = new PlayerArcherWalkingState(this);
             ArcherSprintingState = new PlayerArcherSprintingState(this);
+            ArcherDashingState = new PlayerArcherDashingState(this);
         }
     }
 }
